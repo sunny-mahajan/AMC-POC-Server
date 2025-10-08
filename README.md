@@ -1,14 +1,17 @@
-# Medical Test Matching API
+# Medical Test Speech Recognition System
 
-FastAPI-based service for identifying medical tests from doctor's speech/text using semantic embeddings and LLM fallback.
+FastAPI-based service with web interface for real-time medical test identification from doctor's speech using semantic embeddings and LLM fallback.
 
 ## Features
 
-- **Semantic Matching**: Uses sentence-transformers (all-MiniLM-L6-v2) for embedding-based test matching
-- **LLM Fallback**: OpenAI GPT-4o-mini for ambiguous cases
-- **Intent Detection**: Filters for test ordering intent vs symptoms
-- **Negation Handling**: Skips negated statements ("don't do CBC")
-- **Smart Chunking**: Splits transcripts into meaningful segments
+- **🎤 Real-time Speech Recognition**: Browser-based speech-to-text with live transcription
+- **⚡ Parallel Processing**: Chunked speech processing with concurrent API calls
+- **🧠 Semantic Matching**: Uses sentence-transformers (all-MiniLM-L6-v2) for embedding-based test matching
+- **🤖 LLM Fallback**: OpenAI GPT-4o-mini for ambiguous cases
+- **🎯 Intent Detection**: Filters for test ordering intent vs symptoms
+- **❌ Negation Handling**: Skips negated statements ("don't do CBC")
+- **✂️ Smart Chunking**: Splits transcripts into meaningful segments
+- **📱 Modern Web Interface**: Responsive design with real-time updates
 
 ## Setup
 
@@ -40,20 +43,53 @@ Generate embeddings (one-time setup):
 curl -X POST http://127.0.0.1:8000/generate_embeddings
 ```
 
-## API Endpoints
+## Usage
 
-### Health Check
+### Web Interface (Recommended)
+
+1. **Start the server**:
+   ```bash
+   uvicorn app:app --reload --host 0.0.0.0 --port 8000
+   ```
+
+2. **Open your browser** and go to: `http://localhost:8000`
+
+3. **Allow microphone access** when prompted by your browser
+
+4. **Click "Start Recording"** and speak naturally:
+   - "Please check CBC and RBS for this patient"
+   - "Order a thyroid profile and liver function test"
+   - "Don't do the urine test, just blood work"
+
+5. **View results** in real-time as you speak
+
+### API Endpoints
+
+#### Web Interface
 ```
 GET /
 ```
+Returns the speech recognition web interface.
 
-### Generate Embeddings
+#### Get Available Tests
+```
+GET /api/tests
+```
+Returns list of available tests for the frontend.
+
+#### API Status
+```
+GET /api/status
+```
+Returns API status and health information.
+
+#### Generate Embeddings
 ```
 POST /generate_embeddings
 ```
 Reads `tests.json` and generates embeddings for all test synonyms. Run this once after setup or when updating tests.
 
-### Match Stream
+#### Match Stream
 ```
 POST /match_stream
 Content-Type: application/json
@@ -84,6 +120,10 @@ Content-Type: application/json
 ├── utils.py                        # Helper functions
 ├── tests.json                      # Test definitions (50 popular tests)
 ├── tests_with_embeddings.json     # Generated embeddings (auto-created)
+├── static/                         # Web interface files
+│   ├── index.html                  # Main HTML page
+│   ├── style.css                   # CSS styling
+│   └── script.js                   # JavaScript for speech recognition
 ├── .env                           # API keys (not in git)
 └── README.md
 ```

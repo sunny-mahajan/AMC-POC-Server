@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Test Speech Recognition</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎤</text></svg>">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Medical Test Speech Recognition</h1>
+            <p>Speak naturally to order medical tests</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Speech Recognition Section -->
+            <div class="speech-section">
+                <div class="speech-controls">
+                    <button id="startBtn" class="btn btn-primary">
+                        <span class="icon">🎤</span>
+                        Start Recording
+                    </button>
+                    <button id="stopBtn" class="btn btn-secondary" disabled>
+                        <span class="icon">⏹️</span>
+                        Stop Recording
+                    </button>
+                    <button id="clearBtn" class="btn btn-outline">
+                        <span class="icon">🗑️</span>
+                        Clear
+                    </button>
+                </div>
+
+                <div class="status-indicator">
+                    <div id="status" class="status">Ready to record</div>
+                    <div id="recordingIndicator" class="recording-indicator hidden"></div>
+                </div>
+
+                <!-- Real-time Speech Display -->
+                <div class="speech-display">
+                    <h3>Live Speech</h3>
+                    <div id="liveTranscript" class="transcript-box">
+                        <span class="placeholder">Speech will appear here...</span>
+                    </div>
+                </div>
+
+                <!-- Final Transcript -->
+                <div class="final-transcript">
+                    <h3>Final Transcript</h3>
+                    <div id="finalTranscript" class="transcript-box">
+                        <span class="placeholder">Final transcript will appear here...</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Test Results Section -->
+            <div class="results-section">
+                <h3>Detected Tests</h3>
+                <div id="testResults" class="test-results">
+                    <div class="no-results">
+                        <span class="icon">🔍</span>
+                        <p>No tests detected yet. Start speaking to see results.</p>
+                    </div>
+                </div>
+
+                <!-- Processing Status -->
+                <div id="processingStatus" class="processing-status hidden">
+                    <div class="spinner"></div>
+                    <span>Processing speech...</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Available Tests Reference -->
+        <div class="tests-reference">
+            <h3>Available Tests</h3>
+            <div class="tests-grid" id="availableTests">
+                <!-- Tests will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

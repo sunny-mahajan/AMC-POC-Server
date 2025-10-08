@@ -1,4 +1,6 @@
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from sentence_transformers import SentenceTransformer
 import json
@@ -27,6 +29,10 @@ MODEL_NAME = "all-MiniLM-L6-v2"
 openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 app = FastAPI()
+
+# Mount static files
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
 model = SentenceTransformer(MODEL_NAME)
 
 tests = []
@@ -111,6 +117,28 @@ def match_stream(req: StreamRequest):
 
 @app.get("/")
 def root():
+    return FileResponse("static/index.html")
+
+@app.get("/api/tests")
+def get_tests():
+    """Get list of available tests for the frontend"""
+    if not tests:
+        return {"error": "Tests not loaded"}
+    
+    # Return simplified test data for frontend
+    simplified_tests = []
+    for test in tests:
+        simplified_tests.append({
+            "id": test.get("id", test["name"].lower().replace(" ", "-")),
+            "name": test["name"],
+            "category": test.get("category", "lab"),
+            "synonyms": test.get("synonyms", [])
+        })
+    
+    return simplified_tests
+
+@app.get("/api/status")
+def api_status():
     return {
         "status": "running",
         "model": MODEL_NAME,
