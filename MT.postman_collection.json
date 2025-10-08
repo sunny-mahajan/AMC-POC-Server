@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "55e4ac12-9763-44d1-ac2f-8fe5e824fe52",
+		"name": "MT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "127868",
+		"_collection_link": "https://tech-formation.postman.co/workspace/Team-Workspace~39775adf-d3ae-45a5-8e6e-9148942b4aee/collection/127868-55e4ac12-9763-44d1-ac2f-8fe5e824fe52?action=share&source=collection_link&creator=127868"
+	},
+	"item": [
+		{
+			"name": "Generate Embeddings",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/generate_embeddings",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"generate_embeddings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Match Stream",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"transcript\": \"The patient is a 55-year-old male with a known history of type 2 diabetes for more than 10 years. He has been irregular with his medications and his sugar control has not been good lately. Today, he complains of fatigue, occasional chest heaviness, and mild breathlessness on exertion. On examination, blood pressure is borderline high and BMI is elevated. We should check the routine diabetes parameters — fasting sugar, post-meal sugar, HbA1c to assess long-term control, and also get a random sugar today since he has not eaten since morning. Given the chest symptoms, we must order an ECG and a troponin I test to rule out any acute cardiac event. Lipid profile should also be included since he is at high cardiovascular risk. Let’s also add kidney function and liver function tests to have a complete metabolic picture. I don’t think a chest X-ray is required right now as he doesn’t have cough or fever, but we will reconsider if symptoms worsen. Please avoid repeating CBC at this stage since it was done last month and was normal.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/match_stream",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"match_stream"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": ""
+		}
+	]
+}

@@ -1,0 +1,652 @@
+[
+  {
+    "id": "cbc",
+    "name": "CBC",
+    "category": "lab",
+    "synonyms": [
+      "CBC",
+      "cbc",
+      "cbc test",
+      "complete blood count",
+      "full blood count",
+      "complete blood picture",
+      "blood count",
+      "hb tlc dlc",
+      "hemoglobin tlc dlc",
+      "hemogram",
+      "blood work",
+      "blood test complete"
+    ]
+  },
+  {
+    "id": "urine-r-e",
+    "name": "Urine R/E",
+    "category": "lab",
+    "synonyms": [
+      "urine r/e",
+      "urine routine",
+      "urine routine examination",
+      "urine microscopy",
+      "urine analysis",
+      "urine test",
+      "microscopy",
+      "urine routine and microscopy"
+    ]
+  },
+  {
+    "id": "thyroid-profile",
+    "name": "Thyroid Profile",
+    "category": "lab",
+    "synonyms": [
+      "thyroid profile",
+      "thyroid function test",
+      "tft",
+      "thyroid panel",
+      "thyroid tests",
+      "t3 t4 tsh",
+      "thyroid screen",
+      "thyroid check",
+      "thyroid workup"
+    ]
+  },
+  {
+    "id": "rft",
+    "name": "RFT",
+    "category": "lab",
+    "synonyms": [
+      "RFT",
+      "kidney function test",
+      "kidney panel",
+      "renal function test",
+      "rft",
+      "rft test",
+      "kidney profile",
+      "renal profile",
+      "kft"
+    ]
+  },
+  {
+    "id": "rbs",
+    "name": "RBS",
+    "category": "lab",
+    "synonyms": [
+      "RBS",
+      "glucose random",
+      "random blood sugar",
+      "rbs",
+      "rbs test",
+      "sugar test",
+      "random glucose",
+      "blood sugar",
+      "sugar level"
+    ]
+  },
+  {
+    "id": "se",
+    "name": "SE",
+    "category": "lab",
+    "synonyms": [
+      "SE",
+      "electrolytes",
+      "na k cl",
+      "se",
+      "serum electrolytes",
+      "sodium potassium chloride"
+    ]
+  },
+  {
+    "id": "lft",
+    "name": "LFT",
+    "category": "lab",
+    "synonyms": [
+      "LFT",
+      "lft",
+      "lft test",
+      "liver function test",
+      "liver panel",
+      "liver profile",
+      "hepatic function test",
+      "liver enzymes",
+      "liver workup"
+    ]
+  },
+  {
+    "id": "hba1c",
+    "name": "HBA1c",
+    "category": "lab",
+    "synonyms": [
+      "HBA1c",
+      "average sugar 3 months",
+      "glycated hemoglobin",
+      "glycosylated hemoglobin",
+      "hba1c",
+      "a1c",
+      "hemoglobin a1c",
+      "3 month sugar average",
+      "diabetes control test"
+    ]
+  },
+  {
+    "id": "esr",
+    "name": "ESR",
+    "category": "lab",
+    "synonyms": [
+      "ESR",
+      "erythrocyte sedimentation rate",
+      "esr",
+      "esr test",
+      "sed rate"
+    ]
+  },
+  {
+    "id": "fbs",
+    "name": "FBS",
+    "category": "lab",
+    "synonyms": [
+      "FBS",
+      "fasting blood sugar",
+      "fasting glucose",
+      "fbs",
+      "fbs test"
+    ]
+  },
+  {
+    "id": "ppbs",
+    "name": "PPBS",
+    "category": "lab",
+    "synonyms": [
+      "PPBS",
+      "ppbs",
+      "post meal sugar",
+      "post-meal sugar",
+      "postprandial sugar",
+      "2 hour sugar",
+      "after food sugar"
+    ]
+  },
+  {
+    "id": "sgpt",
+    "name": "SGPT",
+    "category": "lab",
+    "synonyms": [
+      "SGPT",
+      "alanine aminotransferase",
+      "alt",
+      "sgpt",
+      "sgpt alt"
+    ]
+  },
+  {
+    "id": "sgot",
+    "name": "SGOT",
+    "category": "lab",
+    "synonyms": [
+      "SGOT",
+      "aspartate aminotransferase",
+      "ast",
+      "sgot",
+      "sgot ast"
+    ]
+  },
+  {
+    "id": "hbsag",
+    "name": "HBsAG",
+    "category": "lab",
+    "synonyms": [
+      "HBsAG",
+      "hbsag",
+      "hbsag test",
+      "hepatitis b surface antigen",
+      "hepatitis b test",
+      "hep b",
+      "australia antigen",
+      "hepatitis b screening"
+    ]
+  },
+  {
+    "id": "hcv",
+    "name": "HCV",
+    "category": "lab",
+    "synonyms": [
+      "HCV",
+      "anti hcv",
+      "hcv",
+      "hcv antibody",
+      "hepatitis c",
+      "hep c",
+      "hepatitis c test",
+      "hepatitis c screening"
+    ]
+  },
+  {
+    "id": "hiv",
+    "name": "HIV",
+    "category": "lab",
+    "synonyms": [
+      "HIV",
+      "elisa hiv",
+      "hiv",
+      "hiv screening",
+      "hiv test",
+      "hiv antibody",
+      "hiv elisa",
+      "aids test"
+    ]
+  },
+  {
+    "id": "vdrl",
+    "name": "VDRL",
+    "category": "lab",
+    "synonyms": [
+      "VDRL",
+      "rpr",
+      "syphilis test",
+      "vdrl",
+      "vdrl test",
+      "syphilis screening",
+      "rapid plasma reagin"
+    ]
+  },
+  {
+    "id": "ra-factor",
+    "name": "RA Factor",
+    "category": "lab",
+    "synonyms": [
+      "RA Factor",
+      "ra factor",
+      "ra factor test",
+      "rheumatoid factor",
+      "rf test",
+      "rheumatoid arthritis factor",
+      "rf"
+    ]
+  },
+  {
+    "id": "widal",
+    "name": "WIDAL",
+    "category": "microbiology",
+    "synonyms": [
+      "WIDAL",
+      "typhoid widal",
+      "widal",
+      "widal test",
+      "typhoid test",
+      "typhoid fever test",
+      "enteric fever test"
+    ]
+  },
+  {
+    "id": "dengue",
+    "name": "DENGUE",
+    "category": "microbiology",
+    "synonyms": [
+      "DENGUE",
+      "dengue",
+      "dengue igm",
+      "dengue igg",
+      "dengue profile",
+      "dengue test",
+      "ns1 antigen",
+      "dengue ns1",
+      "dengue antibody",
+      "dengue fever test"
+    ]
+  },
+  {
+    "id": "lipid-profile",
+    "name": "LIPID PROFILE",
+    "category": "lab",
+    "synonyms": [
+      "LIPID PROFILE",
+      "cholesterol panel",
+      "lipid panel",
+      "lipid profile",
+      "cholesterol test",
+      "lipid test",
+      "cholesterol hdl ldl",
+      "fasting lipid profile",
+      "cholesterol screening"
+    ]
+  },
+  {
+    "id": "abo-rh",
+    "name": "ABO RH",
+    "category": "lab",
+    "synonyms": [
+      "ABO RH",
+      "abo rh",
+      "abo rh typing",
+      "blood group",
+      "blood grouping and rh factor",
+      "group and rh"
+    ]
+  },
+  {
+    "id": "pt-inr",
+    "name": "PT/INR",
+    "category": "lab",
+    "synonyms": [
+      "PT/INR",
+      "coagulation profile",
+      "inr",
+      "prothrombin time",
+      "pt inr",
+      "pt/inr"
+    ]
+  },
+  {
+    "id": "calcium",
+    "name": "CALCIUM",
+    "category": "lab",
+    "synonyms": [
+      "CALCIUM",
+      "calcium",
+      "calcium test",
+      "serum calcium"
+    ]
+  },
+  {
+    "id": "crp",
+    "name": "CRP",
+    "category": "lab",
+    "synonyms": [
+      "CRP",
+      "c reactive protein",
+      "crp",
+      "crp test"
+    ]
+  },
+  {
+    "id": "iron-ibct",
+    "name": "IRON/ IBCT",
+    "category": "lab",
+    "synonyms": [
+      "IRON/ IBCT",
+      "iron ibct",
+      "iron profile",
+      "iron tibc",
+      "iron total iron binding capacity",
+      "iron/ ibct",
+      "serum iron tibc"
+    ]
+  },
+  {
+    "id": "uric-acid",
+    "name": "URIC ACID",
+    "category": "lab",
+    "synonyms": [
+      "URIC ACID",
+      "serum uric acid",
+      "uric acid",
+      "uric acid test"
+    ]
+  },
+  {
+    "id": "urine-culture",
+    "name": "URINE CULTURE",
+    "category": "microbiology",
+    "synonyms": [
+      "URINE CULTURE",
+      "urine c/s",
+      "urine culture",
+      "urine culture and sensitivity"
+    ]
+  },
+  {
+    "id": "bilirubin-total-direct-indirect",
+    "name": "BILIRUBIN TOTAL DIRECT INDIRECT",
+    "category": "ct",
+    "synonyms": [
+      "BILIRUBIN TOTAL DIRECT INDIRECT",
+      "bilirubin profile",
+      "bilirubin total direct indirect",
+      "ct scan",
+      "lft bilirubin fractions"
+    ]
+  },
+  {
+    "id": "creatinine-egfr",
+    "name": "CREATININE+ EGFR",
+    "category": "lab",
+    "synonyms": [
+      "CREATININE+ EGFR",
+      "creatinine egfr",
+      "creatinine+ egfr",
+      "renal function egfr",
+      "serum creatinine with egfr"
+    ]
+  },
+  {
+    "id": "stool-routine-examination",
+    "name": "Stool Routine Examination",
+    "category": "lab",
+    "synonyms": [
+      "Stool Routine Examination",
+      "stool r/e",
+      "stool routine",
+      "stool routine and microscopy",
+      "stool routine examination"
+    ]
+  },
+  {
+    "id": "covid-19",
+    "name": "Covid 19",
+    "category": "microbiology",
+    "synonyms": [
+      "Covid 19",
+      "covid 19",
+      "covid test",
+      "rt pcr covid",
+      "sars cov 2",
+      "covid pcr",
+      "coronavirus test",
+      "covid rtpcr",
+      "covid antigen",
+      "covid rapid test"
+    ]
+  },
+  {
+    "id": "aptt",
+    "name": "APTT",
+    "category": "lab",
+    "synonyms": [
+      "APTT",
+      "activated partial thromboplastin time",
+      "aptt",
+      "ptt"
+    ]
+  },
+  {
+    "id": "creatinine",
+    "name": "CREATININE",
+    "category": "lab",
+    "synonyms": [
+      "CREATININE",
+      "creatinine",
+      "creatinine test",
+      "serum creatinine"
+    ]
+  },
+  {
+    "id": "hb",
+    "name": "HB",
+    "category": "lab",
+    "synonyms": [
+      "HB",
+      "hb",
+      "hb test",
+      "hemoglobin"
+    ]
+  },
+  {
+    "id": "albumin",
+    "name": "ALBUMIN",
+    "category": "lab",
+    "synonyms": [
+      "ALBUMIN",
+      "albumin",
+      "albumin test",
+      "serum albumin"
+    ]
+  },
+  {
+    "id": "bun",
+    "name": "BUN",
+    "category": "lab",
+    "synonyms": [
+      "BUN",
+      "blood urea nitrogen",
+      "bun",
+      "bun test"
+    ]
+  },
+  {
+    "id": "blood-culture",
+    "name": "BLOOD CULTURE",
+    "category": "microbiology",
+    "synonyms": [
+      "BLOOD CULTURE",
+      "blood c/s",
+      "blood culture"
+    ]
+  },
+  {
+    "id": "amylase",
+    "name": "AMYLASE",
+    "category": "lab",
+    "synonyms": [
+      "AMYLASE",
+      "amylase",
+      "amylase test",
+      "serum amylase"
+    ]
+  },
+  {
+    "id": "ldh",
+    "name": "LDH",
+    "category": "lab",
+    "synonyms": [
+      "LDH",
+      "lactate dehydrogenase",
+      "ldh",
+      "ldh test"
+    ]
+  },
+  {
+    "id": "reticulocyte-count",
+    "name": "RETICULOCYTE COUNT",
+    "category": "lab",
+    "synonyms": [
+      "RETICULOCYTE COUNT",
+      "retic count",
+      "reticulocyte count"
+    ]
+  },
+  {
+    "id": "malaria-parasite",
+    "name": "MALARIA PARASITE",
+    "category": "microbiology",
+    "synonyms": [
+      "MALARIA PARASITE",
+      "malaria parasite",
+      "malaria parasite test",
+      "mp smear",
+      "mp test",
+      "rapid malaria test",
+      "malaria test",
+      "blood smear malaria",
+      "malarial parasite",
+      "pf pv"
+    ]
+  },
+  {
+    "id": "pregnancy-test-urine",
+    "name": "PREGNANCY TEST URINE",
+    "category": "lab",
+    "synonyms": [
+      "PREGNANCY TEST URINE",
+      "hcg urine",
+      "pregnancy test urine",
+      "upt",
+      "urine pregnancy test"
+    ]
+  },
+  {
+    "id": "platelet-count",
+    "name": "PLATELET COUNT",
+    "category": "lab",
+    "synonyms": [
+      "PLATELET COUNT",
+      "platelet count",
+      "plt count"
+    ]
+  },
+  {
+    "id": "alkaline-phosphate",
+    "name": "ALKALINE PHOSPHATE",
+    "category": "lab",
+    "synonyms": [
+      "ALKALINE PHOSPHATE",
+      "alkaline phosphatase",
+      "alkaline phosphate",
+      "alp"
+    ]
+  },
+  {
+    "id": "sodium",
+    "name": "SODIUM",
+    "category": "lab",
+    "synonyms": [
+      "SODIUM",
+      "na+",
+      "serum sodium",
+      "sodium"
+    ]
+  },
+  {
+    "id": "potassium",
+    "name": "POTASSIUM",
+    "category": "lab",
+    "synonyms": [
+      "POTASSIUM",
+      "k+",
+      "potassium",
+      "serum potassium"
+    ]
+  },
+  {
+    "id": "stool-obt-ocult-blood",
+    "name": "Stool OBT Ocult Blood",
+    "category": "lab",
+    "synonyms": [
+      "Stool OBT Ocult Blood",
+      "fecal occult blood",
+      "stool ob",
+      "stool obt ocult blood",
+      "stool occult blood"
+    ]
+  },
+  {
+    "id": "mantoux-test",
+    "name": "MANTOUX TEST",
+    "category": "microbiology",
+    "synonyms": [
+      "MANTOUX TEST",
+      "mantoux",
+      "mantoux test",
+      "ppd test",
+      "tuberculin skin test"
+    ]
+  },
+  {
+    "id": "total-protien",
+    "name": "TOTAL PROTIEN",
+    "category": "lab",
+    "synonyms": [
+      "TOTAL PROTIEN",
+      "serum total protein",
+      "total protein",
+      "total protien"
+    ]
+  }
+]
