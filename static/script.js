@@ -7,7 +7,8 @@ class SpeechRecognitionApp {
         this.chunkQueue = [];
         this.processingChunks = false;
         this.availableTests = [];
-        
+        this.allDetectedTests = new Set();
+
         this.initializeElements();
         this.setupEventListeners();
         this.initializeSpeechRecognition();
@@ -150,6 +151,7 @@ class SpeechRecognitionApp {
         this.currentTranscript = '';
         this.updateLiveTranscript('');
         this.updateFinalTranscript('');
+        this.allDetectedTests.clear();
         this.clearTestResults();
         this.chunkQueue = [];
     }
@@ -219,17 +221,17 @@ class SpeechRecognitionApp {
             // Process all chunks in parallel
             const promises = chunks.map(chunk => this.callMatchAPI(chunk));
             const results = await Promise.all(promises);
-            
-            // Aggregate results
-            const allDetectedTests = new Set();
+
+            // Merge new detections with existing ones
             results.forEach(result => {
                 if (result && result.detected_tests) {
-                    result.detected_tests.forEach(test => allDetectedTests.add(test));
+                    result.detected_tests.forEach(test => this.allDetectedTests.add(test));
                 }
             });
 
-            if (allDetectedTests.size > 0) {
-                this.updateTestResults(Array.from(allDetectedTests));
+            // Update display with all accumulated tests
+            if (this.allDetectedTests.size > 0) {
+                this.updateTestResults(Array.from(this.allDetectedTests));
             }
 
         } catch (error) {
