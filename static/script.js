@@ -222,17 +222,22 @@ class SpeechRecognitionApp {
             const promises = chunks.map(chunk => this.callMatchAPI(chunk));
             const results = await Promise.all(promises);
 
-            // Merge new detections with existing ones
+            // Merge new detections and handle removals
             results.forEach(result => {
-                if (result && result.detected_tests) {
-                    result.detected_tests.forEach(test => this.allDetectedTests.add(test));
+                if (result) {
+                    // Add newly detected tests
+                    if (result.detected_tests) {
+                        result.detected_tests.forEach(test => this.allDetectedTests.add(test));
+                    }
+                    // Remove negated/cancelled tests
+                    if (result.removed_tests) {
+                        result.removed_tests.forEach(test => this.allDetectedTests.delete(test));
+                    }
                 }
             });
 
             // Update display with all accumulated tests
-            if (this.allDetectedTests.size > 0) {
-                this.updateTestResults(Array.from(this.allDetectedTests));
-            }
+            this.updateTestResults(Array.from(this.allDetectedTests));
 
         } catch (error) {
             console.error('Error processing speech chunks:', error);

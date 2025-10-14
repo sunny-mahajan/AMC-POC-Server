@@ -13,6 +13,7 @@ from utils import (
     split_into_chunks,
     is_order_intent,
     has_test_reference,
+    extract_negated_tests,
     embedding_match,
     llm_fallback,
     NEGATION_WORDS,
@@ -71,13 +72,22 @@ def match_stream(req: StreamRequest):
     chunks = split_into_chunks(transcript)
 
     aggregated_matches = set()
+    removed_tests = set()
     detailed = []
 
     for chunk in chunks:
         norm_chunk = normalize_text(chunk)
 
+        # Check for negation/cancellation
         if any(word in norm_chunk for word in NEGATION_WORDS):
-            detailed.append({"chunk": chunk, "method": "skipped", "reason": "negation"})
+            negated = extract_negated_tests(chunk, tests)
+            if negated:
+                for test_name in negated:
+                    removed_tests.add(test_name)
+                    aggregated_matches.discard(test_name)
+                detailed.append({"chunk": chunk, "method": "negation", "removed_tests": negated})
+            else:
+                detailed.append({"chunk": chunk, "method": "skipped", "reason": "negation_no_test"})
             continue
 
         if any(word in norm_chunk for word in SYMPTOM_WORDS):
@@ -96,7 +106,9 @@ def match_stream(req: StreamRequest):
         emb_matches = embedding_match(chunk, tests, model)
         if emb_matches:
             for m in emb_matches:
-                aggregated_matches.add(m["name"])
+                # Don't add tests that were previously removed
+                if m["name"] not in removed_tests:
+                    aggregated_matches.add(m["name"])
             detailed.append({"chunk": chunk, "method": "embedding", "matches": emb_matches})
             continue
 
@@ -105,12 +117,15 @@ def match_stream(req: StreamRequest):
             detailed.append({"chunk": chunk, "method": "skipped", "reason": "no_clear_test"})
             continue
         for m in llm_result["matches"]:
-            aggregated_matches.add(m)
+            # Don't add tests that were previously removed
+            if m not in removed_tests:
+                aggregated_matches.add(m)
         detailed.append({"chunk": chunk, "method": "llm", "matches": llm_result["matches"]})
 
     return {
         "transcript": transcript,
         "detected_tests": sorted(list(aggregated_matches)),
+        "removed_tests": sorted(list(removed_tests)),
         "trace": detailed
     }
 

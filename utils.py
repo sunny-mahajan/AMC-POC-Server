@@ -20,7 +20,8 @@ from typing import List, Dict, Optional, Any
 # Words that indicate negation or exclusion of tests
 NEGATION_WORDS = [
     "don't", "dont", "do not", "no need", "not required",
-    "not needed", "avoid", "skip", "no longer", "stop"
+    "not needed", "avoid", "skip", "no longer", "stop", "already have",
+    "already done", "cancel", "remove", "drop", "exclude"
 ]
 
 # Keywords that indicate test ordering intent
@@ -185,6 +186,48 @@ def has_test_reference(text: str, tests: List[Dict[str, Any]]) -> bool:
                 return True
 
     return False
+
+
+def extract_negated_tests(text: str, tests: List[Dict[str, Any]]) -> List[str]:
+    """
+    Extract test names that are being negated/cancelled in the text.
+
+    Identifies tests mentioned alongside negation words and returns their names
+    for removal from the detected tests list.
+
+    Args:
+        text: Text containing negation/cancellation intent
+        tests: List of test dictionaries with 'name' and 'synonyms' fields
+
+    Returns:
+        List of test names that should be removed
+
+    Example:
+        >>> extract_negated_tests("avoid CBC", tests)
+        ["Complete Blood Count"]
+    """
+    norm = normalize_text(text)
+    negated_tests = []
+
+    # Check if text contains negation words
+    has_negation = any(word in norm for word in NEGATION_WORDS)
+    if not has_negation:
+        return []
+
+    # Find which tests are mentioned in this negated context
+    for test in tests:
+        # Check test name
+        if test["name"].lower() in norm:
+            negated_tests.append(test["name"])
+            continue
+
+        # Check all synonyms
+        for syn in test.get("synonyms", []):
+            if syn.lower() in norm:
+                negated_tests.append(test["name"])
+                break
+
+    return negated_tests
 
 
 # -----------------------------
