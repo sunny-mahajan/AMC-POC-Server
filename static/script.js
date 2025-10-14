@@ -237,13 +237,28 @@ class SpeechRecognitionApp {
             // Merge new detections and handle removals
             results.forEach(result => {
                 if (result) {
-                    // Add newly detected tests
+                    // Add newly detected tests with metadata
                     if (result.detected_tests) {
-                        result.detected_tests.forEach(test => this.allDetectedTests.add(test));
+                        result.detected_tests.forEach(test => {
+                            // Store test with metadata (name, method, score)
+                            const existingTest = Array.from(this.allDetectedTests).find(t => t.name === test.name);
+                            if (!existingTest) {
+                                this.allDetectedTests.add(test);
+                            } else if (test.score && (!existingTest.score || test.score > existingTest.score)) {
+                                // Update if new score is higher
+                                this.allDetectedTests.delete(existingTest);
+                                this.allDetectedTests.add(test);
+                            }
+                        });
                     }
                     // Remove negated/cancelled tests
                     if (result.removed_tests) {
-                        result.removed_tests.forEach(test => this.allDetectedTests.delete(test));
+                        result.removed_tests.forEach(testName => {
+                            const testToRemove = Array.from(this.allDetectedTests).find(t => t.name === testName);
+                            if (testToRemove) {
+                                this.allDetectedTests.delete(testToRemove);
+                            }
+                        });
                     }
                 }
             });
@@ -288,7 +303,7 @@ class SpeechRecognitionApp {
 
     updateTestResults(detectedTests) {
         if (!this.testResults) return;
-        
+
         if (detectedTests.length === 0) {
             this.testResults.innerHTML = `
                 <div class="no-results">
@@ -299,17 +314,33 @@ class SpeechRecognitionApp {
             return;
         }
 
-        const resultsHTML = detectedTests.map(testName => {
+        const resultsHTML = detectedTests.map(testData => {
+            const testName = testData.name || testData;
+            const method = testData.method || 'unknown';
+            const score = testData.score;
+
             const test = this.availableTests.find(t => t.name === testName);
             const category = test ? test.category : 'unknown';
-            
+
+            // Format method badge
+            const methodBadge = method === 'embedding' ?
+                `<span class="method-badge embedding">Embedding</span>` :
+                `<span class="method-badge llm">LLM</span>`;
+
+            // Format score if available
+            const scoreDisplay = score ?
+                `<span class="confidence-score">${(score * 100).toFixed(0)}%</span>` : '';
+
             return `
                 <div class="test-item fade-in">
                     <div class="test-info">
                         <div class="test-name">${testName}</div>
-                        <div class="test-category">${category}</div>
+                        <div class="test-metadata">
+                            <span class="test-category">${category}</span>
+                            ${methodBadge}
+                            ${scoreDisplay}
+                        </div>
                     </div>
-                    <div class="test-confidence">Detected</div>
                 </div>
             `;
         }).join('');

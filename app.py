@@ -71,7 +71,7 @@ def match_stream(req: StreamRequest):
     transcript = req.transcript
     chunks = split_into_chunks(transcript)
 
-    aggregated_matches = set()
+    aggregated_matches = {}
     removed_tests = set()
     detailed = []
 
@@ -84,7 +84,7 @@ def match_stream(req: StreamRequest):
             if negated:
                 for test_name in negated:
                     removed_tests.add(test_name)
-                    aggregated_matches.discard(test_name)
+                    aggregated_matches.pop(test_name, None)
                 detailed.append({"chunk": chunk, "method": "negation", "removed_tests": negated})
             else:
                 detailed.append({"chunk": chunk, "method": "skipped", "reason": "negation_no_test"})
@@ -108,7 +108,12 @@ def match_stream(req: StreamRequest):
             for m in emb_matches:
                 # Don't add tests that were previously removed
                 if m["name"] not in removed_tests:
-                    aggregated_matches.add(m["name"])
+                    # Keep highest score if test detected multiple times
+                    if m["name"] not in aggregated_matches or m["score"] > aggregated_matches[m["name"]]["score"]:
+                        aggregated_matches[m["name"]] = {
+                            "method": "embedding",
+                            "score": m["score"]
+                        }
             detailed.append({"chunk": chunk, "method": "embedding", "matches": emb_matches})
             continue
 
@@ -119,12 +124,27 @@ def match_stream(req: StreamRequest):
         for m in llm_result["matches"]:
             # Don't add tests that were previously removed
             if m not in removed_tests:
-                aggregated_matches.add(m)
+                # Don't overwrite embedding matches with LLM matches
+                if m not in aggregated_matches:
+                    aggregated_matches[m] = {
+                        "method": "llm",
+                        "score": None
+                    }
         detailed.append({"chunk": chunk, "method": "llm", "matches": llm_result["matches"]})
+
+    # Format detected tests with metadata
+    detected_tests_with_metadata = [
+        {
+            "name": test_name,
+            "method": metadata["method"],
+            "score": metadata["score"]
+        }
+        for test_name, metadata in sorted(aggregated_matches.items())
+    ]
 
     return {
         "transcript": transcript,
-        "detected_tests": sorted(list(aggregated_matches)),
+        "detected_tests": detected_tests_with_metadata,
         "removed_tests": sorted(list(removed_tests)),
         "trace": detailed
     }

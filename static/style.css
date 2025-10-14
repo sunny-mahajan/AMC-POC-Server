@@ -209,9 +209,6 @@ header p {
     border-radius: 10px;
     padding: 15px;
     margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     transition: all 0.3s ease;
 }
 
@@ -220,10 +217,59 @@ header p {
     box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
 }
 
+.test-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
 .test-name {
     font-weight: 600;
     color: #1976d2;
     font-size: 1.1rem;
+}
+
+.test-metadata {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.test-category {
+    font-size: 0.85rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.method-badge {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.method-badge.embedding {
+    background: #4CAF50;
+    color: white;
+}
+
+.method-badge.llm {
+    background: #FF9800;
+    color: white;
+}
+
+.confidence-score {
+    background: #2196f3;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
 }
 
 .test-confidence {
