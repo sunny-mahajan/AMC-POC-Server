@@ -26,12 +26,24 @@ class SpeechRecognitionApp {
         this.testResults = document.getElementById('testResults');
         this.processingStatus = document.getElementById('processingStatus');
         this.availableTestsContainer = document.getElementById('availableTests');
+        this.synonymModal = document.getElementById('synonymModal');
+        this.modalTestName = document.getElementById('modalTestName');
+        this.modalSynonymsList = document.getElementById('modalSynonymsList');
+        this.modalCloseBtn = document.getElementById('modalCloseBtn');
     }
 
     setupEventListeners() {
         this.startBtn.addEventListener('click', () => this.startRecording());
         this.stopBtn.addEventListener('click', () => this.stopRecording());
         this.clearBtn.addEventListener('click', () => this.clearAll());
+
+        // Modal event listeners
+        this.modalCloseBtn.addEventListener('click', () => this.closeModal());
+        this.synonymModal.addEventListener('click', (e) => {
+            if (e.target === this.synonymModal) {
+                this.closeModal();
+            }
+        });
     }
 
     initializeSpeechRecognition() {
@@ -115,9 +127,9 @@ class SpeechRecognitionApp {
             console.error('Available tests container not found');
             return;
         }
-        
+
         this.availableTestsContainer.innerHTML = '';
-        
+
         this.availableTests.forEach(test => {
             const testCard = document.createElement('div');
             testCard.className = 'test-card';
@@ -125,11 +137,11 @@ class SpeechRecognitionApp {
                 <div class="test-card-name">${test.name}</div>
                 <div class="test-card-category">${test.category}</div>
             `;
-            
+
             testCard.addEventListener('click', () => {
-                testCard.classList.toggle('selected');
+                this.showSynonyms(test);
             });
-            
+
             this.availableTestsContainer.appendChild(testCard);
         });
     }
@@ -307,13 +319,37 @@ class SpeechRecognitionApp {
 
     clearTestResults() {
         if (!this.testResults) return;
-        
+
         this.testResults.innerHTML = `
             <div class="no-results">
                 <span class="icon">🔍</span>
                 <p>No tests detected yet. Start speaking to see results.</p>
             </div>
         `;
+    }
+
+    showSynonyms(test) {
+        this.modalTestName.textContent = test.name;
+        this.modalSynonymsList.innerHTML = '';
+
+        if (test.synonyms && test.synonyms.length > 0) {
+            test.synonyms.forEach(synonym => {
+                const li = document.createElement('li');
+                li.textContent = synonym;
+                this.modalSynonymsList.appendChild(li);
+            });
+        } else {
+            const li = document.createElement('li');
+            li.textContent = 'No synonyms available';
+            li.style.color = '#999';
+            this.modalSynonymsList.appendChild(li);
+        }
+
+        this.synonymModal.classList.add('show');
+    }
+
+    closeModal() {
+        this.synonymModal.classList.remove('show');
     }
 }
 
