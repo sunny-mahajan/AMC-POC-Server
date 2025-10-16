@@ -1,7 +1,7 @@
 class SpeechRecognitionApp {
     constructor() {
         // Deepgram configuration
-        this.DEEPGRAM_API_KEY = '639c64bd74003b8695eaf7a97b48f0c5ccc50770';
+        this.DEEPGRAM_API_KEY = null;
         this.deepgramClient = null;
         this.deepgramConnection = null;
         this.mediaStream = null;
@@ -26,6 +26,7 @@ class SpeechRecognitionApp {
 
         this.initializeElements();
         this.setupEventListeners();
+        this.loadConfig();
         this.loadAvailableTests();
         this.initializeMicrophone();
         this.initializeWebSpeech();
@@ -85,6 +86,21 @@ class SpeechRecognitionApp {
             console.error('Microphone permission denied:', error);
             this.updateStatus('Microphone permission required', 'error');
             this.startBtn.disabled = true;
+        }
+    }
+
+    async loadConfig() {
+        try {
+            const response = await fetch('/api/config');
+            if (response.ok) {
+                const config = await response.json();
+                this.DEEPGRAM_API_KEY = config.deepgram_api_key;
+                console.log('Configuration loaded successfully');
+            } else {
+                console.error('Failed to load configuration:', response.status);
+            }
+        } catch (error) {
+            console.error('Failed to load configuration:', error);
         }
     }
 

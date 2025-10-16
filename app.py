@@ -179,3 +179,10 @@ def api_status():
         "model": MODEL_NAME,
         "tests_loaded": len(tests)
     }
+
+@app.get("/api/config")
+def get_config():
+    """Get configuration for frontend (API keys, etc.)"""
+    return {
+        "deepgram_api_key": os.getenv("DEEPGRAM_API_KEY", "")
+    }
