@@ -58,6 +58,64 @@ header p {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
+/* Engine Selector */
+.engine-selector {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+}
+
+.engine-label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.engine-options {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.engine-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 8px;
+    background: white;
+    border: 2px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.engine-option:hover {
+    border-color: #667eea;
+    background: #f0f4ff;
+}
+
+.engine-option input[type="radio"] {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    accent-color: #667eea;
+}
+
+.engine-option input[type="radio"]:checked + span {
+    font-weight: 600;
+    color: #667eea;
+}
+
+.engine-option span {
+    font-size: 0.95rem;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
 .speech-controls {
     display: flex;
     gap: 15px;

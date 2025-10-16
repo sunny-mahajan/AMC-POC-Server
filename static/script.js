@@ -1,9 +1,24 @@
 class SpeechRecognitionApp {
     constructor() {
-        this.recognition = null;
+        // Deepgram configuration
+        this.DEEPGRAM_API_KEY = '639c64bd74003b8695eaf7a97b48f0c5ccc50770';
+        this.deepgramClient = null;
+        this.deepgramConnection = null;
+        this.mediaStream = null;
+        this.audioContext = null;
+        this.audioProcessor = null;
+
+        // Web Speech API
+        this.webSpeechRecognition = null;
+
+        // Current engine ('deepgram' or 'webspeech')
+        this.currentEngine = 'deepgram';
+
+        // State management
         this.isRecording = false;
         this.currentTranscript = '';
         this.finalTranscriptText = '';
+        this.interimText = '';
         this.chunkQueue = [];
         this.processingChunks = false;
         this.availableTests = [];
@@ -11,8 +26,9 @@ class SpeechRecognitionApp {
 
         this.initializeElements();
         this.setupEventListeners();
-        this.initializeSpeechRecognition();
         this.loadAvailableTests();
+        this.initializeMicrophone();
+        this.initializeWebSpeech();
     }
 
     initializeElements() {
@@ -30,12 +46,21 @@ class SpeechRecognitionApp {
         this.modalTestName = document.getElementById('modalTestName');
         this.modalSynonymsList = document.getElementById('modalSynonymsList');
         this.modalCloseBtn = document.getElementById('modalCloseBtn');
+        this.engineRadios = document.querySelectorAll('input[name="speechEngine"]');
     }
 
     setupEventListeners() {
         this.startBtn.addEventListener('click', () => this.startRecording());
         this.stopBtn.addEventListener('click', () => this.stopRecording());
         this.clearBtn.addEventListener('click', () => this.clearAll());
+
+        // Engine selection
+        this.engineRadios.forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                this.currentEngine = e.target.value;
+                console.log('Switched to:', this.currentEngine);
+            });
+        });
 
         // Modal event listeners
         this.modalCloseBtn.addEventListener('click', () => this.closeModal());
@@ -44,31 +69,47 @@ class SpeechRecognitionApp {
                 this.closeModal();
             }
         });
+
+        // Cleanup on page unload
+        window.addEventListener('beforeunload', () => {
+            this.cleanup();
+        });
     }
 
-    initializeSpeechRecognition() {
-        if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
-            this.updateStatus('Speech recognition not supported in this browser', 'error');
+    async initializeMicrophone() {
+        try {
+            this.updateStatus('Initializing microphone...', 'info');
+            this.mediaStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            this.updateStatus('Ready to record', 'info');
+        } catch (error) {
+            console.error('Microphone permission denied:', error);
+            this.updateStatus('Microphone permission required', 'error');
             this.startBtn.disabled = true;
+        }
+    }
+
+    initializeWebSpeech() {
+        if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+            console.warn('Web Speech API not supported in this browser');
             return;
         }
 
         const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-        this.recognition = new SpeechRecognition();
-        
-        this.recognition.continuous = true;
-        this.recognition.interimResults = true;
-        this.recognition.lang = 'en-US';
+        this.webSpeechRecognition = new SpeechRecognition();
 
-        this.recognition.onstart = () => {
+        this.webSpeechRecognition.continuous = true;
+        this.webSpeechRecognition.interimResults = true;
+        this.webSpeechRecognition.lang = 'en-US';
+
+        this.webSpeechRecognition.onstart = () => {
             this.isRecording = true;
-            this.updateStatus('Listening...', 'recording');
+            this.updateStatus('Listening... (Web Speech API)', 'recording');
             this.startBtn.disabled = true;
             this.stopBtn.disabled = false;
             this.recordingIndicator.classList.remove('hidden');
         };
 
-        this.recognition.onresult = (event) => {
+        this.webSpeechRecognition.onresult = (event) => {
             let interimTranscript = '';
             let finalTranscript = '';
 
@@ -93,13 +134,13 @@ class SpeechRecognitionApp {
             }
         };
 
-        this.recognition.onerror = (event) => {
-            console.error('Speech recognition error:', event.error);
+        this.webSpeechRecognition.onerror = (event) => {
+            console.error('Web Speech recognition error:', event.error);
             this.updateStatus(`Error: ${event.error}`, 'error');
             this.stopRecording();
         };
 
-        this.recognition.onend = () => {
+        this.webSpeechRecognition.onend = () => {
             this.isRecording = false;
             this.updateStatus('Recording stopped', 'stopped');
             this.startBtn.disabled = false;
@@ -146,21 +187,194 @@ class SpeechRecognitionApp {
         });
     }
 
-    startRecording() {
-        if (this.recognition && !this.isRecording) {
-            this.recognition.start();
+    async startRecording() {
+        if (this.currentEngine === 'deepgram') {
+            await this.startDeepgramRecording();
+        } else {
+            this.startWebSpeechRecording();
         }
     }
 
-    stopRecording() {
-        if (this.recognition && this.isRecording) {
-            this.recognition.stop();
+    startWebSpeechRecording() {
+        if (!this.webSpeechRecognition) {
+            this.updateStatus('Web Speech API not supported', 'error');
+            return;
         }
+
+        if (!this.isRecording) {
+            this.webSpeechRecognition.start();
+        }
+    }
+
+    async startDeepgramRecording() {
+        if (!this.DEEPGRAM_API_KEY) {
+            this.updateStatus('Deepgram API key not configured', 'error');
+            return;
+        }
+
+        if (!this.mediaStream) {
+            await this.initializeMicrophone();
+            if (!this.mediaStream) return;
+        }
+
+        try {
+            this.updateStatus('Connecting to Deepgram...', 'info');
+
+            // Initialize Deepgram client
+            const { createClient, LiveTranscriptionEvents } = deepgram;
+            this.deepgramClient = createClient(this.DEEPGRAM_API_KEY);
+
+            // Create live transcription connection
+            this.deepgramConnection = this.deepgramClient.listen.live({
+                model: 'nova-2-medical',
+                language: 'en',
+                smart_format: true,
+                interim_results: true,
+                punctuate: true,
+                diarize: false,
+                encoding: 'linear16',
+                sample_rate: 48000,
+                channels: 1
+            });
+
+            // Connection opened
+            this.deepgramConnection.on(LiveTranscriptionEvents.Open, () => {
+                this.isRecording = true;
+                this.updateStatus('Listening... (Deepgram Medical)', 'recording');
+                this.startBtn.disabled = true;
+                this.stopBtn.disabled = false;
+                this.recordingIndicator.classList.remove('hidden');
+            });
+
+            // Handle transcription results
+            this.deepgramConnection.on(LiveTranscriptionEvents.Transcript, (data) => {
+                const transcript = data.channel.alternatives[0];
+                if (transcript && transcript.transcript) {
+                    const isFinal = data.is_final;
+                    const text = transcript.transcript;
+
+                    if (isFinal) {
+                        // Final transcript
+                        this.finalTranscriptText += (this.finalTranscriptText ? ' ' : '') + text;
+                        this.interimText = '';
+                        this.currentTranscript = this.finalTranscriptText;
+                        this.updateFinalTranscript(this.finalTranscriptText);
+                        this.updateLiveTranscript(this.currentTranscript);
+
+                        // Process the final transcript chunk
+                        if (text.trim()) {
+                            this.processSpeechChunk(text.trim());
+                        }
+                    } else {
+                        // Interim transcript
+                        this.interimText = text;
+                        this.currentTranscript = this.finalTranscriptText +
+                            (this.finalTranscriptText ? ' ' : '') + this.interimText;
+                        this.updateLiveTranscript(this.currentTranscript);
+                    }
+                }
+            });
+
+            // Handle errors
+            this.deepgramConnection.on(LiveTranscriptionEvents.Error, (error) => {
+                console.error('Deepgram error:', error);
+                this.updateStatus('Connection error occurred', 'error');
+            });
+
+            // Handle connection close
+            this.deepgramConnection.on(LiveTranscriptionEvents.Close, () => {
+                this.isRecording = false;
+                this.updateStatus('Recording stopped', 'stopped');
+                this.startBtn.disabled = false;
+                this.stopBtn.disabled = true;
+                this.recordingIndicator.classList.add('hidden');
+            });
+
+            // Setup audio processing
+            this.setupAudioProcessing();
+
+        } catch (error) {
+            console.error('Error starting Deepgram recording:', error);
+            this.updateStatus(`Error: ${error.message}`, 'error');
+            this.startBtn.disabled = false;
+        }
+    }
+
+    setupAudioProcessing() {
+        // Create AudioContext for processing
+        this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        const source = this.audioContext.createMediaStreamSource(this.mediaStream);
+        this.audioProcessor = this.audioContext.createScriptProcessor(4096, 1, 1);
+
+        source.connect(this.audioProcessor);
+        this.audioProcessor.connect(this.audioContext.destination);
+
+        this.audioProcessor.onaudioprocess = (e) => {
+            if (this.deepgramConnection && this.deepgramConnection.getReadyState() === 1) {
+                const inputData = e.inputBuffer.getChannelData(0);
+
+                // Convert Float32Array to Int16Array
+                const int16Data = new Int16Array(inputData.length);
+                for (let i = 0; i < inputData.length; i++) {
+                    const s = Math.max(-1, Math.min(1, inputData[i]));
+                    int16Data[i] = s < 0 ? s * 0x8000 : s * 0x7FFF;
+                }
+
+                this.deepgramConnection.send(int16Data.buffer);
+            }
+        };
+    }
+
+    stopRecording() {
+        if (this.currentEngine === 'deepgram') {
+            this.stopDeepgramRecording();
+        } else {
+            this.stopWebSpeechRecording();
+        }
+    }
+
+    stopWebSpeechRecording() {
+        if (this.webSpeechRecognition && this.isRecording) {
+            this.webSpeechRecognition.stop();
+        }
+    }
+
+    stopDeepgramRecording() {
+        if (this.audioContext) {
+            this.audioContext.close();
+            this.audioContext = null;
+        }
+
+        if (this.audioProcessor) {
+            this.audioProcessor.disconnect();
+            this.audioProcessor = null;
+        }
+
+        if (this.deepgramConnection) {
+            this.deepgramConnection.finish();
+            this.deepgramConnection = null;
+        }
+
+        this.isRecording = false;
+        this.startBtn.disabled = false;
+        this.stopBtn.disabled = true;
+        this.recordingIndicator.classList.add('hidden');
+        this.updateStatus('Ready to record', 'info');
+    }
+
+    cleanup() {
+        if (this.mediaStream) {
+            this.mediaStream.getTracks().forEach(track => track.stop());
+            this.mediaStream = null;
+        }
+        this.stopDeepgramRecording();
+        this.stopWebSpeechRecording();
     }
 
     clearAll() {
         this.finalTranscriptText = '';
         this.currentTranscript = '';
+        this.interimText = '';
         this.updateLiveTranscript('');
         this.updateFinalTranscript('');
         this.allDetectedTests.clear();
@@ -177,7 +391,7 @@ class SpeechRecognitionApp {
 
     updateLiveTranscript(text) {
         if (!this.liveTranscript) return;
-        
+
         if (text.trim()) {
             this.liveTranscript.innerHTML = `<span class="live-text">${text}</span>`;
             this.liveTranscript.classList.add('has-content');
@@ -189,7 +403,7 @@ class SpeechRecognitionApp {
 
     updateFinalTranscript(text) {
         if (!this.finalTranscript) return;
-        
+
         if (text.trim()) {
             this.finalTranscript.innerHTML = `<span class="final-text">${text}</span>`;
             this.finalTranscript.classList.add('has-content');
@@ -203,13 +417,13 @@ class SpeechRecognitionApp {
         if (!chunk.trim()) return;
 
         this.chunkQueue.push(chunk);
-        
+
         if (!this.processingChunks) {
             this.processingChunks = true;
             if (this.processingStatus) {
                 this.processingStatus.classList.remove('hidden');
             }
-            
+
             // Process chunks with a small delay to allow for batching
             setTimeout(() => {
                 this.processChunkQueue();
@@ -386,6 +600,6 @@ class SpeechRecognitionApp {
 
 // Initialize the app when the page loads
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Initializing Speech Recognition App...');
+    console.log('Initializing Speech Recognition App with dual engine support...');
     new SpeechRecognitionApp();
 });

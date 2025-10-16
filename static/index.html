@@ -6,6 +6,7 @@
     <title>Medical Test Speech Recognition</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎤</text></svg>">
     <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@deepgram/sdk"></script>
 </head>
 <body>
     <div class="container">
@@ -17,6 +18,20 @@
         <div class="main-content">
             <!-- Speech Recognition Section -->
             <div class="speech-section">
+                <div class="engine-selector">
+                    <label class="engine-label">Speech Engine:</label>
+                    <div class="engine-options">
+                        <label class="engine-option">
+                            <input type="radio" name="speechEngine" value="deepgram" checked>
+                            <span>Deepgram (Medical)</span>
+                        </label>
+                        <label class="engine-option">
+                            <input type="radio" name="speechEngine" value="webspeech">
+                            <span>Web Speech API</span>
+                        </label>
+                    </div>
+                </div>
+
                 <div class="speech-controls">
                     <button id="startBtn" class="btn btn-primary">
                         <span class="icon">🎤</span>
