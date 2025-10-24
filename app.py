@@ -25,7 +25,7 @@ load_dotenv()
 
 TESTS_JSON = "tests.json"
 TESTS_EMB_JSON = "tests_with_embeddings.json"
-MODEL_NAME = "intfloat/e5-base-v2"
+MODEL_NAME = "all-mpnet-base-v2"
 
 openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
