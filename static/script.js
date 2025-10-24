@@ -169,13 +169,25 @@ class SpeechRecognitionApp {
         try {
             const response = await fetch('/api/tests');
             if (response.ok) {
-                this.availableTests = await response.json();
+                const data = await response.json();
+                // Ensure we have an array, handle error responses
+                if (Array.isArray(data)) {
+                    this.availableTests = data;
+                } else if (data.error) {
+                    console.error('API returned error:', data.error);
+                    this.availableTests = []; // Set to empty array on error
+                } else {
+                    console.warn('Unexpected response format, defaulting to empty array');
+                    this.availableTests = [];
+                }
                 this.renderAvailableTests();
             } else {
                 console.error('Failed to load tests:', response.status);
+                this.availableTests = []; // Ensure it's an array even on error
             }
         } catch (error) {
             console.error('Failed to load available tests:', error);
+            this.availableTests = []; // Ensure it's an array even on error
         }
     }
 
@@ -186,6 +198,12 @@ class SpeechRecognitionApp {
         }
 
         this.availableTestsContainer.innerHTML = '';
+
+        // Ensure availableTests is an array before iterating
+        if (!Array.isArray(this.availableTests)) {
+            console.warn('availableTests is not an array:', this.availableTests);
+            return;
+        }
 
         this.availableTests.forEach(test => {
             const testCard = document.createElement('div');
@@ -549,7 +567,9 @@ class SpeechRecognitionApp {
             const method = testData.method || 'unknown';
             const score = testData.score;
 
-            const test = this.availableTests.find(t => t.name === testName);
+            // Ensure availableTests is an array before calling find
+            const test = Array.isArray(this.availableTests) ? 
+                this.availableTests.find(t => t.name === testName) : null;
             const category = test ? test.category : 'unknown';
 
             // Format method badge
