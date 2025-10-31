@@ -1,0 +1,2336 @@
+[
+  {
+    "category": "Lab",
+    "investigationCode": "CBC",
+    "investigationName": "Complete Blood Count",
+    "departmentName": "Hematology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "Urine R/E",
+    "investigationName": "Urine Routine Examination",
+    "departmentName": "Clinical Pathology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "RFT",
+    "investigationName": "Renal Function Test",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "RBS",
+    "investigationName": "RANDOM SERUM GLUCOSE",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "SE",
+    "investigationName": "ELECTROLYTES SERUM",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "LFT",
+    "investigationName": "Liver Function Test",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "HBA1c",
+    "investigationName": "HBA1c",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "ESR",
+    "investigationName": "ESR",
+    "departmentName": "Hematology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "FBS",
+    "investigationName": "FASTING SESRUM GLUCOSE",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "PPBS",
+    "investigationName": "Post Prandial PLASMA GLUCOSE",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "SGPT",
+    "investigationName": "SGPT ALT",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "SGOT",
+    "investigationName": "SGOT AST",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "HBsAG",
+    "investigationName": "Hepatitis B Surface Antigen Serum",
+    "departmentName": "Serology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "HCV",
+    "investigationName": "HCV ABS SERUM",
+    "departmentName": "Serology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "HIV",
+    "investigationName": "HIV Antibodies Serum",
+    "departmentName": "Serology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "VDRL",
+    "investigationName": "VDRL",
+    "departmentName": "Serology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "RA Factor",
+    "investigationName": "RA Rheumatoid Arthritis Factor Test",
+    "departmentName": "Serology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "WIDAL",
+    "investigationName": "WIDAL Slide Method",
+    "departmentName": "Serology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "DENGUE",
+    "investigationName": "DENGUE IGG & IGM Antibody & NS1",
+    "departmentName": "Serology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "TYPHI IgM",
+    "investigationName": "TYPHI DOT IgM",
+    "departmentName": "Serology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "Vaginal Swab",
+    "investigationName": "Vaginal Swab Culture And Sensitivity",
+    "departmentName": "Microbiology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "LIPID PROFILE",
+    "investigationName": "LIPID PROFILE",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "ABO RH",
+    "investigationName": "Blood Group ABO and RH Typing",
+    "departmentName": "Hematology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "PT/INR",
+    "investigationName": "Prothrombin Time-PT/INR",
+    "departmentName": "Hematology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "CALCIUM",
+    "investigationName": "CALCIUM SERUM",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "TROPOI",
+    "investigationName": "TROPONIN",
+    "departmentName": "Serology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "CRP",
+    "investigationName": "C Reactive Protein",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "IRON/ IBCT",
+    "investigationName": "IRON/ IBCT",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "URIC ACID",
+    "investigationName": "URIC ACID",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "URINE CULTURE",
+    "investigationName": "URINE CULTURE",
+    "departmentName": "Microbiology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "WOUND SWAB CULTURE",
+    "investigationName": "WOUND SWAB CULTURE",
+    "departmentName": "Microbiology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "BODY FLUID CULTURE",
+    "investigationName": "BODY FLUID CULTURE",
+    "departmentName": "Microbiology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "AFB SMEAR ZN STAIN",
+    "investigationName": "AFB SMEAR ZN STAIN",
+    "departmentName": "Microbiology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "GRAM STAIN",
+    "investigationName": "GRAM STAIN",
+    "departmentName": "Microbiology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "Stool Culture and Senstivity",
+    "investigationName": "Stool Culture and Senstivity",
+    "departmentName": "Microbiology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "BILIRUBIN TOTAL DIRECT INDIRECT",
+    "investigationName": "BILIRUBIN TOTAL DIRECT INDIRECT",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "SPUTUM CULTURE AND SENSITIVITY",
+    "investigationName": "SPUTUM CULTURE AND SENSITIVITY",
+    "departmentName": "Microbiology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "CSF CULTURE",
+    "investigationName": "CSF CULTURE",
+    "departmentName": "Microbiology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "THROAT SWAB CULTURE",
+    "investigationName": "THROAT SWAB CULTURE",
+    "departmentName": "Microbiology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "EYE SWAB CULTURE AND SENSITIVITY",
+    "investigationName": "EYE SWAB CULTURE AND SENSITIVITY",
+    "departmentName": "Microbiology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "EAR SWAB CULTURE and SENSITIVITY",
+    "investigationName": "EAR SWAB CULTURE",
+    "departmentName": "Microbiology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "CREATININE+ EGFR",
+    "investigationName": "CREATININE+ EGFR",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "Stool Routine Examination",
+    "investigationName": "Stool Routine Examination",
+    "departmentName": "Clinical Pathology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "Covid 19",
+    "investigationName": "Covid 19 Antigen Test",
+    "departmentName": "Serology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "APTT",
+    "investigationName": "APTT  Activated Partial Thromboplastin Citrated",
+    "departmentName": "Hematology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "CREATININE",
+    "investigationName": "CREATININE",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "HB",
+    "investigationName": "HB Haemoglobin",
+    "departmentName": "Hematology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "ALBUMIN",
+    "investigationName": "ALBUMIN",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "BUN",
+    "investigationName": "Blood Urea Nitrogen",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "BLOOD CULTURE",
+    "investigationName": "BLOOD CULTURE",
+    "departmentName": "Microbiology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "AMYLASE",
+    "investigationName": "AMYLASE SERUM",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "Peripheral Smear Examination",
+    "investigationName": "Peripheral Smear Examination",
+    "departmentName": "Hematology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "FNAC",
+    "investigationName": "FNAC Fine Needle Aspiration",
+    "departmentName": "Cytology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "LDH",
+    "investigationName": "LDH  Lactate Dehydrogenase",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "PUS CULTURE AND SENSITIVITY",
+    "investigationName": "PUS CULTURE AND SENSITIVITY",
+    "departmentName": "Microbiology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "RETICULOCYTE COUNT",
+    "investigationName": "RETICULOCYTE COUNT",
+    "departmentName": "Hematology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "MALARIA PARASITE",
+    "investigationName": "MALARIA PARASITE",
+    "departmentName": "Hematology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "BILIRUBIN TOTAL",
+    "investigationName": "BILIRUBIN TOTAL",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "PREGNANCY TEST URINE",
+    "investigationName": "PREGNANCY TEST URINE",
+    "departmentName": "Serology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "PAP Smear",
+    "investigationName": "PAP Smear",
+    "departmentName": "Serology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "ABS. EOSINOPHIL COUNTS",
+    "investigationName": "ABS. EOSINOPHIL COUNTS",
+    "departmentName": "Hematology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "PLATELET COUNT",
+    "investigationName": "PLATELET COUNT",
+    "departmentName": "Hematology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "Protein Urine 24 Hrs",
+    "investigationName": "Protein Urine 24 Hrs",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "ALKALINE PHOSPHATE",
+    "investigationName": "ALKALINE PHOSPHATE",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "SODIUM",
+    "investigationName": "SODIUM",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "POTASSIUM",
+    "investigationName": "POTASSIUM",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "Liver Screen",
+    "investigationName": "Liver Screen",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "Large Biopsy",
+    "investigationName": "Large Biopsy",
+    "departmentName": "Histopathology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "Small Biopsy",
+    "investigationName": "Small Biopsy",
+    "departmentName": "Histopathology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "Medium Biopsy",
+    "investigationName": "Medium Biopsy",
+    "departmentName": "Histopathology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "Stool OBT Ocult Blood",
+    "investigationName": "Stool OBT Ocult Blood",
+    "departmentName": "Clinical Pathology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "Malignant Cytology",
+    "investigationName": "Malignant Cytology",
+    "departmentName": "Cytology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "Fungal Stain/ KOH",
+    "investigationName": "Fungal Stain/ KOH",
+    "departmentName": "Microbiology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "MANTOUX TEST",
+    "investigationName": "MANTOUX TuberCulin TEST",
+    "departmentName": "Serology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "Fluid Culture and Senstivity",
+    "investigationName": "Fluid Culture and Senstivity",
+    "departmentName": "Microbiology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "Fluid Glucose",
+    "investigationName": "Fluid Glucose",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "Fluid PROTIEN",
+    "investigationName": "Fluid Protien",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "Fluid LDH",
+    "investigationName": "Fluid LDH",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "A G ratio",
+    "investigationName": "Total Protein Albumin Globulin",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "Fluid Routine Examination",
+    "investigationName": "Fluid Routine Examination",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "ENVIRONMENTAL SURVEILLANCE CULTURE AEROBIC",
+    "investigationName": "ENVIRONMENTAL SURVEILLANCE CULTURE AEROBIC",
+    "departmentName": "Microbiology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "Darting Motility",
+    "investigationName": "Darting Motility",
+    "departmentName": "Clinical Pathology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "SODIUM URINE",
+    "investigationName": "SODIUM URINE",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "TOTAL PROTIEN",
+    "investigationName": "TOTAL PROTIEN",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "Bile Pigment and Bile Salt Urine",
+    "investigationName": "Bile Pigment and Bile Salt Urine",
+    "departmentName": "Clinical Pathology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "HCT",
+    "investigationName": "HCT",
+    "departmentName": "Hematology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "Arterial Blood Gas Analysis",
+    "investigationName": "Arterial Blood Gas Analysis",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "BT CT",
+    "investigationName": "Bleeding and Clotting Time",
+    "departmentName": "Hematology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "TLC",
+    "investigationName": "TLC",
+    "departmentName": "Hematology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "CSF ROUTINE",
+    "investigationName": "CSF ROUTINE",
+    "departmentName": "Cytology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "NASAL SWAB CULTURE AND SENSITIVITY",
+    "investigationName": "NASAL SWAB CULTURE AND SENSITIVITY",
+    "departmentName": "Microbiology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "BONE MARROW ASPIRATION",
+    "investigationName": "BONE MARROW ASPIRATION",
+    "departmentName": "Cytology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "LE Cell Detection",
+    "investigationName": "LE Cell Detection",
+    "departmentName": "Hematology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "Direct Coombs Test",
+    "investigationName": "Direct Coombs Test",
+    "departmentName": "Hematology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "Frozen Section",
+    "investigationName": "Frozen Section",
+    "departmentName": "Histopathology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "ASO TITRE",
+    "investigationName": "ASO TITRE",
+    "departmentName": "Serology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "BILIRUBIN DIRECT",
+    "investigationName": "BILIRUBIN DIRECT",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "BLOOD CULTURE Blood Bag 14 days",
+    "investigationName": "BLOOD CULTURE Blood Bag 14 days",
+    "departmentName": "Microbiology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "SYNOVIAL FLUID",
+    "investigationName": "SYNOVIAL FLUID",
+    "departmentName": "Cytology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "BILIRUBIN INDIRECT",
+    "investigationName": "BILIRUBIN INDIRECT",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "Blood Group-Neonatal and Cord Blood",
+    "investigationName": "Blood Group-Neonatal and Cord Blood",
+    "departmentName": "Hematology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "FLUID ALBUMIN",
+    "investigationName": "FLUID ALBUMIN",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "GESTATIONAL GLUCOSE TOLERANCE TEST",
+    "investigationName": "GESTATIONAL GLUCOSE TOLERANCE TEST",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "CHLORIDE",
+    "investigationName": "CHLORIDE",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "HDL",
+    "investigationName": "HDL",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "CHOLESTEROL TOTAL",
+    "investigationName": "CHOLESTEROL TOTAL",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "TRIGLYCERIDES",
+    "investigationName": "TRIGLYCERIDES",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "InDirect Coombs Test",
+    "investigationName": "InDirect Coombs Test",
+    "departmentName": "Hematology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "FLUID AMYLASE",
+    "investigationName": "FLUID AMYLASE",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "HB TLC DLC",
+    "investigationName": "HB TLC DLC",
+    "departmentName": "Hematology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "GTT",
+    "investigationName": "GLUCOSE TOLERANCE Test",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "OSMOLALITY Urine",
+    "investigationName": "OSMOLALITY Urine",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "Urinary CALCIUM 24 hrs",
+    "investigationName": "Urinary CALCIUM 24 hrs",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "CALCIUM CREATININE RATIO",
+    "investigationName": "CALCIUM CREATININE RATIO",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "CREATININE CLEARANCE TEST",
+    "investigationName": "CREATININE CLEARANCE TEST",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "OSMOLALITY SERUM",
+    "investigationName": "OSMOLALITY SERUM",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "AEROBIC SUSPECTIBILITY GRAM NEGATIVE ORGANISM",
+    "investigationName": "AEROBIC SUSPECTIBILITY GRAM NEGATIVE ORGANISM",
+    "departmentName": "Microbiology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "UREA",
+    "investigationName": "UREA",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "Absolute Neutrophil Count",
+    "investigationName": "Absolute Neutrophil Count",
+    "departmentName": "Hematology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "OTHER FLUID",
+    "investigationName": "OTHER FLUID",
+    "departmentName": "Clinical Pathology"
+  },
+  {
+    "category": "Lab",
+    "investigationCode": "CREATININE KINASE",
+    "investigationName": "CREATININE KINASE",
+    "departmentName": "Biochemistry"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Chest-PA",
+    "investigationName": "Chest-Posterior-Anterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Cervical Spine-Lateral",
+    "investigationName": "Cervical Spine-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Knee Joints Both AP",
+    "investigationName": "Knee Joints Both AP",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Abdomen-Erect-AP",
+    "investigationName": "Abdomen-Erect-AP",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "PNS-Water View",
+    "investigationName": "Paranasal Sinuses-Water View",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Knee Joints Both Lateral",
+    "investigationName": "Knee Joints Both Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "LS Spine-Lateral",
+    "investigationName": "Lumber Spine-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Chest-AP",
+    "investigationName": "Chest-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Cervical Spine-AP",
+    "investigationName": "Cervical Spine-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Chest-Right Lateral",
+    "investigationName": "Chest-Right Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Cervical Spine-Open mouth",
+    "investigationName": "Cervical Spine-Open mouth",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Chest-Left Lateral",
+    "investigationName": "Chest-Left Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Cervical Spine-Both Oblique",
+    "investigationName": "Cervical Spine-Both Oblique",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Chest-Right Lateral Decubit",
+    "investigationName": "Chest-Right Lateral Decubit",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Cervical Spine-Left Oblique",
+    "investigationName": "Cervical Spine-Left Oblique",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Chest-Apiceo Gram",
+    "investigationName": "Chest-Apiceo Gram",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Cervical Spine-Right Oblique",
+    "investigationName": "Cervical Spine-Right Oblique",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "L.S. Spine-AP",
+    "investigationName": "Lumbar Spine-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Cervical Spine-Flexion",
+    "investigationName": "Cervical Spine-Flexion",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Cervical Spine-Extension",
+    "investigationName": "Cervical Spine-Extension",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Abdomen-AP Lateral",
+    "investigationName": "Abdomen-Anteroposterior Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Abdomen-KUB",
+    "investigationName": "Abdomen-Kidney,Ureter and Bladder",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Abdomen-IVP",
+    "investigationName": "Abdomen-IVP",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Abdomen-Right Lateral Decubit",
+    "investigationName": "Abdomen-Right Lateral Decubit",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Abdomen-Left Lateral Decubit",
+    "investigationName": "Abdomen-Left Lateral Decubit",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Barium Swallow",
+    "investigationName": "Barium Swallow",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Barium Meal",
+    "investigationName": "Barium Meal",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Barium FT",
+    "investigationName": "Barium FT",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Barium enema",
+    "investigationName": "Barium enema",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Skull-Full View",
+    "investigationName": "Skull-Full View",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Skull-AP",
+    "investigationName": "Skull Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Skull-PA",
+    "investigationName": "Skull Posterior-Anterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Skull-Sella Turcica -Lateral basic",
+    "investigationName": "Skull-Sella Turcica -Lateral basic",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Skull-Townes View",
+    "investigationName": "Skull-Townes View",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Skull-Occipito-mental-PNS",
+    "investigationName": "Skull-Occipito-mental-PNS",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Skull-Lateral",
+    "investigationName": "Skull-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Nasal-Lateral",
+    "investigationName": "Nasal-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Paranasal Sinuses-Occipito-mental-Basic",
+    "investigationName": "Paranasal Sinuses-Occipito-mental-Basic",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Paranasal Sinuses-Lateral basic-all sinuses",
+    "investigationName": "Paranasal Sinuses-Lateral basic-all sinuses",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Mandible-PA",
+    "investigationName": "Mandible-Posterior-Anterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Mandible-Right Lateral Oblique",
+    "investigationName": "Mandible-Right Lateral Oblique",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Mandible-Left Lateral Oblique",
+    "investigationName": "Mandible-Left Lateral Oblique",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "TM Joint-PA",
+    "investigationName": "TM Joint-Posterior-Anterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "TM Joint Both-Open and close mouth",
+    "investigationName": "TM Joint Both-Open and close mouth",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "TM Joint Right-Open and close mouth",
+    "investigationName": "TM Joint Right-Open and close mouth",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "TM Joint Left-Open and close mouth",
+    "investigationName": "TM Joint Left-Open and close mouth",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Thoracic-Dorsal Spine-AP",
+    "investigationName": "Thoracic-Dorsal Spine-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Thoracic-Dorsal Spine-Lateral",
+    "investigationName": "Thoracic-Dorsal Spine-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Lumber Spine-Right Oblique",
+    "investigationName": "Lumber Spine-Right Oblique",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Lumber Spine-Left Oblique",
+    "investigationName": "Lumber Spine-Left Oblique",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Lumber Spine-Flexion",
+    "investigationName": "Lumber Spine-Flexion",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Lumber Spine-Extension",
+    "investigationName": "Lumber Spine-Extension",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Lumbo Sacral-AP",
+    "investigationName": "Lumbo Sacral-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Lumbo Sacral-Lateral",
+    "investigationName": "Lumbo Sacral-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Lumbo Sacral-Right Oblique",
+    "investigationName": "Lumbo Sacral-Right Oblique",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Lumbo Sacral-Left Oblique",
+    "investigationName": "Lumbo Sacral-Left Oblique",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Coccyx-AP",
+    "investigationName": "Coccyx-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Coccyx-Lateral",
+    "investigationName": "Coccyx-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Hand Right-AP",
+    "investigationName": "Hand Right-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Hand Right-Lateral",
+    "investigationName": "Hand Right-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Hand Right-Oblique",
+    "investigationName": "Hand Right-Oblique",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Hand Left-AP",
+    "investigationName": "Hand Left-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Hand Left-Oblique",
+    "investigationName": "Hand Left-Oblique",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Hands Both-AP",
+    "investigationName": "Hands Both-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Hands Both-Oblique",
+    "investigationName": "Hands Both-Oblique",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Finger Right hand-Ring and Little-AP",
+    "investigationName": "Finger Right hand-Ring and Little-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Finger Right hand-Ring and Little-Lateral",
+    "investigationName": "Finger Right hand-Ring and Little-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Finger Right hand-Index and Middle-AP",
+    "investigationName": "Finger Right hand-Index and Middle-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Finger Right hand-Index and Middle-Lateral",
+    "investigationName": "Finger Right hand-Index and Middle-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Finger Left hand-Ring and Little-AP",
+    "investigationName": "Finger Left hand-Ring and Little-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Finger Left hand-Ring and Little-Lateral",
+    "investigationName": "Finger Left hand- Ring and Little-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Finger Left hand-Index and Middle-AP",
+    "investigationName": "Finger Left hand-Index and Middle-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Finger Left hand-Index and Middle-Lateral",
+    "investigationName": "Finger Left hand-Index and Middle-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Thumb Left-AP",
+    "investigationName": "Thumb Left-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Thumb Left-Lateral",
+    "investigationName": "Thumb Left-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Thumb Right-AP",
+    "investigationName": "Thumb Right-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Thumb Right-Lateral",
+    "investigationName": "Thumb Right-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Wrist Joint Left-AP",
+    "investigationName": "Wrist Joint Left-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Wrist Joint Left-Lateral",
+    "investigationName": "Wrist Joint Left-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Wrist Joint Right-AP",
+    "investigationName": "Wrist Joint Right-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Wrist Joint Right-Lateral",
+    "investigationName": "Wrist Joint Right-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Scaphoid Left-AP",
+    "investigationName": "Scaphoid Left-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Scaphoid Left-Posterior",
+    "investigationName": "Scaphoid Left-Posterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Scaphoid Left-Anterior",
+    "investigationName": "Scaphoid Left-Anterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Scaphoid Left-Oblique",
+    "investigationName": "Scaphoid Left-Oblique",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Scaphoid Left-Lateral",
+    "investigationName": "Scaphoid Left-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Scaphoid Right-AP",
+    "investigationName": "Scaphoid Right-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Scaphoid Right-Posterior",
+    "investigationName": "Scaphoid Right-Posterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Scaphoid Right-Anterior",
+    "investigationName": "Scaphoid Right-Anterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Scaphoid Right-Oblique",
+    "investigationName": "Scaphoid Right-Oblique",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Scaphoid Right-Lateral",
+    "investigationName": "Scaphoid Right-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Forearm Left-AP",
+    "investigationName": "Forearm Left-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Forearm Left-Lateral",
+    "investigationName": "Forearm Left-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Forearm Right-AP",
+    "investigationName": "Forearm Right-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Forearm Right-Lateral",
+    "investigationName": "Forearm Right-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Elbow Joint Left-AP",
+    "investigationName": "Elbow Joint Left-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Elbow Joint Left-Lateral",
+    "investigationName": "Elbow Joint Left-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Elbow Joint Left-Oblique",
+    "investigationName": "Elbow Joint Left-Oblique",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Elbow Joint Right-AP",
+    "investigationName": "Elbow Joint Right-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Elbow Joint Right-Lateral",
+    "investigationName": "Elbow Joint Right-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Elbow Joint Right-Oblique",
+    "investigationName": "Elbow Joint Right-Oblique",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Humerus Arm Left-AP",
+    "investigationName": "Humerus Arm Left-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Humerus Arm Left-Lateral",
+    "investigationName": "Humerus Arm Left-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Humerus Arm Right-AP",
+    "investigationName": "Humerus Arm Right-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Humerus Arm Right-Lateral",
+    "investigationName": "Humerus Arm Right-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Shoulder Joint Left-AP",
+    "investigationName": "Shoulder Joint Left-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Shoulder Joint Left-Lateral-Exil",
+    "investigationName": "Shoulder Joint Left-Lateral-Exil",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Shoulder Joint Right-AP",
+    "investigationName": "Shoulder Joint Right-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Shoulder Joint Right-Lateral-Exil",
+    "investigationName": "Shoulder Joint Right-Lateral-Exil",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Acromio Clavicular joint Left-AP",
+    "investigationName": "Acromio Clavicular joint Left-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Acromio Clavicular joint Right-AP",
+    "investigationName": "Acromio Clavicular joint Right-AP",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Scapula Left-AP",
+    "investigationName": "Scapula Left-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Scapula Left-Lateral",
+    "investigationName": "Scapula Left-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Scapula Right-AP",
+    "investigationName": "Scapula Right-AP",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Scapula Right-Lateral",
+    "investigationName": "Scapula Right-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Clavicle Left-AP",
+    "investigationName": "Clavicle Left-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Clavicle Right-AP",
+    "investigationName": "Clavicle Right-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Sterno Clavicular Joint Left Oblique",
+    "investigationName": "Sterno Clavicular Joint Left Oblique",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Sterno Clavicular Joint Right Oblique",
+    "investigationName": "Sterno Clavicular Joint Right Oblique",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Foot Left-AP",
+    "investigationName": "Foot Left-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Foot Left-Lateral",
+    "investigationName": "Foot Left-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Foot Left-Oblique",
+    "investigationName": "Foot Left-Oblique",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Foot Right-AP",
+    "investigationName": "Foot Right-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Foot Right-Lateral",
+    "investigationName": "Foot Right-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Foot Right-Oblique",
+    "investigationName": "Foot Right-Oblique",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Calcaneus-Heel-Left-Lateral",
+    "investigationName": "Calcaneus-Heel-Left-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Calcaneus-Heel-Left-Axial",
+    "investigationName": "Calcaneus-Heel-Left-Axial",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Calcaneus-Heel-Right-Lateral",
+    "investigationName": "Calcaneus-Heel-Right-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Calcaneus-Heel-Right-Axial",
+    "investigationName": "Calcaneus-Heel-Right-Axial",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Ankle Joint Left-AP",
+    "investigationName": "Ankle Joint Left-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Ankle Joint Left-Lateral",
+    "investigationName": "Ankle Joint Left-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Ankle Joint Right-AP",
+    "investigationName": "Ankle Joint Right-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Ankle Joint Right-Lateral",
+    "investigationName": "Ankle Joint Right-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Leg Left-AP",
+    "investigationName": "Leg Left-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Leg Left-Lateral",
+    "investigationName": "Leg Left-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Leg Right-AP",
+    "investigationName": "Leg Right-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Leg Right-Lateral",
+    "investigationName": "Leg Right-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Knee Joint Left-AP",
+    "investigationName": "Knee Joint Left-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Knee Joint Left-Latera",
+    "investigationName": "Knee Joint Left-Latera",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Knee Joint Left-Inferior-Superior",
+    "investigationName": "Knee Joint Left-Inferior-Superior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Knee Joint Right-AP",
+    "investigationName": "Knee Joint Right-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Knee Joint Right-Latera",
+    "investigationName": "Knee Joint Right-Latera",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Knee Joint Right-Inferior-Superior",
+    "investigationName": "Knee Joint Right-Inferior-Superior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Femur Thigh Left-AP",
+    "investigationName": "Femur Thigh Left-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Femur Thigh Left-Lateral",
+    "investigationName": "Femur Thigh Left-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Femur Thigh Right-AP",
+    "investigationName": "Femur Thigh Right-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Hip Joint Left-AP",
+    "investigationName": "Hip Joint Left-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Hip Joint Left-Lateral",
+    "investigationName": "Hip Joint Left-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Hip Joint Right-AP",
+    "investigationName": "Hip Joint Right-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Hip Joint Right-Lateral",
+    "investigationName": "Hip Joint Right-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Pelvis-AP",
+    "investigationName": "Pelvis-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Pelvis Left-Lateral",
+    "investigationName": "Pelvis Left-Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Pelvis Left-Oblique",
+    "investigationName": "Pelvis Left-Oblique",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Pelvis Right-Oblique",
+    "investigationName": "Pelvis Right-Oblique",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Sacroiliac Joint-AP",
+    "investigationName": "Sacroiliac Joint-Anteroposterior",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Sacroiliac Joint Left-Oblique",
+    "investigationName": "Sacroiliac Joint Left-Oblique",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Sacroiliac Joint Right-Oblique",
+    "investigationName": "Sacroiliac Joint Right-Oblique",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Mastoid Lauss",
+    "investigationName": "Mastoid Lauss",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Nasopharynx Lateral",
+    "investigationName": "Nasopharynx Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Towne View",
+    "investigationName": "Towne View",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Leg",
+    "investigationName": "Leg",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Ankle",
+    "investigationName": "Ankle",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "STN",
+    "investigationName": "STN",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Mastoids",
+    "investigationName": "Mastoids",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Forearm",
+    "investigationName": "Forearm",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Wrist",
+    "investigationName": "Wrist",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Elbow",
+    "investigationName": "Elbow",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "TM joint Left",
+    "investigationName": "TM joint Left",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "TM joint Right",
+    "investigationName": "TM joint Right",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "BA Swallow",
+    "investigationName": "BA Swallow",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "IVP",
+    "investigationName": "IVP",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "BA Enema",
+    "investigationName": "BA Enema",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "DL Spine",
+    "investigationName": "DL Spine",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "B-L Hands",
+    "investigationName": "B-L Hands",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Arm",
+    "investigationName": "Arm",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Foot",
+    "investigationName": "Foot",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Thigh and Hip",
+    "investigationName": "Thigh and Hip",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Thigh and Knee",
+    "investigationName": "Thigh and Knee",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Knee and Leg",
+    "investigationName": "Knee and Leg",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Leg and Ankle",
+    "investigationName": "Leg and Ankle",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Calcaneus Axial",
+    "investigationName": "Calcaneus Axial",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Chest AP",
+    "investigationName": "Chest AP",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Skull Lateral",
+    "investigationName": "Skull Lateral",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Bitewing",
+    "investigationName": "Bitewing",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "IOPA",
+    "investigationName": "Intraoral Periapical",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Occlusal view",
+    "investigationName": "Occlusal View",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "OPG",
+    "investigationName": "Orthopantomogram",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "Lateral Cephalogram",
+    "investigationName": "Lateral Cephalogram",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "X-Ray",
+    "investigationCode": "TMJ Open/Closed",
+    "investigationName": "Temporomandibular Joint Open/Closed",
+    "departmentName": "X-Ray"
+  },
+  {
+    "category": "USG",
+    "investigationCode": "Abdomen",
+    "investigationName": "Abdomen",
+    "departmentName": "Ultrasound"
+  },
+  {
+    "category": "USG",
+    "investigationCode": "Pelvic Organs",
+    "investigationName": "Pelvic Organs",
+    "departmentName": "Ultrasound"
+  },
+  {
+    "category": "USG",
+    "investigationCode": "Neck",
+    "investigationName": "Neck",
+    "departmentName": "Ultrasound"
+  },
+  {
+    "category": "USG",
+    "investigationCode": "Breast",
+    "investigationName": "Breast",
+    "departmentName": "Ultrasound"
+  },
+  {
+    "category": "USG",
+    "investigationCode": "Cervical Spine",
+    "investigationName": "Cervical Spine",
+    "departmentName": "Ultrasound"
+  },
+  {
+    "category": "USG",
+    "investigationCode": "Chest",
+    "investigationName": "Chest",
+    "departmentName": "Ultrasound"
+  },
+  {
+    "category": "USG",
+    "investigationCode": "Nasopharynx",
+    "investigationName": "Nasopharynx",
+    "departmentName": "Ultrasound"
+  },
+  {
+    "category": "USG",
+    "investigationCode": "Pelvic Hip Joint PBH",
+    "investigationName": "Pelvic Hip Joint PBH",
+    "departmentName": "Ultrasound"
+  },
+  {
+    "category": "USG",
+    "investigationCode": "Shoulder",
+    "investigationName": "Shoulder",
+    "departmentName": "Ultrasound"
+  },
+  {
+    "category": "USG",
+    "investigationCode": "Knee Joints",
+    "investigationName": "Knee Joints",
+    "departmentName": "Ultrasound"
+  },
+  {
+    "category": "USG",
+    "investigationCode": "Brain",
+    "investigationName": "Brain",
+    "departmentName": "Ultrasound"
+  },
+  {
+    "category": "USG",
+    "investigationCode": "Face",
+    "investigationName": "Face",
+    "departmentName": "Ultrasound"
+  },
+  {
+    "category": "USG",
+    "investigationCode": "Sub Mandibular Gland",
+    "investigationName": "Sub Mandibular Gland",
+    "departmentName": "Ultrasound"
+  },
+  {
+    "category": "USG",
+    "investigationCode": "Parotid Gland",
+    "investigationName": "Parotid Gland",
+    "departmentName": "Ultrasound"
+  },
+  {
+    "category": "USG",
+    "investigationCode": "Limbs",
+    "investigationName": "Limbs",
+    "departmentName": "Ultrasound"
+  },
+  {
+    "category": "USG",
+    "investigationCode": "Lymph Nodes",
+    "investigationName": "Lymph Nodes",
+    "departmentName": "Ultrasound"
+  },
+  {
+    "category": "USG",
+    "investigationCode": "Swellings",
+    "investigationName": "Swellings",
+    "departmentName": "Ultrasound"
+  },
+  {
+    "category": "USG",
+    "investigationCode": "Foetal wellbeing",
+    "investigationName": "Foetal wellbeing",
+    "departmentName": "Ultrasound"
+  },
+  {
+    "category": "USG",
+    "investigationCode": "Abdominal aorta and its branches -doppler study",
+    "investigationName": "Abdominal aorta and its branches -doppler study",
+    "departmentName": "Ultrasound"
+  },
+  {
+    "category": "USG",
+    "investigationCode": "Deep Venous Thrombosis Doppler Study",
+    "investigationName": "Deep Venous Thrombosis Doppler Study",
+    "departmentName": "Ultrasound"
+  },
+  {
+    "category": "USG",
+    "investigationCode": "Venous doppler study",
+    "investigationName": "Venous doppler study",
+    "departmentName": "Ultrasound"
+  },
+  {
+    "category": "USG",
+    "investigationCode": "Arterial doppler study of limbs",
+    "investigationName": "Arterial doppler study of limbs",
+    "departmentName": "Ultrasound"
+  },
+  {
+    "category": "USG",
+    "investigationCode": "Renal arterial doppler study",
+    "investigationName": "Renal arterial doppler study",
+    "departmentName": "Ultrasound"
+  },
+  {
+    "category": "USG",
+    "investigationCode": "Carotid doppler study",
+    "investigationName": "Carotid doppler study",
+    "departmentName": "Ultrasound"
+  },
+  {
+    "category": "USG",
+    "investigationCode": "Varicose veins doppler study",
+    "investigationName": "Varicose veins doppler study",
+    "departmentName": "Ultrasound"
+  },
+  {
+    "category": "Cardio",
+    "investigationCode": "ECG",
+    "investigationName": "ECG",
+    "departmentName": "Cardio"
+  },
+  {
+    "category": "Cardio",
+    "investigationCode": "CAG",
+    "investigationName": "Coronary Angiography",
+    "departmentName": "Cardio"
+  },
+  {
+    "category": "Cardio",
+    "investigationCode": "Holter",
+    "investigationName": "Holter",
+    "departmentName": "Cardio"
+  },
+  {
+    "category": "Cardio",
+    "investigationCode": "Lung Function Test",
+    "investigationName": "Lung Function Test",
+    "departmentName": "Cardio"
+  },
+  {
+    "category": "Cardio",
+    "investigationCode": "ECHO",
+    "investigationName": "ECHO",
+    "departmentName": "Cardio"
+  },
+  {
+    "category": "Cardio",
+    "investigationCode": "Treadmill test",
+    "investigationName": "Treadmill test",
+    "departmentName": "Cardio"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Brain Plain - Non Contrast head",
+    "investigationName": "Brain Plain - Non Contrast head",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "CT Angio",
+    "investigationName": "CT Angiography",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Brain Plain- Contrast",
+    "investigationName": "Brain Plain- Contrast",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Thorax - HRCT Thorax",
+    "investigationName": "Thorax - HRCT Thorax",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "PNS - Non Contrast",
+    "investigationName": "PNS - Non Contrast",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Sinus - Contrast",
+    "investigationName": "Sinus - Contrast",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Inner Ear (Temporal Bone) - Non Contrast",
+    "investigationName": "Inner Ear (Temporal Bone) - Non Contrast",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Inner Ear (Temporal Bone) - Contrast",
+    "investigationName": "Inner Ear (Temporal Bone) - Contrast",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Neck Plain - Contrast",
+    "investigationName": "Neck Plain - Contrast",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Thorax Plain - Contrast",
+    "investigationName": "Thorax Plain - Contrast",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Thorax and Abdomen - Plain Contrast",
+    "investigationName": "Thorax and Abdomen - Plain Contrast",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Abdomen Plain - Contrast - Delayed",
+    "investigationName": "Abdomen Plain - Contrast - Delayed",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Abdomen - Non Contrast Liver",
+    "investigationName": "Abdomen - Non Contrast Liver",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Abdomen - tripple phase Arterial, Portal, Venous",
+    "investigationName": "Abdomen - tripple phase Arterial, Portal, Venous",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Pelvis",
+    "investigationName": "Pelvis",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Hip Left",
+    "investigationName": "Hip Left",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Hip Right",
+    "investigationName": "Hip Right",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Femur Left",
+    "investigationName": "Femur Left",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Femur Right",
+    "investigationName": "Femur Right",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Knee Left",
+    "investigationName": "Knee Left",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Knee Right",
+    "investigationName": "Knee Right",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Leg Left",
+    "investigationName": "Leg Left",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Leg Right",
+    "investigationName": "Leg Right",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Ankle Left",
+    "investigationName": "Ankle Left",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Ankle Right",
+    "investigationName": "Ankle Right",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Foot Left",
+    "investigationName": "Foot Left",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Foot Right",
+    "investigationName": "Foot Right",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Heel Left",
+    "investigationName": "Heel Left",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Heel Right",
+    "investigationName": "Heel Right",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Shoulder Joint Left",
+    "investigationName": "Shoulder Joint Left",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Shoulder Joint Right",
+    "investigationName": "Shoulder Joint Right",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Humerus Left",
+    "investigationName": "Humerus Left",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Humerus Right",
+    "investigationName": "Humerus Right",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Elbow Left",
+    "investigationName": "Elbow Left",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Elbow Right",
+    "investigationName": "Elbow Right",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Forearm Left",
+    "investigationName": "Forearm Left",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Forearm Right",
+    "investigationName": "Forearm Right",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Wrist Left",
+    "investigationName": "Wrist Left",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Wrist Right",
+    "investigationName": "Wrist Right",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Hand Left",
+    "investigationName": "Hand Left",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Hand Right",
+    "investigationName": "Hand Right",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Pulmonary Angio",
+    "investigationName": "Pulmonary Angio",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Renal Angio",
+    "investigationName": "Renal Angio",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Upper Limb Angio",
+    "investigationName": "Upper Limb Angio",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "CT-Scan",
+    "investigationCode": "Lower Limb Angio",
+    "investigationName": "Lower Limb Angio",
+    "departmentName": "CT-Scan"
+  },
+  {
+    "category": "Others",
+    "investigationCode": "Pleural fluid",
+    "investigationName": "Pleural fluid",
+    "departmentName": "Others"
+  },
+  {
+    "category": "Others",
+    "investigationCode": "Catheter insertions for collections",
+    "investigationName": "Catheter insertions for collections",
+    "departmentName": "Others"
+  },
+  {
+    "category": "Others",
+    "investigationCode": "Urinary bladder balloon rupture for indwelling",
+    "investigationName": "Urinary bladder balloon rupture for indwelling",
+    "departmentName": "Others"
+  }
+]

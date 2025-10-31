@@ -87,11 +87,33 @@
             </div>
         </div>
 
-        <!-- Available Tests Reference -->
+        <!-- Available Tests Reference with Category Sidebar -->
         <div class="tests-reference">
-            <h3>Available Tests</h3>
-            <div class="tests-grid" id="availableTests">
-                <!-- Tests will be loaded here -->
+            <h3>Available Tests <span id="testCount" class="test-count"></span></h3>
+            <div class="tests-layout">
+                <!-- Category Sidebar -->
+                <div class="category-sidebar">
+                    <div class="category-header">
+                        <h4>Categories</h4>
+                    </div>
+                    <div class="category-list" id="categoryList">
+                        <!-- Categories will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Tests Panel -->
+                <div class="tests-panel">
+                    <div class="tests-header">
+                        <input type="text" id="testSearch" class="test-search" placeholder="🔍 Search tests...">
+                        <div class="view-toggle">
+                            <button id="gridViewBtn" class="view-btn active" title="Grid View">⊞</button>
+                            <button id="listViewBtn" class="view-btn" title="List View">☰</button>
+                        </div>
+                    </div>
+                    <div class="tests-grid" id="availableTests">
+                        <!-- Tests will be loaded here -->
+                    </div>
+                </div>
             </div>
         </div>
     </div>

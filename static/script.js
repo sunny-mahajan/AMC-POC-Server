@@ -48,12 +48,51 @@ class SpeechRecognitionApp {
         this.modalSynonymsList = document.getElementById('modalSynonymsList');
         this.modalCloseBtn = document.getElementById('modalCloseBtn');
         this.engineRadios = document.querySelectorAll('input[name="speechEngine"]');
+
+        // New elements for categorized view
+        this.categoryList = document.getElementById('categoryList');
+        this.testSearch = document.getElementById('testSearch');
+        this.gridViewBtn = document.getElementById('gridViewBtn');
+        this.listViewBtn = document.getElementById('listViewBtn');
+        this.testCount = document.getElementById('testCount');
+
+        // State for filtering
+        this.selectedCategory = 'All';
+        this.searchQuery = '';
+        this.viewMode = 'grid'; // 'grid' or 'list'
     }
 
     setupEventListeners() {
         this.startBtn.addEventListener('click', () => this.startRecording());
         this.stopBtn.addEventListener('click', () => this.stopRecording());
         this.clearBtn.addEventListener('click', () => this.clearAll());
+
+        // Search functionality
+        if (this.testSearch) {
+            this.testSearch.addEventListener('input', (e) => {
+                this.searchQuery = e.target.value.toLowerCase();
+                this.renderAvailableTests();
+            });
+        }
+
+        // View toggle
+        if (this.gridViewBtn) {
+            this.gridViewBtn.addEventListener('click', () => {
+                this.viewMode = 'grid';
+                this.gridViewBtn.classList.add('active');
+                this.listViewBtn.classList.remove('active');
+                this.availableTestsContainer.classList.remove('list-view');
+            });
+        }
+
+        if (this.listViewBtn) {
+            this.listViewBtn.addEventListener('click', () => {
+                this.viewMode = 'list';
+                this.listViewBtn.classList.add('active');
+                this.gridViewBtn.classList.remove('active');
+                this.availableTestsContainer.classList.add('list-view');
+            });
+        }
 
         // Engine selection
         this.engineRadios.forEach(radio => {
@@ -80,12 +119,65 @@ class SpeechRecognitionApp {
     async initializeMicrophone() {
         try {
             this.updateStatus('Initializing microphone...', 'info');
+
+            // Check if getUserMedia is supported
+            if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+                throw new Error('Your browser does not support microphone access. Please use a modern browser like Chrome, Firefox, or Edge.');
+            }
+
             this.mediaStream = await navigator.mediaDevices.getUserMedia({ audio: true });
             this.updateStatus('Ready to record', 'info');
         } catch (error) {
-            console.error('Microphone permission denied:', error);
-            this.updateStatus('Microphone permission required', 'error');
+            console.error('Microphone error:', error);
+
+            let errorMessage = 'Microphone error: ';
+            if (error.name === 'NotAllowedError' || error.name === 'PermissionDeniedError') {
+                errorMessage += 'Permission denied. Please allow microphone access in your browser settings.';
+            } else if (error.name === 'NotFoundError' || error.name === 'DevicesNotFoundError') {
+                errorMessage += 'No microphone found. Please connect a microphone and reload the page.';
+            } else if (error.name === 'NotReadableError' || error.name === 'TrackStartError') {
+                errorMessage += 'Microphone is already in use by another application.';
+            } else {
+                errorMessage += error.message || 'Unknown error occurred.';
+            }
+
+            this.updateStatus(errorMessage, 'error');
+            this.showMicrophoneError(errorMessage);
             this.startBtn.disabled = true;
+        }
+    }
+
+    showMicrophoneError(message) {
+        // Show error in the speech section
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'microphone-error';
+        errorDiv.style.cssText = `
+            background: #fee;
+            border: 2px solid #f44;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            color: #c00;
+            font-weight: 600;
+        `;
+        errorDiv.innerHTML = `
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <span style="font-size: 1.5rem;">🎤</span>
+                <div>
+                    <strong>Microphone Not Available</strong>
+                    <p style="margin: 5px 0 0 0; font-weight: normal;">${message}</p>
+                </div>
+            </div>
+        `;
+
+        const speechSection = document.querySelector('.speech-section');
+        if (speechSection) {
+            // Remove any existing error
+            const existingError = speechSection.querySelector('.microphone-error');
+            if (existingError) {
+                existingError.remove();
+            }
+            speechSection.insertBefore(errorDiv, speechSection.firstChild);
         }
     }
 
@@ -191,6 +283,52 @@ class SpeechRecognitionApp {
         }
     }
 
+    renderCategories() {
+        if (!this.categoryList) return;
+
+        // Get unique categories with counts
+        const categories = {};
+        this.availableTests.forEach(test => {
+            if (!categories[test.category]) {
+                categories[test.category] = 0;
+            }
+            categories[test.category]++;
+        });
+
+        // Add "All" category
+        const totalCount = this.availableTests.length;
+
+        // Clear and render
+        this.categoryList.innerHTML = '';
+
+        // All category
+        const allCategory = this.createCategoryItem('All', totalCount, this.selectedCategory === 'All');
+        this.categoryList.appendChild(allCategory);
+
+        // Sort and add other categories
+        Object.keys(categories).sort().forEach(category => {
+            const categoryItem = this.createCategoryItem(category, categories[category], this.selectedCategory === category);
+            this.categoryList.appendChild(categoryItem);
+        });
+    }
+
+    createCategoryItem(name, count, isActive) {
+        const item = document.createElement('div');
+        item.className = `category-item${isActive ? ' active' : ''}`;
+        item.innerHTML = `
+            <span class="category-name">${name}</span>
+            <span class="category-count">${count}</span>
+        `;
+
+        item.addEventListener('click', () => {
+            this.selectedCategory = name;
+            this.renderCategories();
+            this.renderAvailableTests();
+        });
+
+        return item;
+    }
+
     renderAvailableTests() {
         if (!this.availableTestsContainer) {
             console.error('Available tests container not found');
@@ -205,7 +343,35 @@ class SpeechRecognitionApp {
             return;
         }
 
-        this.availableTests.forEach(test => {
+        // Filter tests by category and search
+        let filteredTests = this.availableTests;
+
+        // Filter by category
+        if (this.selectedCategory !== 'All') {
+            filteredTests = filteredTests.filter(test => test.category === this.selectedCategory);
+        }
+
+        // Filter by search query
+        if (this.searchQuery) {
+            filteredTests = filteredTests.filter(test =>
+                test.name.toLowerCase().includes(this.searchQuery) ||
+                test.category.toLowerCase().includes(this.searchQuery) ||
+                (test.synonyms && test.synonyms.some(s => s.toLowerCase().includes(this.searchQuery)))
+            );
+        }
+
+        // Update test count
+        if (this.testCount) {
+            this.testCount.textContent = `(${filteredTests.length})`;
+        }
+
+        // Render filtered tests
+        if (filteredTests.length === 0) {
+            this.availableTestsContainer.innerHTML = '<div class="no-results"><p>No tests found matching your criteria.</p></div>';
+            return;
+        }
+
+        filteredTests.forEach(test => {
             const testCard = document.createElement('div');
             testCard.className = 'test-card';
             testCard.innerHTML = `
@@ -219,6 +385,9 @@ class SpeechRecognitionApp {
 
             this.availableTestsContainer.appendChild(testCard);
         });
+
+        // Render categories
+        this.renderCategories();
     }
 
     async startRecording() {

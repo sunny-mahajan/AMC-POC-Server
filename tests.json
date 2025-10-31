@@ -1,652 +1,6615 @@
 [
   {
     "id": "cbc",
-    "name": "CBC",
-    "category": "lab",
+    "name": "Complete Blood Count",
+    "category": "Lab",
     "synonyms": [
       "CBC",
-      "cbc",
-      "cbc test",
       "complete blood count",
-      "full blood count",
-      "complete blood picture",
-      "blood count",
-      "hb tlc dlc",
-      "hemoglobin tlc dlc",
-      "hemogram",
       "blood work",
-      "blood test complete"
+      "full blood test",
+      "hemogram",
+      "blood profile",
+      "routine blood test",
+      "complete blood examination",
+      "CBC test",
+      "blood cell count"
     ]
   },
   {
     "id": "urine-r-e",
-    "name": "Urine R/E",
-    "category": "lab",
+    "name": "Urine Routine Examination",
+    "category": "Lab",
     "synonyms": [
-      "urine r/e",
-      "urine routine",
-      "urine routine examination",
-      "urine microscopy",
-      "urine analysis",
+      "urinalysis",
       "urine test",
-      "microscopy",
-      "urine routine and microscopy"
-    ]
-  },
-  {
-    "id": "thyroid-profile",
-    "name": "Thyroid Profile",
-    "category": "lab",
-    "synonyms": [
-      "thyroid profile",
-      "thyroid function test",
-      "tft",
-      "thyroid panel",
-      "thyroid tests",
-      "t3 t4 tsh",
-      "thyroid screen",
-      "thyroid check",
-      "thyroid workup"
+      "pee test",
+      "routine urine examination",
+      "urine screening",
+      "urine R/E",
+      "urine analysis",
+      "urine check",
+      "lab test for urine",
+      "urine sample examination"
     ]
   },
   {
     "id": "rft",
-    "name": "RFT",
-    "category": "lab",
+    "name": "Renal Function Test",
+    "category": "Lab",
     "synonyms": [
-      "RFT",
+      "renal panel",
       "kidney function test",
-      "kidney panel",
-      "renal function test",
-      "rft",
-      "rft test",
-      "kidney profile",
-      "renal profile",
-      "kft"
+      "RFT",
+      "renal test",
+      "kidney health examination",
+      "urine and blood kidney test",
+      "kidney function examination",
+      "renal assessment",
+      "kidney checkup",
+      "renal function evaluation"
     ]
   },
   {
     "id": "rbs",
-    "name": "RBS",
-    "category": "lab",
+    "name": "RANDOM SERUM GLUCOSE",
+    "category": "Lab",
     "synonyms": [
-      "RBS",
-      "glucose random",
-      "random blood sugar",
-      "rbs",
-      "rbs test",
-      "sugar test",
-      "random glucose",
-      "blood sugar",
-      "sugar level"
+      "random blood sugar test",
+      "RBS test",
+      "blood glucose test",
+      "serum glucose level check",
+      "glucose test",
+      "blood sugar examination",
+      "random serum glucose check",
+      "sugar level test",
+      "glucose measurement",
+      "fasting blood sugar test"
     ]
   },
   {
     "id": "se",
-    "name": "SE",
-    "category": "lab",
+    "name": "ELECTROLYTES SERUM",
+    "category": "Lab",
     "synonyms": [
-      "SE",
-      "electrolytes",
-      "na k cl",
-      "se",
-      "serum electrolytes",
-      "sodium potassium chloride"
+      "electrolyte panel",
+      "serum electrolytes test",
+      "electrolyte blood test",
+      "electrolyte level check",
+      "electrolyte examination",
+      "serum electrolyte analysis",
+      "electrolyte screen",
+      "electrolyte blood work",
+      "electrolyte profile",
+      "total electrolyte test"
     ]
   },
   {
     "id": "lft",
-    "name": "LFT",
-    "category": "lab",
+    "name": "Liver Function Test",
+    "category": "Lab",
     "synonyms": [
+      "liver function tests",
       "LFT",
-      "lft",
-      "lft test",
-      "liver function test",
       "liver panel",
-      "liver profile",
+      "liver blood test",
       "hepatic function test",
-      "liver enzymes",
-      "liver workup"
+      "liver health check",
+      "liver enzyme test",
+      "liver examination",
+      "blood test for liver function",
+      "liver test"
     ]
   },
   {
     "id": "hba1c",
     "name": "HBA1c",
-    "category": "lab",
+    "category": "Lab",
     "synonyms": [
-      "HBA1c",
-      "average sugar 3 months",
-      "glycated hemoglobin",
-      "glycosylated hemoglobin",
-      "hba1c",
-      "a1c",
-      "hemoglobin a1c",
-      "3 month sugar average",
-      "diabetes control test"
+      "HbA1c test",
+      "glycated hemoglobin test",
+      "A1C test",
+      "hemoglobin A1c",
+      "diabetes control test",
+      "long-term blood sugar test",
+      "average blood sugar test",
+      "HbA1c examination",
+      "glycosylated hemoglobin test",
+      "A1C blood test"
     ]
   },
   {
     "id": "esr",
     "name": "ESR",
-    "category": "lab",
+    "category": "Lab",
     "synonyms": [
-      "ESR",
+      "ESR test",
       "erythrocyte sedimentation rate",
-      "esr",
-      "esr test",
-      "sed rate"
+      "sed rate",
+      "blood sedimentation test",
+      "inflammation test",
+      "ESR blood test",
+      "sedimentation test",
+      "blood test for inflammation",
+      "ESR examination",
+      "red cell sedimentation rate"
     ]
   },
   {
     "id": "fbs",
-    "name": "FBS",
-    "category": "lab",
+    "name": "FASTING SESRUM GLUCOSE",
+    "category": "Lab",
     "synonyms": [
-      "FBS",
-      "fasting blood sugar",
-      "fasting glucose",
-      "fbs",
-      "fbs test"
+      "fasting blood sugar test",
+      "FBS test",
+      "blood sugar examination",
+      "fasting glucose level test",
+      "glucose fasting test",
+      "fasting glucose test",
+      "blood glucose test",
+      "sugar test after fasting",
+      "blood sugar fasting exam",
+      "glucose test after fasting"
     ]
   },
   {
     "id": "ppbs",
-    "name": "PPBS",
-    "category": "lab",
+    "name": "Post Prandial PLASMA GLUCOSE",
+    "category": "Lab",
     "synonyms": [
-      "PPBS",
-      "ppbs",
-      "post meal sugar",
-      "post-meal sugar",
-      "postprandial sugar",
-      "2 hour sugar",
-      "after food sugar"
+      "post-meal blood sugar test",
+      "PPBS test",
+      "post-prandial glucose test",
+      "blood sugar after meals",
+      "meal-time glucose check",
+      "sugar level test after eating",
+      "post-prandial plasma glucose examination",
+      "glucose tolerance test after food",
+      "blood glucose level test post meal",
+      "after meal sugar test"
     ]
   },
   {
     "id": "sgpt",
-    "name": "SGPT",
-    "category": "lab",
+    "name": "SGPT ALT",
+    "category": "Lab",
     "synonyms": [
-      "SGPT",
-      "alanine aminotransferase",
-      "alt",
-      "sgpt",
-      "sgpt alt"
+      "SGPT test",
+      "ALT test",
+      "alanine aminotransferase test",
+      "liver function test",
+      "liver enzyme test",
+      "SGPT examination",
+      "ALT screening",
+      "SGPT blood test",
+      "ALT blood work",
+      "liver health assessment"
     ]
   },
   {
     "id": "sgot",
-    "name": "SGOT",
-    "category": "lab",
+    "name": "SGOT AST",
+    "category": "Lab",
     "synonyms": [
-      "SGOT",
-      "aspartate aminotransferase",
-      "ast",
-      "sgot",
-      "sgot ast"
+      "SGOT test",
+      "AST test",
+      "liver enzyme test",
+      "serum glutamic-oxaloacetic transaminase test",
+      "liver function test",
+      "SGOT examination",
+      "AST blood test",
+      "blood test for liver enzymes",
+      "hepatic enzyme test",
+      "liver health check"
     ]
   },
   {
     "id": "hbsag",
-    "name": "HBsAG",
-    "category": "lab",
+    "name": "Hepatitis B Surface Antigen Serum",
+    "category": "Lab",
     "synonyms": [
-      "HBsAG",
-      "hbsag",
-      "hbsag test",
-      "hepatitis b surface antigen",
-      "hepatitis b test",
-      "hep b",
-      "australia antigen",
-      "hepatitis b screening"
+      "HBsAg test",
+      "Hepatitis B test",
+      "Hepatitis B surface antigen test",
+      "HBsAg examination",
+      "HBsAg screening",
+      "Hep B surface antigen blood test",
+      "Hepatitis B antigen check",
+      "Hepatitis B blood work",
+      "Hep B test",
+      "serum hepatitis B test"
     ]
   },
   {
     "id": "hcv",
-    "name": "HCV",
-    "category": "lab",
+    "name": "HCV ABS SERUM",
+    "category": "Lab",
     "synonyms": [
-      "HCV",
-      "anti hcv",
-      "hcv",
-      "hcv antibody",
-      "hepatitis c",
-      "hep c",
-      "hepatitis c test",
-      "hepatitis c screening"
+      "HCV antibody test",
+      "HCV antibodies serum test",
+      "HCV blood test",
+      "HCV screening",
+      "hepatitis C test",
+      "hepatitis C antibody test",
+      "HCV serology",
+      "HCV examination",
+      "HCV test",
+      "blood test for hepatitis C"
     ]
   },
   {
     "id": "hiv",
-    "name": "HIV",
-    "category": "lab",
+    "name": "HIV Antibodies Serum",
+    "category": "Lab",
     "synonyms": [
-      "HIV",
-      "elisa hiv",
-      "hiv",
-      "hiv screening",
-      "hiv test",
-      "hiv antibody",
-      "hiv elisa",
-      "aids test"
+      "HIV test",
+      "HIV antibody test",
+      "HIV blood test",
+      "serological test for HIV",
+      "HIV antibodies screening",
+      "HIV antibody examination",
+      "anti-HIV test",
+      "HIV screening test",
+      "blood test for HIV",
+      "HIV serology"
     ]
   },
   {
     "id": "vdrl",
     "name": "VDRL",
-    "category": "lab",
+    "category": "Lab",
     "synonyms": [
-      "VDRL",
-      "rpr",
+      "VDRL test",
+      "Venereal Disease Research Laboratory test",
       "syphilis test",
-      "vdrl",
-      "vdrl test",
-      "syphilis screening",
-      "rapid plasma reagin"
+      "blood test for syphilis",
+      "VDRL screening",
+      "rapid plasma reagin test",
+      "RPR test",
+      "syphilis screening test",
+      "serology test for syphilis",
+      "VDRL examination"
     ]
   },
   {
     "id": "ra-factor",
-    "name": "RA Factor",
-    "category": "lab",
+    "name": "RA Rheumatoid Arthritis Factor Test",
+    "category": "Lab",
     "synonyms": [
-      "RA Factor",
-      "ra factor",
-      "ra factor test",
-      "rheumatoid factor",
-      "rf test",
-      "rheumatoid arthritis factor",
-      "rf"
+      "RA factor test",
+      "rheumatoid arthritis factor test",
+      "RA antibody test",
+      "rheumatoid factor examination",
+      "RA test",
+      "rheumatoid factor blood test",
+      "arthritis factor test",
+      "serology test for RA",
+      "RF test",
+      "rheumatology blood test"
     ]
   },
   {
     "id": "widal",
-    "name": "WIDAL",
-    "category": "microbiology",
+    "name": "WIDAL Slide Method",
+    "category": "Lab",
     "synonyms": [
-      "WIDAL",
-      "typhoid widal",
-      "widal",
-      "widal test",
+      "WIDAL test",
+      "WIDAL slide test",
+      "WIDAL examination",
+      "WIDAL serology",
       "typhoid test",
-      "typhoid fever test",
-      "enteric fever test"
+      "typhoid slide test",
+      "WIDAL assay",
+      "WIDAL blood test",
+      "WIDAL analysis",
+      "typhoid fever test"
     ]
   },
   {
     "id": "dengue",
-    "name": "DENGUE",
-    "category": "microbiology",
+    "name": "DENGUE IGG & IGM Antibody & NS1",
+    "category": "Lab",
     "synonyms": [
-      "DENGUE",
-      "dengue",
-      "dengue igm",
-      "dengue igg",
-      "dengue profile",
-      "dengue test",
-      "ns1 antigen",
-      "dengue ns1",
-      "dengue antibody",
-      "dengue fever test"
+      "Dengue fever test",
+      "Dengue antibodies test",
+      "Dengue IgG and IgM test",
+      "Dengue serology test",
+      "NS1 antigen test for dengue",
+      "Dengue test",
+      "Dengue screening",
+      "Dengue blood test",
+      "Dengue IgG/IgM examination",
+      "Dengue antibody panel"
+    ]
+  },
+  {
+    "id": "typhi-igm",
+    "name": "TYPHI DOT IgM",
+    "category": "Lab",
+    "synonyms": [
+      "typhoid IgM test",
+      "typhi dot test",
+      "typhoid fever test",
+      "IgM antibody test for typhoid",
+      "typhoid serology test",
+      "typhoid screen",
+      "IgM test for typhoid",
+      "typhoid dot assay",
+      "serological test for typhoid",
+      "typhoid antibodies test"
+    ]
+  },
+  {
+    "id": "vaginal-swab",
+    "name": "Vaginal Swab Culture And Sensitivity",
+    "category": "Lab",
+    "synonyms": [
+      "vaginal culture test",
+      "swab test for infections",
+      "vaginal swab for bacteria",
+      "sensitivity test for vaginal swab",
+      "vaginal swab analysis",
+      "vaginal smear test",
+      "microbial culture of vaginal swab",
+      "vaginal discharge culture",
+      "vaginal swab examination",
+      "cervical culture test"
     ]
   },
   {
     "id": "lipid-profile",
     "name": "LIPID PROFILE",
-    "category": "lab",
+    "category": "Lab",
     "synonyms": [
-      "LIPID PROFILE",
-      "cholesterol panel",
       "lipid panel",
-      "lipid profile",
       "cholesterol test",
       "lipid test",
-      "cholesterol hdl ldl",
-      "fasting lipid profile",
-      "cholesterol screening"
+      "blood lipids examination",
+      "lipid profile test",
+      "lipid levels check",
+      "fat profile",
+      "triglycerides and cholesterol test",
+      "lipid blood work",
+      "serum lipid study"
     ]
   },
   {
     "id": "abo-rh",
-    "name": "ABO RH",
-    "category": "lab",
+    "name": "Blood Group ABO and RH Typing",
+    "category": "Lab",
     "synonyms": [
-      "ABO RH",
-      "abo rh",
-      "abo rh typing",
-      "blood group",
-      "blood grouping and rh factor",
-      "group and rh"
+      "ABO typing",
+      "Rh factor test",
+      "blood type test",
+      "blood group test",
+      "ABO and Rh examination",
+      "blood type determination",
+      "ABO-Rh typing",
+      "blood group analysis",
+      "blood type check",
+      "Rh blood typing"
     ]
   },
   {
     "id": "pt-inr",
-    "name": "PT/INR",
-    "category": "lab",
+    "name": "Prothrombin Time-PT/INR",
+    "category": "Lab",
     "synonyms": [
-      "PT/INR",
-      "coagulation profile",
-      "inr",
+      "PT test",
       "prothrombin time",
-      "pt inr",
-      "pt/inr"
+      "INR test",
+      "blood clotting test",
+      "coagulation test",
+      "protime test",
+      "PT-INR examination",
+      "clotting time test",
+      "prothrombin analysis",
+      "international normalized ratio test"
     ]
   },
   {
     "id": "calcium",
-    "name": "CALCIUM",
-    "category": "lab",
+    "name": "CALCIUM SERUM",
+    "category": "Lab",
     "synonyms": [
-      "CALCIUM",
-      "calcium",
+      "calcium blood test",
+      "serum calcium level",
       "calcium test",
-      "serum calcium"
+      "calcium panel",
+      "calcium examination",
+      "calcium blood work",
+      "total calcium test",
+      "calcium screening",
+      "calcium serum analysis",
+      "serum calcium test"
+    ]
+  },
+  {
+    "id": "tropoi",
+    "name": "TROPONIN",
+    "category": "Lab",
+    "synonyms": [
+      "troponin test",
+      "Tn test",
+      "troponin level check",
+      "cardiac troponin test",
+      "heart muscle enzyme test",
+      "troponin blood test",
+      "troponin examination",
+      "troponin analysis",
+      "heart injury test",
+      "serum troponin test"
     ]
   },
   {
     "id": "crp",
-    "name": "CRP",
-    "category": "lab",
+    "name": "C Reactive Protein",
+    "category": "Lab",
     "synonyms": [
-      "CRP",
-      "c reactive protein",
-      "crp",
-      "crp test"
+      "C-reactive protein test",
+      "CRP test",
+      "inflammatory marker test",
+      "high-sensitivity CRP",
+      "blood test for inflammation",
+      "CRP levels examination",
+      "C-reactive protein blood work",
+      "CRP screening",
+      "test for acute inflammation",
+      "C-reactive protein analysis"
     ]
   },
   {
-    "id": "iron-ibct",
+    "id": "iron--ibct",
     "name": "IRON/ IBCT",
-    "category": "lab",
+    "category": "Lab",
     "synonyms": [
-      "IRON/ IBCT",
-      "iron ibct",
+      "iron test",
+      "iron levels test",
+      "serum iron test",
+      "iron blood test",
+      "iron panel",
+      "iron studies",
+      "ferritin test",
+      "iron examination",
       "iron profile",
-      "iron tibc",
-      "iron total iron binding capacity",
-      "iron/ ibct",
-      "serum iron tibc"
+      "iron and binding capacity test"
     ]
   },
   {
     "id": "uric-acid",
     "name": "URIC ACID",
-    "category": "lab",
+    "category": "Lab",
     "synonyms": [
-      "URIC ACID",
-      "serum uric acid",
-      "uric acid",
-      "uric acid test"
+      "uric acid test",
+      "serum uric acid level",
+      "uric acid blood test",
+      "uric acid examination",
+      "uric acid panel",
+      "blood uric acid test",
+      "UA test",
+      "uric acid measurement",
+      "uric acid screening",
+      "uric acid analysis"
     ]
   },
   {
     "id": "urine-culture",
     "name": "URINE CULTURE",
-    "category": "microbiology",
+    "category": "Lab",
     "synonyms": [
-      "URINE CULTURE",
-      "urine c/s",
-      "urine culture",
-      "urine culture and sensitivity"
+      "urine culture test",
+      "urine culture examination",
+      "urine test",
+      "urine culture analysis",
+      "urine culture lab test",
+      "urinary culture",
+      "pee culture",
+      "bladder culture test",
+      "urine sample test",
+      "microbiology urine culture"
+    ]
+  },
+  {
+    "id": "wound-swab-culture",
+    "name": "WOUND SWAB CULTURE",
+    "category": "Lab",
+    "synonyms": [
+      "wound culture",
+      "swab test for infection",
+      "wound swab test",
+      "infection swab",
+      "culture from the wound",
+      "wound sample analysis",
+      "wound swabbing",
+      "microbial culture of the wound",
+      "wound test",
+      "swabbing for bacteria"
+    ]
+  },
+  {
+    "id": "body-fluid-culture",
+    "name": "BODY FLUID CULTURE",
+    "category": "Lab",
+    "synonyms": [
+      "body fluid culture",
+      "fluid culture test",
+      "body fluid analysis",
+      "culture of body fluids",
+      "fluid examination",
+      "body fluid test",
+      "microbial culture test",
+      "fluid sample culture",
+      "body fluid microbiology test",
+      "body fluid testing"
+    ]
+  },
+  {
+    "id": "afb-smear-zn-stain",
+    "name": "AFB SMEAR ZN STAIN",
+    "category": "Lab",
+    "synonyms": [
+      "AFB smear test",
+      "ZN stain test",
+      "acid-fast bacilli smear",
+      "AFB staining examination",
+      "TB smear test",
+      "mycobacterial smear",
+      "AFB microscopy",
+      "sputum smear test",
+      "tuberculosis smear examination",
+      "AFB test for tuberculosis"
+    ]
+  },
+  {
+    "id": "gram-stain",
+    "name": "GRAM STAIN",
+    "category": "Lab",
+    "synonyms": [
+      "Gram stain test",
+      "Gram staining",
+      "Gram stain examination",
+      "Gram stain analysis",
+      "Gram stain procedure",
+      "Gram test",
+      "bacterial stain test",
+      "microbial stain test",
+      "Gram reaction test",
+      "Gram stain microscopy"
+    ]
+  },
+  {
+    "id": "stool-culture-and-senstivity",
+    "name": "Stool Culture and Senstivity",
+    "category": "Lab",
+    "synonyms": [
+      "stool culture test",
+      "stool sensitivity test",
+      "fecal culture",
+      "poop test",
+      "stool analysis",
+      "stool sample examination",
+      "fecal analysis",
+      "stool culture and sensitivity",
+      "bowel culture test",
+      "digestive health test"
     ]
   },
   {
     "id": "bilirubin-total-direct-indirect",
     "name": "BILIRUBIN TOTAL DIRECT INDIRECT",
-    "category": "ct",
+    "category": "Lab",
     "synonyms": [
-      "BILIRUBIN TOTAL DIRECT INDIRECT",
+      "total bilirubin test",
+      "direct and indirect bilirubin test",
+      "bilirubin levels check",
+      "bilirubin blood test",
+      "bilirubin panel",
+      "total and direct bilirubin examination",
+      "bilirubin assessment",
+      "bilirubin blood work",
       "bilirubin profile",
-      "bilirubin total direct indirect",
-      "ct scan",
-      "lft bilirubin fractions"
+      "bilirubin testing"
     ]
   },
   {
-    "id": "creatinine-egfr",
-    "name": "CREATININE+ EGFR",
-    "category": "lab",
+    "id": "sputum-culture-and-sensitivity",
+    "name": "SPUTUM CULTURE AND SENSITIVITY",
+    "category": "Lab",
     "synonyms": [
-      "CREATININE+ EGFR",
-      "creatinine egfr",
-      "creatinine+ egfr",
-      "renal function egfr",
-      "serum creatinine with egfr"
+      "sputum test",
+      "sputum culture",
+      "mucus culture",
+      "phlegm test",
+      "sputum analysis",
+      "sputum sensitivity test",
+      "respiratory culture",
+      "lung secretion test",
+      "sputum examination",
+      "sputum culture and sensitivity test"
+    ]
+  },
+  {
+    "id": "csf-culture",
+    "name": "CSF CULTURE",
+    "category": "Lab",
+    "synonyms": [
+      "CSF culture test",
+      "cerebrospinal fluid culture",
+      "spinal fluid culture",
+      "CSF test",
+      "CSF analysis",
+      "spinal fluid examination",
+      "cerebrospinal fluid test",
+      "bacterial culture of CSF",
+      "CSF microbiology test",
+      "CSF infection test"
+    ]
+  },
+  {
+    "id": "throat-swab-culture",
+    "name": "THROAT SWAB CULTURE",
+    "category": "Lab",
+    "synonyms": [
+      "throat culture",
+      "throat swab test",
+      "strep test",
+      "pharyngeal culture",
+      "throat swab examination",
+      "rapid throat test",
+      "throat swab analysis",
+      "culture of the throat",
+      "throat sample test",
+      "oral swab culture"
+    ]
+  },
+  {
+    "id": "eye-swab-culture-and-sensitivity",
+    "name": "EYE SWAB CULTURE AND SENSITIVITY",
+    "category": "Lab",
+    "synonyms": [
+      "eye swab test",
+      "ocular culture and sensitivity",
+      "eye culture test",
+      "conjunctival swab",
+      "eye infection swab",
+      "eye sensitivity test",
+      "ocular swab examination",
+      "eye sample culture",
+      "swab test for eye infection",
+      "eye culture analysis"
+    ]
+  },
+  {
+    "id": "ear-swab-culture-and-sensitivity",
+    "name": "EAR SWAB CULTURE",
+    "category": "Lab",
+    "synonyms": [
+      "ear culture test",
+      "ear swab test",
+      "ear swab for infection",
+      "ear discharge culture",
+      "ear specimen analysis",
+      "aural culture",
+      "ear sensitivity test",
+      "ear swab examination",
+      "ear microbiology test",
+      "ear infection culture"
+    ]
+  },
+  {
+    "id": "creatinine+-egfr",
+    "name": "CREATININE+ EGFR",
+    "category": "Lab",
+    "synonyms": [
+      "creatinine test",
+      "eGFR test",
+      "kidney function test",
+      "renal panel",
+      "creatinine level check",
+      "glomerular filtration rate test",
+      "creatinine and eGFR examination",
+      "kidney health assessment",
+      "creatinine blood test",
+      "renal function examination"
     ]
   },
   {
     "id": "stool-routine-examination",
     "name": "Stool Routine Examination",
-    "category": "lab",
+    "category": "Lab",
     "synonyms": [
-      "Stool Routine Examination",
-      "stool r/e",
-      "stool routine",
-      "stool routine and microscopy",
-      "stool routine examination"
+      "stool test",
+      "fecal examination",
+      "stool analysis",
+      "fecal test",
+      "bowel movement test",
+      "stool sample test",
+      "routine stool check",
+      "poop test",
+      "fecal occult blood test",
+      "stool routine"
     ]
   },
   {
     "id": "covid-19",
-    "name": "Covid 19",
-    "category": "microbiology",
+    "name": "Covid 19 Antigen Test",
+    "category": "Lab",
     "synonyms": [
-      "Covid 19",
-      "covid 19",
-      "covid test",
-      "rt pcr covid",
-      "sars cov 2",
-      "covid pcr",
-      "coronavirus test",
-      "covid rtpcr",
-      "covid antigen",
-      "covid rapid test"
+      "Covid antigen test",
+      "rapid Covid test",
+      "Covid antigen swab",
+      "SARS-CoV-2 antigen test",
+      "Covid rapid test",
+      "Covid test",
+      "antigen test for Covid",
+      "Covid-19 rapid antigen examination",
+      "Covid antigen screening",
+      "Covid-19 test"
     ]
   },
   {
     "id": "aptt",
-    "name": "APTT",
-    "category": "lab",
+    "name": "APTT  Activated Partial Thromboplastin Citrated",
+    "category": "Lab",
     "synonyms": [
-      "APTT",
+      "APTT test",
       "activated partial thromboplastin time",
-      "aptt",
-      "ptt"
+      "APTT screening",
+      "partial thromboplastin time test",
+      "clotting test",
+      "blood clotting profile",
+      "thrombosis test",
+      "APTT examination",
+      "coagulation test",
+      "thromboplastin time test"
     ]
   },
   {
     "id": "creatinine",
     "name": "CREATININE",
-    "category": "lab",
+    "category": "Lab",
     "synonyms": [
-      "CREATININE",
-      "creatinine",
       "creatinine test",
-      "serum creatinine"
+      "serum creatinine",
+      "creatinine level check",
+      "kidney function test",
+      "renal function test",
+      "creatinine blood test",
+      "creatinine measurement",
+      "blood creatinine test",
+      "creatinine examination",
+      "creatinine panel"
     ]
   },
   {
     "id": "hb",
-    "name": "HB",
-    "category": "lab",
+    "name": "HB Haemoglobin",
+    "category": "Lab",
     "synonyms": [
-      "HB",
-      "hb",
-      "hb test",
-      "hemoglobin"
+      "hemoglobin test",
+      "Hb test",
+      "blood hemoglobin level",
+      "hemoglobin examination",
+      "Hgb test",
+      "blood oxygen test",
+      "hemoglobin measurement",
+      "red blood cell count test",
+      "HbA1c test",
+      "hemoglobin analysis"
     ]
   },
   {
     "id": "albumin",
     "name": "ALBUMIN",
-    "category": "lab",
+    "category": "Lab",
     "synonyms": [
-      "ALBUMIN",
-      "albumin",
       "albumin test",
-      "serum albumin"
+      "serum albumin test",
+      "albumin levels check",
+      "albumin blood test",
+      "blood albumin examination",
+      "albumin measurement",
+      "total protein test",
+      "liver function test (LFT)",
+      "protein levels test",
+      "albumin assessment"
     ]
   },
   {
     "id": "bun",
-    "name": "BUN",
-    "category": "lab",
+    "name": "Blood Urea Nitrogen",
+    "category": "Lab",
     "synonyms": [
-      "BUN",
-      "blood urea nitrogen",
-      "bun",
-      "bun test"
+      "BUN test",
+      "blood urea nitrogen test",
+      "urea test",
+      "kidney function test",
+      "nitrogen blood test",
+      "urea level examination",
+      "blood urea test",
+      "renal function test",
+      "BUN panel",
+      "blood nitrogen examination"
     ]
   },
   {
     "id": "blood-culture",
     "name": "BLOOD CULTURE",
-    "category": "microbiology",
+    "category": "Lab",
     "synonyms": [
-      "BLOOD CULTURE",
-      "blood c/s",
-      "blood culture"
+      "blood culture test",
+      "blood culture examination",
+      "blood culture analysis",
+      "BC test",
+      "microbial blood test",
+      "infection blood test",
+      "blood sample test for infections",
+      "bacterial culture test",
+      "blood culture screening",
+      "sepsis blood test"
     ]
   },
   {
     "id": "amylase",
-    "name": "AMYLASE",
-    "category": "lab",
+    "name": "AMYLASE SERUM",
+    "category": "Lab",
     "synonyms": [
-      "AMYLASE",
-      "amylase",
-      "amylase test",
-      "serum amylase"
+      "serum amylase test",
+      "amylase blood test",
+      "amylase levels check",
+      "amylase examination",
+      "blood amylase test",
+      "amylase lab test",
+      "serum amylase levels",
+      "amylase test panel",
+      "digestive enzyme test",
+      "pancreatic enzyme test"
+    ]
+  },
+  {
+    "id": "peripheral-smear-examination",
+    "name": "Peripheral Smear Examination",
+    "category": "Lab",
+    "synonyms": [
+      "peripheral blood smear",
+      "blood smear test",
+      "smear examination",
+      "peripheral blood examination",
+      "blood slide test",
+      "PBS test",
+      "blood film examination",
+      "peripheral smear analysis",
+      "microscopic blood test",
+      "blood smear analysis"
+    ]
+  },
+  {
+    "id": "fnac",
+    "name": "FNAC Fine Needle Aspiration",
+    "category": "Lab",
+    "synonyms": [
+      "FNAC",
+      "fine needle aspiration",
+      "needle biopsy",
+      "aspiration cytology",
+      "fine needle biopsy",
+      "cell sampling test",
+      "thyroid FNAC",
+      "cyst aspiration test",
+      "cytology examination",
+      "quick needle test"
     ]
   },
   {
     "id": "ldh",
-    "name": "LDH",
-    "category": "lab",
+    "name": "LDH  Lactate Dehydrogenase",
+    "category": "Lab",
     "synonyms": [
-      "LDH",
-      "lactate dehydrogenase",
-      "ldh",
-      "ldh test"
+      "LDH test",
+      "lactate dehydrogenase test",
+      "LDH blood test",
+      "lactate test",
+      "LDH examination",
+      "lactate levels check",
+      "enzyme test for LDH",
+      "LDH analysis",
+      "blood lactate dehydrogenase assessment",
+      "LDH lab test"
+    ]
+  },
+  {
+    "id": "pus-culture-and-sensitivity",
+    "name": "PUS CULTURE AND SENSITIVITY",
+    "category": "Lab",
+    "synonyms": [
+      "pus culture",
+      "sensitivity test",
+      "pus test",
+      "culture and sensitivity",
+      "C&S test",
+      "infection culture",
+      "pus examination",
+      "bacterial culture test",
+      "pus analysis",
+      "microbial sensitivity test"
     ]
   },
   {
     "id": "reticulocyte-count",
     "name": "RETICULOCYTE COUNT",
-    "category": "lab",
+    "category": "Lab",
     "synonyms": [
-      "RETICULOCYTE COUNT",
+      "reticulocyte test",
+      "reticulocyte count test",
+      "reticulocyte examination",
       "retic count",
-      "reticulocyte count"
+      "retic test",
+      "young red blood cell count",
+      "new blood cell test",
+      "reticulocyte analysis",
+      "red cell production test",
+      "blood cell regeneration test"
     ]
   },
   {
     "id": "malaria-parasite",
     "name": "MALARIA PARASITE",
-    "category": "microbiology",
+    "category": "Lab",
     "synonyms": [
-      "MALARIA PARASITE",
-      "malaria parasite",
-      "malaria parasite test",
-      "mp smear",
-      "mp test",
-      "rapid malaria test",
       "malaria test",
-      "blood smear malaria",
-      "malarial parasite",
-      "pf pv"
+      "malaria screening",
+      "malaria examination",
+      "blood test for malaria",
+      "malaria parasite detection",
+      "malaria blood test",
+      "parasite test for malaria",
+      "malaria rapid test",
+      "malaria diagnostic test",
+      "malaria check"
+    ]
+  },
+  {
+    "id": "bilirubin-total",
+    "name": "BILIRUBIN TOTAL",
+    "category": "Lab",
+    "synonyms": [
+      "total bilirubin test",
+      "bilirubin blood test",
+      "bilirubin levels examination",
+      "bilirubin assessment",
+      "total bilirubin measurement",
+      "bilirubin panel",
+      "bilirubin test",
+      "blood bilirubin test",
+      "bilirubin check",
+      "liver function test (bilirubin component)"
     ]
   },
   {
     "id": "pregnancy-test-urine",
     "name": "PREGNANCY TEST URINE",
-    "category": "lab",
+    "category": "Lab",
     "synonyms": [
-      "PREGNANCY TEST URINE",
-      "hcg urine",
-      "pregnancy test urine",
-      "upt",
-      "urine pregnancy test"
+      "urine pregnancy test",
+      "pregnancy urine examination",
+      "hCG test",
+      "home pregnancy test",
+      "urine hCG test",
+      "pee test for pregnancy",
+      "pregnancy check",
+      "urine test for pregnancy",
+      "qualitative pregnancy test",
+      "pregnancy screening test"
+    ]
+  },
+  {
+    "id": "pap-smear",
+    "name": "PAP Smear",
+    "category": "Lab",
+    "synonyms": [
+      "PAP test",
+      "Pap smear test",
+      "cervical screening",
+      "Papanicolaou test",
+      "cervical cytology",
+      "Pap examination",
+      "routine Pap smear",
+      "women's health test",
+      "Pap test screening",
+      "cervical cancer test"
+    ]
+  },
+  {
+    "id": "abs.-eosinophil-counts",
+    "name": "ABS. EOSINOPHIL COUNTS",
+    "category": "Lab",
+    "synonyms": [
+      "eosinophil count",
+      "absolute eosinophil count",
+      "eosinophil test",
+      "blood eosinophil levels",
+      "eosinophil examination",
+      "eosinophil blood test",
+      "eosinophil panel",
+      "absolute eosinophil test",
+      "eosinophil assessment",
+      "eosinophil blood work"
     ]
   },
   {
     "id": "platelet-count",
     "name": "PLATELET COUNT",
-    "category": "lab",
+    "category": "Lab",
     "synonyms": [
-      "PLATELET COUNT",
-      "platelet count",
-      "plt count"
+      "platelet test",
+      "platelet count examination",
+      "platelet level test",
+      "blood platelet count",
+      "platelet panel",
+      "platelet count blood work",
+      "PLT test",
+      "thrombocyte count",
+      "blood test for platelets",
+      "routine platelet check"
+    ]
+  },
+  {
+    "id": "protein-urine-24-hrs",
+    "name": "Protein Urine 24 Hrs",
+    "category": "Lab",
+    "synonyms": [
+      "24-hour protein test",
+      "24-hour urine protein examination",
+      "urine protein collection",
+      "protein in urine test",
+      "protein urine analysis",
+      "24-hour urine protein test",
+      "protein test in urine",
+      "urine protein levels test",
+      "urine protein screening",
+      "daily urine protein test"
     ]
   },
   {
     "id": "alkaline-phosphate",
     "name": "ALKALINE PHOSPHATE",
-    "category": "lab",
+    "category": "Lab",
     "synonyms": [
-      "ALKALINE PHOSPHATE",
-      "alkaline phosphatase",
-      "alkaline phosphate",
-      "alp"
+      "alkaline phosphate test",
+      "alk phos test",
+      "alkaline phosphatase test",
+      "liver function test",
+      "bone enzyme test",
+      "alkaline phosphate level",
+      "alkaline phosphatase activity test",
+      "blood test for alkaline phosphatase",
+      "alk phos examination",
+      "alkaline phosphatase blood test"
     ]
   },
   {
     "id": "sodium",
     "name": "SODIUM",
-    "category": "lab",
+    "category": "Lab",
     "synonyms": [
-      "SODIUM",
-      "na+",
-      "serum sodium",
-      "sodium"
+      "sodium level test",
+      "sodium blood test",
+      "serum sodium test",
+      "sodium panel",
+      "electrolyte test",
+      "sodium examination",
+      "blood sodium check",
+      "sodium concentration test",
+      "sodium assay",
+      "sodium screening"
     ]
   },
   {
     "id": "potassium",
     "name": "POTASSIUM",
-    "category": "lab",
+    "category": "Lab",
     "synonyms": [
-      "POTASSIUM",
-      "k+",
-      "potassium",
-      "serum potassium"
+      "potassium test",
+      "serum potassium level",
+      "potassium blood test",
+      "potassium assessment",
+      "K level test",
+      "electrolyte panel",
+      "potassium examination",
+      "blood potassium check",
+      "potassium measurement",
+      "potassium screening"
+    ]
+  },
+  {
+    "id": "liver-screen",
+    "name": "Liver Screen",
+    "category": "Lab",
+    "synonyms": [
+      "liver function test",
+      "LFT",
+      "liver panel",
+      "hepatic function test",
+      "liver blood test",
+      "liver checkup",
+      "liver examination",
+      "liver screening test",
+      "liver health test",
+      "liver assessment"
+    ]
+  },
+  {
+    "id": "large-biopsy",
+    "name": "Large Biopsy",
+    "category": "Lab",
+    "synonyms": [
+      "large tissue biopsy",
+      "extensive biopsy",
+      "biopsy of a larger area",
+      "big biopsy test",
+      "large sample examination",
+      "deep tissue biopsy",
+      "large specimen test",
+      "comprehensive biopsy",
+      "wide-area biopsy",
+      "large lesion biopsy"
+    ]
+  },
+  {
+    "id": "small-biopsy",
+    "name": "Small Biopsy",
+    "category": "Lab",
+    "synonyms": [
+      "small tissue sample",
+      "biopsy test",
+      "needle biopsy",
+      "skin biopsy",
+      "tissue examination",
+      "biopsy procedure",
+      "local biopsy",
+      "biopsy analysis",
+      "sample collection",
+      "minimally invasive biopsy"
+    ]
+  },
+  {
+    "id": "medium-biopsy",
+    "name": "Medium Biopsy",
+    "category": "Lab",
+    "synonyms": [
+      "medium biopsy",
+      "medium tissue sample",
+      "biopsy test",
+      "tissue examination",
+      "medium-sized biopsy",
+      "biopsy for analysis",
+      "surgical biopsy",
+      "tissue analysis test",
+      "medium punch biopsy",
+      "biopsy procedure"
     ]
   },
   {
     "id": "stool-obt-ocult-blood",
     "name": "Stool OBT Ocult Blood",
-    "category": "lab",
+    "category": "Lab",
     "synonyms": [
-      "Stool OBT Ocult Blood",
-      "fecal occult blood",
-      "stool ob",
-      "stool obt ocult blood",
-      "stool occult blood"
+      "stool occult blood test",
+      "fecal occult blood test",
+      "FOBT",
+      "stool blood test",
+      "hidden blood test in stool",
+      "occult blood examination",
+      "stool screening for blood",
+      "fecal blood examination",
+      "stool analysis for blood",
+      "test for hidden blood in stool"
+    ]
+  },
+  {
+    "id": "malignant-cytology",
+    "name": "Malignant Cytology",
+    "category": "Lab",
+    "synonyms": [
+      "malignant cell test",
+      "cancer cell examination",
+      "malignant cytology test",
+      "cancer screening test",
+      "abnormal cell analysis",
+      "malignant cytology examination",
+      "cancer cell assessment",
+      "cytology cancer test",
+      "tumor cell evaluation",
+      "malignant cell analysis"
+    ]
+  },
+  {
+    "id": "fungal-stain--koh",
+    "name": "Fungal Stain/ KOH",
+    "category": "Lab",
+    "synonyms": [
+      "fungal stain test",
+      "KOH test",
+      "potassium hydroxide examination",
+      "fungal smear",
+      "fungal culture test",
+      "fungal analysis",
+      "KOH preparation",
+      "fungus test",
+      "microbiological fungal examination",
+      "yeast and mold test"
     ]
   },
   {
     "id": "mantoux-test",
-    "name": "MANTOUX TEST",
-    "category": "microbiology",
+    "name": "MANTOUX TuberCulin TEST",
+    "category": "Lab",
     "synonyms": [
-      "MANTOUX TEST",
-      "mantoux",
-      "mantoux test",
-      "ppd test",
-      "tuberculin skin test"
+      "Mantoux test",
+      "tuberculosis skin test",
+      "TB skin test",
+      "tuberculin sensitivity test",
+      "PPD test",
+      "purified protein derivative test",
+      "TB test",
+      "mantoux examination",
+      "tuberculosis test",
+      "skin test for TB"
+    ]
+  },
+  {
+    "id": "fluid-culture-and-senstivity",
+    "name": "Fluid Culture and Senstivity",
+    "category": "Lab",
+    "synonyms": [
+      "fluid culture",
+      "sensitivity test",
+      "culture and sensitivity test",
+      "fluid sensitivity examination",
+      "microbial culture",
+      "fluid analysis",
+      "culture test for fluids",
+      "fluid testing",
+      "culture sensitivity panel",
+      "fluid specimen culture"
+    ]
+  },
+  {
+    "id": "fluid-glucose",
+    "name": "Fluid Glucose",
+    "category": "Lab",
+    "synonyms": [
+      "fluid glucose test",
+      "glucose level test",
+      "blood sugar test",
+      "serum glucose examination",
+      "glucose monitoring test",
+      "sugar level check",
+      "plasma glucose test",
+      "fluid sugar examination",
+      "glucose test",
+      "blood glucose evaluation"
+    ]
+  },
+  {
+    "id": "fluid-protien",
+    "name": "Fluid Protien",
+    "category": "Lab",
+    "synonyms": [
+      "fluid protein test",
+      "protein level test",
+      "protein analysis",
+      "fluid protein examination",
+      "serum protein test",
+      "protein assessment",
+      "protein content analysis",
+      "fluid protein panel",
+      "lab test for protein",
+      "protein measurement test"
+    ]
+  },
+  {
+    "id": "fluid-ldh",
+    "name": "Fluid LDH",
+    "category": "Lab",
+    "synonyms": [
+      "LDH fluid test",
+      "lactate dehydrogenase fluid test",
+      "fluid LDH examination",
+      "LDH analysis of fluid",
+      "fluid enzyme test",
+      "fluid lactate test",
+      "serum LDH test",
+      "body fluid LDH check",
+      "fluid LDH screening",
+      "LDH levels in fluid test"
+    ]
+  },
+  {
+    "id": "a-g-ratio",
+    "name": "Total Protein Albumin Globulin",
+    "category": "Lab",
+    "synonyms": [
+      "total protein test",
+      "albumin-globulin ratio",
+      "A/G ratio test",
+      "protein levels examination",
+      "serum protein test",
+      "protein panel",
+      "blood protein test",
+      "total protein assessment",
+      "albumin test",
+      "globulin test"
+    ]
+  },
+  {
+    "id": "fluid-routine-examination",
+    "name": "Fluid Routine Examination",
+    "category": "Lab",
+    "synonyms": [
+      "fluid analysis",
+      "fluid examination",
+      "routine fluid test",
+      "body fluid test",
+      "fluid profile",
+      "fluid workup",
+      "fluid testing",
+      "fluid assessment",
+      "fluid test panel",
+      "biochemical fluid examination"
+    ]
+  },
+  {
+    "id": "environmental-surveillance-culture-aerobic",
+    "name": "ENVIRONMENTAL SURVEILLANCE CULTURE AEROBIC",
+    "category": "Lab",
+    "synonyms": [
+      "aerobic culture test",
+      "environmental culture test",
+      "air sample culture",
+      "environmental surveillance testing",
+      "aerobic microorganism culture",
+      "environmental microbiology test",
+      "airborne bacteria culture",
+      "environmental testing culture",
+      "environmental air culture",
+      "microbial air quality test"
+    ]
+  },
+  {
+    "id": "darting-motility",
+    "name": "Darting Motility",
+    "category": "Lab",
+    "synonyms": [
+      "darting motility test",
+      "motility examination",
+      "darting movement test",
+      "motility scan",
+      "dart test",
+      "movement assessment",
+      "darting motility assessment",
+      "motility study",
+      "motility evaluation",
+      "darting motion analysis"
+    ]
+  },
+  {
+    "id": "sodium-urine",
+    "name": "SODIUM URINE",
+    "category": "Lab",
+    "synonyms": [
+      "urine sodium test",
+      "sodium level in urine",
+      "urine sodium examination",
+      "sodium urine analysis",
+      "urine sodium screening",
+      "24-hour urine sodium test",
+      "sodium test in urine",
+      "urinary sodium assessment",
+      "urine sodium measurement",
+      "sodium concentration in urine"
     ]
   },
   {
     "id": "total-protien",
     "name": "TOTAL PROTIEN",
-    "category": "lab",
+    "category": "Lab",
     "synonyms": [
-      "TOTAL PROTIEN",
-      "serum total protein",
-      "total protein",
-      "total protien"
+      "total protein test",
+      "protein blood test",
+      "total protein level",
+      "serum protein test",
+      "protein panel",
+      "TP test",
+      "blood protein examination",
+      "protein test",
+      "protein assessment",
+      "total protein analysis"
+    ]
+  },
+  {
+    "id": "bile-pigment-and-bile-salt-urine",
+    "name": "Bile Pigment and Bile Salt Urine",
+    "category": "Lab",
+    "synonyms": [
+      "bile test",
+      "bile pigment and salt analysis",
+      "urine bile pigment test",
+      "bile salts urine examination",
+      "urine test for bile",
+      "bile component urine test",
+      "bile acids test",
+      "urine bile analysis",
+      "bile pigment urine scan",
+      "urine test for liver function"
+    ]
+  },
+  {
+    "id": "hct",
+    "name": "HCT",
+    "category": "Lab",
+    "synonyms": [
+      "hematocrit test",
+      "HCT test",
+      "red blood cell volume test",
+      "blood cell concentration test",
+      "hematocrit examination",
+      "HCT measurement",
+      "hematocrit level check",
+      "blood volume test",
+      "HCT analysis",
+      "packed cell volume test"
+    ]
+  },
+  {
+    "id": "arterial-blood-gas-analysis",
+    "name": "Arterial Blood Gas Analysis",
+    "category": "Lab",
+    "synonyms": [
+      "ABG test",
+      "arterial blood gas test",
+      "blood gas analysis",
+      "arterial gas test",
+      "oxygen level test",
+      "blood gas examination",
+      "arterial blood test",
+      "ABG analysis",
+      "arterial blood gas evaluation",
+      "blood oxygen test"
+    ]
+  },
+  {
+    "id": "bt-ct",
+    "name": "Bleeding and Clotting Time",
+    "category": "Lab",
+    "synonyms": [
+      "bleeding and clotting test",
+      "BT CT",
+      "clotting time assessment",
+      "bleeding time examination",
+      "coagulation test",
+      "blood clotting test",
+      "clot check",
+      "bleeding time test",
+      "coagulation profile",
+      "blood clotting evaluation"
+    ]
+  },
+  {
+    "id": "tlc",
+    "name": "TLC",
+    "category": "Lab",
+    "synonyms": [
+      "TLC test",
+      "total leukocyte count",
+      "white blood cell count test",
+      "white cell count",
+      "blood cell examination",
+      "leukocyte test",
+      "immune cell count",
+      "total leukocyte examination",
+      "blood work for white cells",
+      "TLC blood test"
+    ]
+  },
+  {
+    "id": "csf-routine",
+    "name": "CSF ROUTINE",
+    "category": "Lab",
+    "synonyms": [
+      "CSF analysis",
+      "cerebrospinal fluid test",
+      "spinal fluid examination",
+      "CSF study",
+      "lumbar puncture test",
+      "spinal tap",
+      "CSF evaluation",
+      "cerebrospinal fluid examination",
+      "CSF routine test",
+      "brain fluid analysis"
+    ]
+  },
+  {
+    "id": "nasal-swab-culture-and-sensitivity",
+    "name": "NASAL SWAB CULTURE AND SENSITIVITY",
+    "category": "Lab",
+    "synonyms": [
+      "nasal swab test",
+      "nasal culture",
+      "nose swab sensitivity",
+      "nasal swab examination",
+      "nasal sample test",
+      "nose culture test",
+      "nasal swab analysis",
+      "nasal swab sensitivity test",
+      "nose swab culture",
+      "nasal microbiology test"
+    ]
+  },
+  {
+    "id": "bone-marrow-aspiration",
+    "name": "BONE MARROW ASPIRATION",
+    "category": "Lab",
+    "synonyms": [
+      "bone marrow test",
+      "bone marrow biopsy",
+      "marrow aspiration",
+      "bone marrow examination",
+      "bone marrow analysis",
+      "BM aspiration",
+      "aspiration of bone marrow",
+      "bone marrow extraction",
+      "marrow test",
+      "bone marrow sampling"
+    ]
+  },
+  {
+    "id": "le-cell-detection",
+    "name": "LE Cell Detection",
+    "category": "Lab",
+    "synonyms": [
+      "LE cell test",
+      "lupus erythematosus cell detection",
+      "LE cell examination",
+      "LE cell analysis",
+      "lupus cell test",
+      "lupus detection test",
+      "LE test",
+      "lupus indicator test",
+      "LE cell scan",
+      "lupus test"
+    ]
+  },
+  {
+    "id": "direct-coombs-test",
+    "name": "Direct Coombs Test",
+    "category": "Lab",
+    "synonyms": [
+      "Direct Coombs test",
+      "Coombs test",
+      "direct antiglobulin test",
+      "DAT",
+      "antiglobulin test",
+      "blood compatibility test",
+      "red blood cell test",
+      "direct Coombs examination",
+      "direct Coombs scan",
+      "Coombs screening"
+    ]
+  },
+  {
+    "id": "frozen-section",
+    "name": "Frozen Section",
+    "category": "Lab",
+    "synonyms": [
+      "frozen section analysis",
+      "frozen section examination",
+      "frozen tissue test",
+      "quick biopsy",
+      "rapid section",
+      "intraoperative frozen section",
+      "frozen biopsy",
+      "frozen sample test",
+      "frozen pathology test",
+      "immediate tissue examination"
+    ]
+  },
+  {
+    "id": "aso-titre",
+    "name": "ASO TITRE",
+    "category": "Lab",
+    "synonyms": [
+      "ASO test",
+      "antistreptolysin O titer",
+      "ASO titer",
+      "strep titer test",
+      "strep antibody test",
+      "ASO blood test",
+      "antistreptolysin O test",
+      "strep antibody level examination",
+      "ASO examination",
+      "ASO screening"
+    ]
+  },
+  {
+    "id": "bilirubin-direct",
+    "name": "BILIRUBIN DIRECT",
+    "category": "Lab",
+    "synonyms": [
+      "direct bilirubin test",
+      "total and direct bilirubin test",
+      "bilirubin blood test",
+      "bilirubin examination",
+      "Bilirubin Direct",
+      "DBIL test",
+      "bilirubin level check",
+      "bilirubin panel",
+      "direct bilirubin measurement",
+      "bilirubin analysis"
+    ]
+  },
+  {
+    "id": "blood-culture-blood-bag-14-days",
+    "name": "BLOOD CULTURE Blood Bag 14 days",
+    "category": "Lab",
+    "synonyms": [
+      "blood culture test",
+      "blood culture analysis",
+      "blood culture examination",
+      "bacterial blood test",
+      "blood bag culture",
+      "blood infection test",
+      "microbial culture test",
+      "blood culture panel",
+      "culture of blood",
+      "blood culture for 14 days"
+    ]
+  },
+  {
+    "id": "synovial-fluid",
+    "name": "SYNOVIAL FLUID",
+    "category": "Lab",
+    "synonyms": [
+      "joint fluid test",
+      "synovial fluid analysis",
+      "joint fluid analysis",
+      "synovial fluid examination",
+      "knee fluid test",
+      "joint space fluid test",
+      "synovial fluid sample",
+      "joint fluid evaluation",
+      "fluid extraction from the joint",
+      "synovial fluid assay"
+    ]
+  },
+  {
+    "id": "bilirubin-indirect",
+    "name": "BILIRUBIN INDIRECT",
+    "category": "Lab",
+    "synonyms": [
+      "indirect bilirubin test",
+      "bilirubin levels test",
+      "total bilirubin test",
+      "bilirubin blood test",
+      "indirect bilirubin examination",
+      "bilirubin profile",
+      "bilirubin test",
+      "serum indirect bilirubin",
+      "bilirubin count",
+      "bilirubin lab test"
+    ]
+  },
+  {
+    "id": "blood-group-neonatal-and-cord-blood",
+    "name": "Blood Group-Neonatal and Cord Blood",
+    "category": "Lab",
+    "synonyms": [
+      "neonatal blood typing",
+      "cord blood test",
+      "baby's blood group test",
+      "cord blood examination",
+      "newborn blood type",
+      "blood group test for infants",
+      "neonatal blood group assessment",
+      "infant blood typing",
+      "cord blood analysis",
+      "baby blood test"
+    ]
+  },
+  {
+    "id": "fluid-albumin",
+    "name": "FLUID ALBUMIN",
+    "category": "Lab",
+    "synonyms": [
+      "fluid albumin test",
+      "serum albumin test",
+      "albumin level test",
+      "albumin blood test",
+      "fluid albumin examination",
+      "albumin concentration test",
+      "albumin assessment",
+      "blood albumin test",
+      "fluid protein test",
+      "albumin analysis"
+    ]
+  },
+  {
+    "id": "gestational-glucose-tolerance-test",
+    "name": "GESTATIONAL GLUCOSE TOLERANCE TEST",
+    "category": "Lab",
+    "synonyms": [
+      "gestational diabetes test",
+      "glucose tolerance test for pregnancy",
+      "GTT pregnancy test",
+      "glucose screening test",
+      "oral glucose tolerance test",
+      "pregnancy glucose test",
+      "gestational glucose screening",
+      "blood sugar test during pregnancy",
+      "diabetes test for expectant mothers",
+      "glucose examination for pregnant women"
+    ]
+  },
+  {
+    "id": "chloride",
+    "name": "CHLORIDE",
+    "category": "Lab",
+    "synonyms": [
+      "chloride test",
+      "serum chloride level",
+      "chloride blood test",
+      "electrolyte panel",
+      "chloride examination",
+      "chloride measurement",
+      "blood chloride test",
+      "chloride screening",
+      "chloride level check",
+      "chloride analysis"
+    ]
+  },
+  {
+    "id": "hdl",
+    "name": "HDL",
+    "category": "Lab",
+    "synonyms": [
+      "HDL cholesterol test",
+      "high-density lipoprotein test",
+      "good cholesterol test",
+      "HDL level check",
+      "lipid panel",
+      "cholesterol blood test",
+      "HDL examination",
+      "cholesterol profile",
+      "lipid profile test",
+      "HDL test"
+    ]
+  },
+  {
+    "id": "cholesterol-total",
+    "name": "CHOLESTEROL TOTAL",
+    "category": "Lab",
+    "synonyms": [
+      "cholesterol test",
+      "total cholesterol test",
+      "lipid panel",
+      "cholesterol levels check",
+      "cholesterol blood test",
+      "cholesterol screening",
+      "cholesterol profile",
+      "TC test",
+      "lipid profile examination",
+      "cholesterol assessment"
+    ]
+  },
+  {
+    "id": "triglycerides",
+    "name": "TRIGLYCERIDES",
+    "category": "Lab",
+    "synonyms": [
+      "triglyceride test",
+      "triglyceride levels",
+      "blood triglycerides",
+      "fat test",
+      "lipid test",
+      "triglyceride panel",
+      "triglyceride examination",
+      "triglyceride screening",
+      "TG test",
+      "serum triglycerides"
+    ]
+  },
+  {
+    "id": "indirect-coombs-test",
+    "name": "InDirect Coombs Test",
+    "category": "Lab",
+    "synonyms": [
+      "indirect Coombs test",
+      "indirect antiglobulin test",
+      "indirect Coombs examination",
+      "antibody screening test",
+      "Coombs test for antibodies",
+      "indirect Coombs screening",
+      "blood compatibility test",
+      "Coombs test",
+      "blood test for Rh factor",
+      "indirect Coombs assay"
+    ]
+  },
+  {
+    "id": "fluid-amylase",
+    "name": "FLUID AMYLASE",
+    "category": "Lab",
+    "synonyms": [
+      "fluid amylase test",
+      "amylase level test",
+      "pancreatic enzyme test",
+      "amylase blood test",
+      "fluid amylase examination",
+      "serum amylase test",
+      "amylase activity test",
+      "amylase analysis",
+      "pancreatic function test",
+      "amylase lab test"
+    ]
+  },
+  {
+    "id": "hb-tlc-dlc",
+    "name": "HB TLC DLC",
+    "category": "Lab",
+    "synonyms": [
+      "hemoglobin test",
+      "TLC and DLC test",
+      "blood cell count test",
+      "hemoglobin and blood count",
+      "white blood cell count test",
+      "blood work for hemoglobin",
+      "full blood count with differential",
+      "complete blood cell examination",
+      "blood analysis for hemoglobin",
+      "CBC with differential"
+    ]
+  },
+  {
+    "id": "gtt",
+    "name": "GLUCOSE TOLERANCE Test",
+    "category": "Lab",
+    "synonyms": [
+      "glucose tolerance test",
+      "GTT",
+      "sugar tolerance test",
+      "blood sugar test",
+      "glucose test",
+      "carbohydrate tolerance test",
+      "glucose challenge test",
+      "oral glucose tolerance test",
+      "sugar test",
+      "diabetes screening test"
+    ]
+  },
+  {
+    "id": "osmolality-urine",
+    "name": "OSMOLALITY Urine",
+    "category": "Lab",
+    "synonyms": [
+      "urine osmolality test",
+      "urine concentration test",
+      "urine osmolality examination",
+      "osmolality in urine",
+      "urine osmolarity test",
+      "urine osmolarity examination",
+      "kidney function urine test",
+      "osmolarity test for urine",
+      "urine osmo test",
+      "pee concentration test"
+    ]
+  },
+  {
+    "id": "urinary-calcium-24-hrs",
+    "name": "Urinary CALCIUM 24 hrs",
+    "category": "Lab",
+    "synonyms": [
+      "24-hour urine calcium test",
+      "urinary calcium collection",
+      "calcium in urine test",
+      "24-hour calcium assessment",
+      "urine calcium measurement",
+      "calcium level urine test",
+      "urine calcium analysis",
+      "24-hour urine calcium examination",
+      "urinary calcium test",
+      "24-hour calcium test"
+    ]
+  },
+  {
+    "id": "calcium-creatinine-ratio",
+    "name": "CALCIUM CREATININE RATIO",
+    "category": "Lab",
+    "synonyms": [
+      "calcium to creatinine ratio",
+      "calcium-creatinine test",
+      "creatinine calcium ratio test",
+      "calcium creatinine examination",
+      "CC ratio test",
+      "calcium-creatinine analysis",
+      "renal calcium test",
+      "creatinine and calcium ratio",
+      "kidney function calcium test",
+      "creatinine and calcium examination"
+    ]
+  },
+  {
+    "id": "creatinine-clearance-test",
+    "name": "CREATININE CLEARANCE TEST",
+    "category": "Lab",
+    "synonyms": [
+      "creatinine clearance",
+      "creatinine test",
+      "kidney function test",
+      "urine creatinine test",
+      "24-hour creatinine collection",
+      "creatinine clearance examination",
+      "renal clearance test",
+      "creatinine level check",
+      "creatinine test for kidney health",
+      "kidney filtering test"
+    ]
+  },
+  {
+    "id": "osmolality-serum",
+    "name": "OSMOLALITY SERUM",
+    "category": "Lab",
+    "synonyms": [
+      "serum osmolality test",
+      "serum osmolality",
+      "osmolality blood test",
+      "blood osmolality test",
+      "osmolarity test",
+      "osmolality examination",
+      "serum osmolarity",
+      "osmolality check",
+      "osmolarity assessment",
+      "blood fluid balance test"
+    ]
+  },
+  {
+    "id": "aerobic-suspectibility-gram-negative-organism",
+    "name": "AEROBIC SUSPECTIBILITY GRAM NEGATIVE ORGANISM",
+    "category": "Lab",
+    "synonyms": [
+      "aerobic susceptibility test",
+      "gram-negative organism test",
+      "gram-negative susceptibility examination",
+      "bacterial culture sensitivity test",
+      "aerobic bacteria sensitivity test",
+      "gram-negative bacteria test",
+      "susceptibility scan for gram-negative organisms",
+      "microbial susceptibility test",
+      "aerobic organism sensitivity analysis",
+      "bacteria resistance testing"
+    ]
+  },
+  {
+    "id": "urea",
+    "name": "UREA",
+    "category": "Lab",
+    "synonyms": [
+      "urea test",
+      "blood urea nitrogen test",
+      "BUN test",
+      "urea level examination",
+      "kidney function test",
+      "urea blood test",
+      "renal function test",
+      "urea analysis",
+      "blood urea assessment",
+      "urea concentration test"
+    ]
+  },
+  {
+    "id": "absolute-neutrophil-count",
+    "name": "Absolute Neutrophil Count",
+    "category": "Lab",
+    "synonyms": [
+      "ANC",
+      "absolute neutrophil count",
+      "neutrophil count test",
+      "white blood cell count",
+      "neutrophil test",
+      "blood neutrophil level",
+      "immune cell count",
+      "neutrophil examination",
+      "infection-fighting cell count",
+      "neutrophil assessment"
+    ]
+  },
+  {
+    "id": "other-fluid",
+    "name": "OTHER FLUID",
+    "category": "Lab",
+    "synonyms": [
+      "fluid analysis",
+      "body fluid test",
+      "other bodily fluid examination",
+      "fluid workup",
+      "fluid sample test",
+      "serous fluid analysis",
+      "body fluid panel",
+      "fluid examination",
+      "other fluid assessment",
+      "fluid testing"
+    ]
+  },
+  {
+    "id": "creatinine-kinase",
+    "name": "CREATININE KINASE",
+    "category": "Lab",
+    "synonyms": [
+      "CK test",
+      "creatine kinase test",
+      "creatine phosphokinase test",
+      "muscle enzyme test",
+      "CK-MB test",
+      "heart enzyme test",
+      "muscle function examination",
+      "creatine kinase level check",
+      "creatine kinase blood test",
+      "enzyme test for muscle damage"
+    ]
+  },
+  {
+    "id": "chest-pa",
+    "name": "Chest-Posterior-Anterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "chest X-ray",
+      "chest radiograph",
+      "chest film",
+      "posteroanterior chest X-ray",
+      "CXR",
+      "PA view of the chest",
+      "lung X-ray",
+      "thoracic X-ray",
+      "chest imaging test",
+      "chest scan"
+    ]
+  },
+  {
+    "id": "cervical-spine-lateral",
+    "name": "Cervical Spine-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "lateral cervical spine X-ray",
+      "cervical spine lateral view",
+      "cervical spine imaging",
+      "neck X-ray",
+      "C-spine lateral scan",
+      "lateral neck radiograph",
+      "cervical X-ray test",
+      "lateral view cervical imaging",
+      "cervical spine examination",
+      "side view neck X-ray"
+    ]
+  },
+  {
+    "id": "knee-joints-both-ap",
+    "name": "Knee Joints Both AP",
+    "category": "X-Ray",
+    "synonyms": [
+      "knee X-ray",
+      "knee joint X-ray",
+      "bilateral knee X-ray",
+      "knee imaging",
+      "knee scan",
+      "AP view knee X-ray",
+      "knee radiograph",
+      "knee examination",
+      "knee joint scan",
+      "knee X-ray test"
+    ]
+  },
+  {
+    "id": "abdomen-erect-ap",
+    "name": "Abdomen-Erect-AP",
+    "category": "X-Ray",
+    "synonyms": [
+      "abdominal X-ray",
+      "erect abdomen X-ray",
+      "standing abdominal X-ray",
+      "abdominal radiograph",
+      "upright abdomen scan",
+      "abdominal imaging",
+      "AP view abdomen X-ray",
+      "abdominal examination in standing position",
+      "abdominal X-ray test",
+      "abdominal upright film"
+    ]
+  },
+  {
+    "id": "pns-water-view",
+    "name": "Paranasal Sinuses-Water View",
+    "category": "X-Ray",
+    "synonyms": [
+      "PNS water view",
+      "paranasal sinus X-ray",
+      "sinus scan",
+      "sinus examination",
+      "water's view X-ray",
+      "paranasal sinus imaging",
+      "sinus radiograph",
+      "sinus film",
+      "PNS X-ray",
+      "sinus test"
+    ]
+  },
+  {
+    "id": "knee-joints-both-lateral",
+    "name": "Knee Joints Both Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "knee X-ray",
+      "bilateral knee joint X-ray",
+      "knee joint scan",
+      "knee examination",
+      "X-ray of both knees",
+      "knee imaging",
+      "lateral knee X-ray",
+      "knee joint radiograph",
+      "knee scan",
+      "knee film"
+    ]
+  },
+  {
+    "id": "ls-spine-lateral",
+    "name": "Lumber Spine-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "lumbar spine X-ray",
+      "LS spine lateral view",
+      "lower back X-ray",
+      "lumbar X-ray scan",
+      "spine X-ray test",
+      "lateral lumbar imaging",
+      "back X-ray examination",
+      "lateral view of the lumbar spine",
+      "lumbar radiograph",
+      "lower back imaging"
+    ]
+  },
+  {
+    "id": "chest-ap",
+    "name": "Chest-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "chest X-ray AP",
+      "anteroposterior chest X-ray",
+      "front and back chest scan",
+      "chest radiograph AP view",
+      "CXR AP",
+      "chest examination",
+      "thoracic X-ray",
+      "chest imaging test",
+      "chest film AP view",
+      "AP chest scan"
+    ]
+  },
+  {
+    "id": "cervical-spine-ap",
+    "name": "Cervical Spine-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "cervical spine X-ray",
+      "C-spine AP view",
+      "neck X-ray",
+      "cervical spine examination",
+      "cervical radiograph",
+      "spinal X-ray",
+      "cervical spine scan",
+      "neck film",
+      "Cervical AP test",
+      "cervical spine imaging"
+    ]
+  },
+  {
+    "id": "chest-right-lateral",
+    "name": "Chest-Right Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "right lateral chest X-ray",
+      "chest X-ray right side",
+      "right side chest scan",
+      "right lateral view chest film",
+      "chest examination from the right",
+      "right lateral thoracic X-ray",
+      "chest imaging right lateral",
+      "X-ray of the right chest",
+      "right side lung X-ray",
+      "right lateral chest radiograph"
+    ]
+  },
+  {
+    "id": "cervical-spine-open-mouth",
+    "name": "Cervical Spine-Open mouth",
+    "category": "X-Ray",
+    "synonyms": [
+      "cervical spine X-ray",
+      "open mouth cervical X-ray",
+      "cervical spine open mouth view",
+      "neck X-ray",
+      "cervical spine scan",
+      "cervical radiograph",
+      "cervical spine examination",
+      "open mouth X-ray of the neck",
+      "neck imaging test",
+      "cervical spine imaging"
+    ]
+  },
+  {
+    "id": "chest-left-lateral",
+    "name": "Chest-Left Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "left lateral chest X-ray",
+      "left side chest scan",
+      "left lateral chest imaging",
+      "left chest X-ray",
+      "chest X-ray from the left",
+      "left lateral view chest examination",
+      "left chest radiograph",
+      "side chest X-ray",
+      "chest film left view",
+      "lateral chest X-ray"
+    ]
+  },
+  {
+    "id": "cervical-spine-both-oblique",
+    "name": "Cervical Spine-Both Oblique",
+    "category": "X-Ray",
+    "synonyms": [
+      "cervical spine oblique test",
+      "cervical spine oblique scan",
+      "neck X-ray both oblique views",
+      "cervical X-ray",
+      "cervical spine imaging",
+      "cervical spine examination",
+      "neck radiograph",
+      "cervical spinal scan",
+      "oblique cervical spine X-ray",
+      "neck film"
+    ]
+  },
+  {
+    "id": "chest-right-lateral-decubit",
+    "name": "Chest-Right Lateral Decubit",
+    "category": "X-Ray",
+    "synonyms": [
+      "right lateral chest X-ray",
+      "right side chest scan",
+      "chest X-ray on the right side",
+      "right lateral decubitus view",
+      "chest imaging right lateral",
+      "right side chest examination",
+      "chest film right lateral",
+      "X-ray of the right lateral chest",
+      "right lateral chest radiograph",
+      "right lateral decubitus X-ray"
+    ]
+  },
+  {
+    "id": "cervical-spine-left-oblique",
+    "name": "Cervical Spine-Left Oblique",
+    "category": "X-Ray",
+    "synonyms": [
+      "cervical spine left oblique X-ray",
+      "left oblique cervical spine scan",
+      "cervical spine imaging",
+      "cervical spine left view",
+      "cervical spine left oblique test",
+      "neck X-ray left oblique view",
+      "left side neck X-ray",
+      "cervical oblique examination",
+      "cervical spine left angle X-ray",
+      "X-ray of the neck in left oblique position"
+    ]
+  },
+  {
+    "id": "chest-apiceo-gram",
+    "name": "Chest-Apiceo Gram",
+    "category": "X-Ray",
+    "synonyms": [
+      "chest apiceo gram",
+      "apex chest X-ray",
+      "chest apical view",
+      "apical lung scan",
+      "chest apex examination",
+      "apex chest imaging",
+      "CXR apical view",
+      "chest apiceo test",
+      "lung apical X-ray",
+      "upper lung scan"
+    ]
+  },
+  {
+    "id": "cervical-spine-right-oblique",
+    "name": "Cervical Spine-Right Oblique",
+    "category": "X-Ray",
+    "synonyms": [
+      "right oblique cervical spine X-ray",
+      "cervical spine right oblique view",
+      "cervical spine right side X-ray",
+      "neck X-ray at an angle",
+      "right oblique neck scan",
+      "cervical spine imaging from the right",
+      "right-sided cervical X-ray",
+      "cervical spine right lateral view",
+      "neck angle X-ray",
+      "cervical spine right oblique examination"
+    ]
+  },
+  {
+    "id": "l.s.-spine-ap",
+    "name": "Lumbar Spine-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "lumbar spine X-ray",
+      "L.S. spine X-ray",
+      "lower back X-ray",
+      "lumbar spine examination",
+      "spine back scan",
+      "lumbar radiograph",
+      "lower back imaging",
+      "spinal X-ray",
+      "lumbar spine test",
+      "X-ray of the lower back"
+    ]
+  },
+  {
+    "id": "cervical-spine-flexion",
+    "name": "Cervical Spine-Flexion",
+    "category": "X-Ray",
+    "synonyms": [
+      "cervical spine flexion test",
+      "neck flexion X-ray",
+      "cervical flexion scan",
+      "neck movement examination",
+      "cervical spine imaging",
+      "flexion X-ray of the neck",
+      "cervical spine assessment",
+      "neck X-ray",
+      "cervical flexion examination",
+      "neck scan"
+    ]
+  },
+  {
+    "id": "cervical-spine-extension",
+    "name": "Cervical Spine-Extension",
+    "category": "X-Ray",
+    "synonyms": [
+      "cervical spine extension test",
+      "cervical extension X-ray",
+      "neck extension scan",
+      "cervical spine X-ray",
+      "neck X-ray",
+      "cervical spine exam",
+      "cervical spine imaging",
+      "neck radiograph",
+      "cervical extension examination",
+      "spine extension film"
+    ]
+  },
+  {
+    "id": "abdomen-ap-lateral",
+    "name": "Abdomen-Anteroposterior Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "abdominal X-ray",
+      "AP lateral abdomen scan",
+      "belly X-ray",
+      "abdominal radiograph",
+      "abdominal imaging",
+      "lateral view abdomen X-ray",
+      "abdomen X-ray test",
+      "stomach X-ray",
+      "abdominal examination",
+      "abdomen lateral scan"
+    ]
+  },
+  {
+    "id": "abdomen-kub",
+    "name": "Abdomen-Kidney,Ureter and Bladder",
+    "category": "X-Ray",
+    "synonyms": [
+      "KUB X-ray",
+      "kidney, ureter, bladder X-ray",
+      "abdominal KUB scan",
+      "KUB examination",
+      "abdominal X-ray",
+      "urinary tract X-ray",
+      "KUB imaging",
+      "bladder and kidney scan",
+      "KUB test",
+      "kidney and bladder X-ray"
+    ]
+  },
+  {
+    "id": "abdomen-ivp",
+    "name": "Abdomen-IVP",
+    "category": "X-Ray",
+    "synonyms": [
+      "IVP abdomen",
+      "intravenous pyelogram",
+      "abdominal X-ray test",
+      "kidney function scan",
+      "abdominal imaging",
+      "IVP scan",
+      "urinary tract X-ray",
+      "abdominal radiograph",
+      "X-ray of the abdomen",
+      "abdominal contrast study"
+    ]
+  },
+  {
+    "id": "abdomen-right-lateral-decubit",
+    "name": "Abdomen-Right Lateral Decubit",
+    "category": "X-Ray",
+    "synonyms": [
+      "right lateral decubitus X-ray",
+      "right side abdomen scan",
+      "abdomen lateral view",
+      "right lateral abdominal examination",
+      "abdominal X-ray on the right side",
+      "right-side belly X-ray",
+      "right lateral decubitus position X-ray",
+      "abdomen imaging from the right side",
+      "right-side tummy scan",
+      "lateral decubitus abdomen test"
+    ]
+  },
+  {
+    "id": "abdomen-left-lateral-decubit",
+    "name": "Abdomen-Left Lateral Decubit",
+    "category": "X-Ray",
+    "synonyms": [
+      "left lateral decubitus X-ray",
+      "left side abdomen scan",
+      "left lateral abdominal examination",
+      "abdomen left side X-ray",
+      "left lateral decubitis abdominal test",
+      "side-lying abdominal X-ray",
+      "abdominal imaging on left side",
+      "lateral abdomen scan",
+      "X-ray of the left abdomen",
+      "left side belly film"
+    ]
+  },
+  {
+    "id": "barium-swallow",
+    "name": "Barium Swallow",
+    "category": "X-Ray",
+    "synonyms": [
+      "barium swallow test",
+      "barium meal test",
+      "barium esophagram",
+      "swallow study",
+      "barium swallow examination",
+      "upper GI series",
+      "esophageal swallow scan",
+      "radiographic swallow test",
+      "barium imaging for swallowing",
+      "esophageal X-ray"
+    ]
+  },
+  {
+    "id": "barium-meal",
+    "name": "Barium Meal",
+    "category": "X-Ray",
+    "synonyms": [
+      "barium swallow",
+      "barium study",
+      "barium contrast test",
+      "upper GI series",
+      "barium X-ray",
+      "GI tract examination",
+      "barium meal study",
+      "barium meal test",
+      "esophagus and stomach X-ray",
+      "barium imaging"
+    ]
+  },
+  {
+    "id": "barium-ft",
+    "name": "Barium FT",
+    "category": "X-Ray",
+    "synonyms": [
+      "barium swallow test",
+      "barium meal study",
+      "barium X-ray",
+      "barium examination",
+      "barium contrast study",
+      "upper GI series",
+      "barium test",
+      "GI tract imaging",
+      "barium scan",
+      "barium fluoroscopy"
+    ]
+  },
+  {
+    "id": "barium-enema",
+    "name": "Barium enema",
+    "category": "X-Ray",
+    "synonyms": [
+      "barium enema test",
+      "barium X-ray",
+      "lower GI series",
+      "barium bowel examination",
+      "barium contrast study",
+      "barium colon test",
+      "colon X-ray",
+      "barium enema examination",
+      "barium imaging",
+      "intestinal barium test"
+    ]
+  },
+  {
+    "id": "skull-full-view",
+    "name": "Skull-Full View",
+    "category": "X-Ray",
+    "synonyms": [
+      "skull X-ray",
+      "cranial X-ray",
+      "head X-ray",
+      "full skull scan",
+      "skull imaging",
+      "skull examination",
+      "complete skull view",
+      "cranial radiograph",
+      "full head X-ray",
+      "skull survey"
+    ]
+  },
+  {
+    "id": "skull-ap",
+    "name": "Skull Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "skull X-ray",
+      "anterior-posterior skull view",
+      "skull film",
+      "skull radiograph",
+      "AP skull scan",
+      "skull imaging",
+      "head X-ray",
+      "skull examination",
+      "X-ray of the skull",
+      "skull AP test"
+    ]
+  },
+  {
+    "id": "skull-pa",
+    "name": "Skull Posterior-Anterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "skull X-ray",
+      "posterior-anterior skull view",
+      "skull scan",
+      "skull radiograph",
+      "skull PA view",
+      "head X-ray",
+      "cranial X-ray",
+      "skull examination",
+      "skull imaging",
+      "skull film"
+    ]
+  },
+  {
+    "id": "skull-sella-turcica--lateral-basic",
+    "name": "Skull-Sella Turcica -Lateral basic",
+    "category": "X-Ray",
+    "synonyms": [
+      "sella turcica X-ray",
+      "lateral skull X-ray",
+      "skull lateral view scan",
+      "skull imaging test",
+      "sella turcica examination",
+      "lateral skull film",
+      "X-ray of the sella turcica",
+      "skull X-ray test",
+      "lateral cranial X-ray",
+      "skull scan"
+    ]
+  },
+  {
+    "id": "skull-townes-view",
+    "name": "Skull-Townes View",
+    "category": "X-Ray",
+    "synonyms": [
+      "Skull Townes view X-ray",
+      "Townes view skull exam",
+      "Townes view skull scan",
+      "skull imaging",
+      "skull X-ray",
+      "Townes view test",
+      "skull radiograph",
+      "head X-ray",
+      "Townes projection",
+      "skull examination"
+    ]
+  },
+  {
+    "id": "skull-occipito-mental-pns",
+    "name": "Skull-Occipito-mental-PNS",
+    "category": "X-Ray",
+    "synonyms": [
+      "occipital X-ray",
+      "skull scan",
+      "head X-ray",
+      "skull examination",
+      "occipito-mental view",
+      "PNS X-ray",
+      "skull imaging",
+      "skull radiograph",
+      "head examination",
+      "head film"
+    ]
+  },
+  {
+    "id": "skull-lateral",
+    "name": "Skull-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "lateral skull X-ray",
+      "skull lateral view",
+      "skull X-ray",
+      "lateral cranial X-ray",
+      "side view skull scan",
+      "lateral skull examination",
+      "side skull imaging",
+      "skull lateral radiograph",
+      "lateral head X-ray",
+      "skull imaging test"
+    ]
+  },
+  {
+    "id": "nasal-lateral",
+    "name": "Nasal-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "nasal lateral X-ray",
+      "nasal lateral view",
+      "nose X-ray",
+      "sinus X-ray",
+      "nasal scan",
+      "X-ray of the nose",
+      "lateral nasal examination",
+      "nasal imaging",
+      "lateral view of the nasal cavity",
+      "nasal lateral radiograph"
+    ]
+  },
+  {
+    "id": "paranasal-sinuses-occipito-mental-basic",
+    "name": "Paranasal Sinuses-Occipito-mental-Basic",
+    "category": "X-Ray",
+    "synonyms": [
+      "paranasal sinus X-ray",
+      "occipito-mental view X-ray",
+      "sinus examination",
+      "sinus scan",
+      "paranasal sinus imaging",
+      "sinus radiograph",
+      "occipito-mental sinus test",
+      "sinus check-up",
+      "paranasal sinus test",
+      "facial sinus X-ray"
+    ]
+  },
+  {
+    "id": "paranasal-sinuses-lateral-basic-all-sinuses",
+    "name": "Paranasal Sinuses-Lateral basic-all sinuses",
+    "category": "X-Ray",
+    "synonyms": [
+      "lateral sinus X-ray",
+      "paranasal sinus scan",
+      "sinus examination",
+      "sinus imaging",
+      "sinus film",
+      "sinus X-ray",
+      "all sinus radiograph",
+      "sinus evaluation",
+      "lateral view of sinuses",
+      "sinus check-up"
+    ]
+  },
+  {
+    "id": "mandible-pa",
+    "name": "Mandible-Posterior-Anterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "mandible X-ray",
+      "mandible PA scan",
+      "jaw X-ray",
+      "jaw examination",
+      "mandibular radiograph",
+      "mandible imaging test",
+      "mandible posterior-anterior view",
+      "mandible PA film",
+      "jawbone X-ray",
+      "mandible assessment"
+    ]
+  },
+  {
+    "id": "mandible-right-lateral-oblique",
+    "name": "Mandible-Right Lateral Oblique",
+    "category": "X-Ray",
+    "synonyms": [
+      "right lateral oblique mandible X-ray",
+      "mandible lateral view scan",
+      "mandible right side X-ray",
+      "jaw X-ray right oblique",
+      "mandible examination from the right side",
+      "right-sided jaw radiograph",
+      "mandibular right lateral imaging",
+      "right jaw X-ray",
+      "mandible right lateral oblique test",
+      "jaw scan from the right angle"
+    ]
+  },
+  {
+    "id": "mandible-left-lateral-oblique",
+    "name": "Mandible-Left Lateral Oblique",
+    "category": "X-Ray",
+    "synonyms": [
+      "left mandible X-ray",
+      "left lateral oblique mandible scan",
+      "mandible side view X-ray",
+      "jaw X-ray",
+      "left jaw examination",
+      "left mandible image",
+      "mandibular lateral view test",
+      "mandible left view radiograph",
+      "left side jaw scan",
+      "mandible left lateral imaging"
+    ]
+  },
+  {
+    "id": "tm-joint-pa",
+    "name": "TM Joint-Posterior-Anterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "TM joint X-ray",
+      "TM joint PA view",
+      "temporomandibular joint X-ray",
+      "jaw joint scan",
+      "TMJ radiograph",
+      "TM joint examination",
+      "jaw X-ray",
+      "TM joint imaging",
+      "posterior-anterior TM joint test",
+      "TMJ PA view"
+    ]
+  },
+  {
+    "id": "tm-joint-both-open-and-close-mouth",
+    "name": "TM Joint Both-Open and close mouth",
+    "category": "X-Ray",
+    "synonyms": [
+      "TMJ X-ray",
+      "jaw joint X-ray",
+      "temporomandibular joint scan",
+      "TMJ examination",
+      "TM joint imaging",
+      "jaw scan",
+      "TMJ evaluation",
+      "open and close jaw X-ray",
+      "TMJ film",
+      "jaw joint assessment"
+    ]
+  },
+  {
+    "id": "tm-joint-right-open-and-close-mouth",
+    "name": "TM Joint Right-Open and close mouth",
+    "category": "X-Ray",
+    "synonyms": [
+      "TMJ examination",
+      "jaw joint X-ray",
+      "TM joint scan",
+      "jaw imaging test",
+      "open-close jaw test",
+      "TMJ imaging",
+      "right TMJ X-ray",
+      "jaw function test",
+      "temporomandibular joint test",
+      "TMJ assessment"
+    ]
+  },
+  {
+    "id": "tm-joint-left-open-and-close-mouth",
+    "name": "TM Joint Left-Open and close mouth",
+    "category": "X-Ray",
+    "synonyms": [
+      "TM joint examination",
+      "jaw joint X-ray",
+      "TMJ imaging",
+      "temporomandibular joint scan",
+      "open and close mouth X-ray",
+      "TM joint test",
+      "jaw movement X-ray",
+      "TMJ test",
+      "jaw joint assessment",
+      "temporomandibular joint evaluation"
+    ]
+  },
+  {
+    "id": "thoracic-dorsal-spine-ap",
+    "name": "Thoracic-Dorsal Spine-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "thoracic spine X-ray",
+      "dorsal spine AP view",
+      "spine X-ray",
+      "back X-ray",
+      "thoracic spine radiograph",
+      "thoracic dorsal X-ray",
+      "AP spine examination",
+      "spinal X-ray",
+      "thoracic X-ray",
+      "X-ray of the upper back"
+    ]
+  },
+  {
+    "id": "thoracic-dorsal-spine-lateral",
+    "name": "Thoracic-Dorsal Spine-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "thoracic spine X-ray",
+      "dorsal spine scan",
+      "spine X-ray lateral view",
+      "lateral thoracic X-ray",
+      "thoracic spine examination",
+      "back X-ray",
+      "X-ray of the mid-back",
+      "thoracic spine imaging",
+      "spinal X-ray",
+      "dorsal spine radiograph"
+    ]
+  },
+  {
+    "id": "lumber-spine-right-oblique",
+    "name": "Lumber Spine-Right Oblique",
+    "category": "X-Ray",
+    "synonyms": [
+      "right oblique lumbar X-ray",
+      "lumbar spine oblique view",
+      "lower back X-ray",
+      "lumbar spine scan",
+      "spine X-ray right side",
+      "lumbar oblique examination",
+      "back X-ray",
+      "right side lumbar imaging",
+      "oblique lumbar spine test",
+      "lumbar X-ray right oblique view"
+    ]
+  },
+  {
+    "id": "lumber-spine-left-oblique",
+    "name": "Lumber Spine-Left Oblique",
+    "category": "X-Ray",
+    "synonyms": [
+      "left oblique lumbar X-ray",
+      "lumbar spine X-ray",
+      "lumbar left side scan",
+      "left side spine examination",
+      "oblique lumbar spine test",
+      "lumbar spine left view",
+      "lower back X-ray",
+      "lumbar left oblique scan",
+      "spine X-ray from the left",
+      "left lumbar radiograph"
+    ]
+  },
+  {
+    "id": "lumber-spine-flexion",
+    "name": "Lumber Spine-Flexion",
+    "category": "X-Ray",
+    "synonyms": [
+      "lumbar spine flexion test",
+      "lumbar flexion scan",
+      "lower back flexibility test",
+      "lumbar spine examination",
+      "back bending test",
+      "lumbar range of motion test",
+      "spine flexibility assessment",
+      "lumbar spine X-ray",
+      "flexibility scan of the lower back",
+      "lumbar motion study"
+    ]
+  },
+  {
+    "id": "lumber-spine-extension",
+    "name": "Lumber Spine-Extension",
+    "category": "X-Ray",
+    "synonyms": [
+      "lumbar spine extension test",
+      "lumbar extension X-ray",
+      "lower back extension scan",
+      "lumbar spine X-ray",
+      "spine extension examination",
+      "back extension imaging",
+      "lumbar X-ray",
+      "spinal extension test",
+      "lower back X-ray",
+      "lumbar spine scan"
+    ]
+  },
+  {
+    "id": "lumbo-sacral-ap",
+    "name": "Lumbo Sacral-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "lumbosacral X-ray",
+      "lumbar-sacral AP view",
+      "lower back X-ray",
+      "lumbar spine examination",
+      "lumbosacral scan",
+      "lumbosacral radiograph",
+      "lumbar back film",
+      "lower spine X-ray",
+      "sacral X-ray",
+      "lumbosacral imaging"
+    ]
+  },
+  {
+    "id": "lumbo-sacral-lateral",
+    "name": "Lumbo Sacral-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "lumbar spine X-ray",
+      "lumbar sacral scan",
+      "lower back X-ray",
+      "lumbo sacral examination",
+      "LS spine X-ray",
+      "lumbar X-ray",
+      "lower back radiograph",
+      "spine X-ray",
+      "lumbar region imaging",
+      "back X-ray"
+    ]
+  },
+  {
+    "id": "lumbo-sacral-right-oblique",
+    "name": "Lumbo Sacral-Right Oblique",
+    "category": "X-Ray",
+    "synonyms": [
+      "lumbosacral right oblique X-ray",
+      "lumbar sacral oblique view",
+      "lower back oblique scan",
+      "right oblique lumbosacral X-ray",
+      "lumbar spine right side examination",
+      "lumbosacral right tilt X-ray",
+      "oblique lumbar spine test",
+      "lumbosacral X-ray right angle",
+      "lower back imaging right oblique",
+      "lumbosacral right side scan"
+    ]
+  },
+  {
+    "id": "lumbo-sacral-left-oblique",
+    "name": "Lumbo Sacral-Left Oblique",
+    "category": "X-Ray",
+    "synonyms": [
+      "lumbar sacral left oblique X-ray",
+      "lumbar left oblique view",
+      "lumbar spine scan",
+      "L-S left oblique test",
+      "sacral X-ray",
+      "lower back X-ray",
+      "lumbar oblique examination",
+      "spine imaging left oblique",
+      "lumbar left view X-ray",
+      "back scan left oblique"
+    ]
+  },
+  {
+    "id": "coccyx-ap",
+    "name": "Coccyx-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "coccyx X-ray",
+      "coccyx examination",
+      "tailbone X-ray",
+      "tailbone scan",
+      "coccygeal radiograph",
+      "coccyx imaging",
+      "coccyx AP view",
+      "coccyx test",
+      "coccyx film",
+      "X-ray of the tailbone"
+    ]
+  },
+  {
+    "id": "coccyx-lateral",
+    "name": "Coccyx-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "coccyx X-ray",
+      "coccyx lateral view",
+      "tailbone X-ray",
+      "coccygeal radiograph",
+      "coccyx scan",
+      "X-ray of the tailbone",
+      "lateral coccyx examination",
+      "coccyx imaging",
+      "coccyx test",
+      "coccyx lateral imaging"
+    ]
+  },
+  {
+    "id": "hand-right-ap",
+    "name": "Hand Right-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "right hand X-ray",
+      "hand X-ray AP view",
+      "anterior-posterior hand scan",
+      "hand radiograph",
+      "hand imaging test",
+      "hand examination",
+      "right hand radiology",
+      "X-ray of the right hand",
+      "hand AP X-ray",
+      "hand film"
+    ]
+  },
+  {
+    "id": "hand-right-lateral",
+    "name": "Hand Right-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "right lateral hand X-ray",
+      "hand lateral view",
+      "hand X-ray on the side",
+      "hand side view scan",
+      "lateral hand imaging",
+      "hand X-ray test",
+      "hand radiograph (right lateral)",
+      "hand lateral examination",
+      "side view hand X-ray",
+      "right-side hand scan"
+    ]
+  },
+  {
+    "id": "hand-right-oblique",
+    "name": "Hand Right-Oblique",
+    "category": "X-Ray",
+    "synonyms": [
+      "hand oblique X-ray",
+      "right hand oblique view",
+      "oblique hand scan",
+      "hand X-ray",
+      "hand radiograph",
+      "hand examination",
+      "oblique view of the right hand",
+      "hand imaging test",
+      "right hand X-ray",
+      "oblique hand imaging"
+    ]
+  },
+  {
+    "id": "hand-left-ap",
+    "name": "Hand Left-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "left hand X-ray",
+      "left hand radiograph",
+      "hand AP X-ray",
+      "left hand scan",
+      "hand examination",
+      "anterior-posterior hand X-ray",
+      "left hand imaging",
+      "hand X-ray test",
+      "hand AP film",
+      "left hand view X-ray"
+    ]
+  },
+  {
+    "id": "hand-left-oblique",
+    "name": "Hand Left-Oblique",
+    "category": "X-Ray",
+    "synonyms": [
+      "left oblique hand X-ray",
+      "hand X-ray left oblique view",
+      "left oblique view of the hand",
+      "hand oblique scan",
+      "left hand radiograph",
+      "hand X-ray",
+      "left hand imaging",
+      "hand examination in oblique view",
+      "left oblique hand examination",
+      "hand left oblique test"
+    ]
+  },
+  {
+    "id": "hands-both-ap",
+    "name": "Hands Both-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "hands X-ray",
+      "AP view of hands",
+      "hand radiograph",
+      "hands scan",
+      "bilateral hand X-ray",
+      "hands examination",
+      "hands imaging",
+      "X-ray of both hands",
+      "hands AP scan",
+      "bilateral hands radiography"
+    ]
+  },
+  {
+    "id": "hands-both-oblique",
+    "name": "Hands Both-Oblique",
+    "category": "X-Ray",
+    "synonyms": [
+      "bilateral hand X-ray",
+      "hands oblique view",
+      "hand scan",
+      "X-ray of both hands",
+      "oblique hand radiograph",
+      "hand examination",
+      "both hands X-ray",
+      "hand imaging",
+      "hand X-ray test",
+      "oblique view of hands"
+    ]
+  },
+  {
+    "id": "finger-right-hand-ring-and-little-ap",
+    "name": "Finger Right hand-Ring and Little-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "right hand ring and little finger X-ray",
+      "ring and pinky finger X-ray",
+      "finger X-ray right hand",
+      "X-ray of right hand fingers",
+      "right hand finger scan",
+      "hand X-ray AP view",
+      "right hand ring and small finger examination",
+      "X-ray of ring and little fingers",
+      "right hand digit X-ray",
+      "hand imaging for ring and little fingers"
+    ]
+  },
+  {
+    "id": "finger-right-hand-ring-and-little-lateral",
+    "name": "Finger Right hand-Ring and Little-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "right hand ring and little finger X-ray",
+      "ring and pinky finger scan",
+      "finger X-ray right hand",
+      "right hand finger examination",
+      "X-ray of ring and little fingers",
+      "hand X-ray for ring and pinky",
+      "finger lateral view X-ray",
+      "right hand digit scan",
+      "X-ray test for ring and little fingers",
+      "ring and little finger imaging"
+    ]
+  },
+  {
+    "id": "finger-right-hand-index-and-middle-ap",
+    "name": "Finger Right hand-Index and Middle-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "right hand finger X-ray",
+      "index and middle finger X-ray",
+      "finger scan for right hand",
+      "X-ray of right hand fingers",
+      "finger examination for right hand",
+      "AP view of right hand fingers",
+      "digit X-ray of right hand",
+      "right hand finger imaging",
+      "finger radiograph of right hand",
+      "right hand finger test"
+    ]
+  },
+  {
+    "id": "finger-right-hand-index-and-middle-lateral",
+    "name": "Finger Right hand-Index and Middle-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "finger X-ray right hand",
+      "right hand index and middle finger scan",
+      "lateral finger X-ray",
+      "right hand finger examination",
+      "X-ray of right hand fingers",
+      "hand X-ray for index and middle fingers",
+      "right hand finger imaging",
+      "finger scan for right hand",
+      "X-ray of index and middle fingers",
+      "right hand lateral finger test"
+    ]
+  },
+  {
+    "id": "finger-left-hand-ring-and-little-ap",
+    "name": "Finger Left hand-Ring and Little-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "left hand finger X-ray",
+      "finger X-ray of left hand",
+      "left hand ring and little finger scan",
+      "left hand ring and pinky X-ray",
+      "left hand finger examination",
+      "ring and little finger X-ray",
+      "left hand finger imaging",
+      "X-ray of left hand fingers",
+      "left hand finger radiograph",
+      "left hand finger test"
+    ]
+  },
+  {
+    "id": "finger-left-hand-ring-and-little-lateral",
+    "name": "Finger Left hand- Ring and Little-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "left hand finger X-ray",
+      "ring and little finger X-ray",
+      "left hand digit scan",
+      "hand X-ray for ring and pinky",
+      "left hand lateral view X-ray",
+      "finger examination for left hand",
+      "left hand finger radiograph",
+      "X-ray of left hand fingers",
+      "left hand ring and little finger imaging",
+      "left hand finger scan"
+    ]
+  },
+  {
+    "id": "finger-left-hand-index-and-middle-ap",
+    "name": "Finger Left hand-Index and Middle-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "left hand finger X-ray",
+      "index and middle finger X-ray",
+      "finger X-ray left hand",
+      "X-ray of left hand fingers",
+      "left hand finger scan",
+      "left hand finger examination",
+      "X-ray of index and middle fingers",
+      "AP view of left hand fingers",
+      "left hand finger imaging",
+      "radiograph of left hand fingers"
+    ]
+  },
+  {
+    "id": "finger-left-hand-index-and-middle-lateral",
+    "name": "Finger Left hand-Index and Middle-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "left hand finger X-ray",
+      "index and middle finger X-ray",
+      "finger X-ray of the left hand",
+      "left hand finger scan",
+      "X-ray of left index and middle fingers",
+      "left hand digit X-ray",
+      "X-ray examination of left hand fingers",
+      "left hand finger imaging",
+      "digit X-ray left hand",
+      "finger lateral view X-ray"
+    ]
+  },
+  {
+    "id": "thumb-left-ap",
+    "name": "Thumb Left-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "left thumb X-ray",
+      "thumb left AP view",
+      "left thumb scan",
+      "left thumb radiograph",
+      "X-ray of the left thumb",
+      "left thumb examination",
+      "thumb imaging",
+      "left thumb film",
+      "left thumb X-ray test",
+      "thumb left anterior-posterior"
+    ]
+  },
+  {
+    "id": "thumb-left-lateral",
+    "name": "Thumb Left-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "thumb lateral X-ray",
+      "left thumb X-ray",
+      "left lateral thumb scan",
+      "left thumb radiograph",
+      "thumb side view X-ray",
+      "lateral view of the left thumb",
+      "left thumb imaging test",
+      "thumb lateral examination",
+      "left thumb film",
+      "X-ray of the left thumb"
+    ]
+  },
+  {
+    "id": "thumb-right-ap",
+    "name": "Thumb Right-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "right thumb X-ray",
+      "thumb AP view",
+      "thumb radiograph",
+      "thumb scan",
+      "X-ray of the right thumb",
+      "right thumb examination",
+      "right thumb imaging",
+      "thumb film",
+      "thumb X-ray AP",
+      "radiographic examination of the right thumb"
+    ]
+  },
+  {
+    "id": "thumb-right-lateral",
+    "name": "Thumb Right-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "right lateral thumb X-ray",
+      "thumb lateral view",
+      "right thumb scan",
+      "thumb X-ray",
+      "right thumb radiograph",
+      "thumb examination",
+      "lateral thumb imaging",
+      "thumb right view",
+      "digital X-ray of the thumb",
+      "thumb joint X-ray"
+    ]
+  },
+  {
+    "id": "wrist-joint-left-ap",
+    "name": "Wrist Joint Left-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "left wrist X-ray",
+      "wrist joint X-ray",
+      "X-ray of the left wrist",
+      "left wrist scan",
+      "wrist examination",
+      "left wrist radiograph",
+      "AP view wrist X-ray",
+      "wrist imaging",
+      "left wrist test",
+      "X-ray wrist joint left"
+    ]
+  },
+  {
+    "id": "wrist-joint-left-lateral",
+    "name": "Wrist Joint Left-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "left wrist X-ray",
+      "left wrist scan",
+      "lateral wrist examination",
+      "wrist joint imaging",
+      "X-ray of the left wrist",
+      "left wrist radiograph",
+      "wrist joint lateral view",
+      "left wrist film",
+      "wrist X-ray test",
+      "left wrist joint scan"
+    ]
+  },
+  {
+    "id": "wrist-joint-right-ap",
+    "name": "Wrist Joint Right-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "right wrist X-ray",
+      "wrist joint radiograph",
+      "wrist scan",
+      "X-ray of the right wrist",
+      "wrist joint examination",
+      "right wrist AP view",
+      "wrist imaging",
+      "wrist film",
+      "wrist joint assessment",
+      "right wrist X-ray test"
+    ]
+  },
+  {
+    "id": "wrist-joint-right-lateral",
+    "name": "Wrist Joint Right-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "right wrist X-ray",
+      "wrist joint lateral view",
+      "wrist scan",
+      "X-ray of the right wrist",
+      "lateral wrist examination",
+      "wrist imaging",
+      "right wrist radiograph",
+      "wrist joint test",
+      "X-ray wrist lateral",
+      "right wrist film"
+    ]
+  },
+  {
+    "id": "scaphoid-left-ap",
+    "name": "Scaphoid Left-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "scaphoid X-ray",
+      "left wrist X-ray",
+      "scaphoid bone scan",
+      "left wrist radiograph",
+      "scaphoid examination",
+      "left hand X-ray",
+      "scaphoid imaging",
+      "left wrist scan",
+      "X-ray of the scaphoid",
+      "scaphoid AP view"
+    ]
+  },
+  {
+    "id": "scaphoid-left-posterior",
+    "name": "Scaphoid Left-Posterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "left scaphoid X-ray",
+      "scaphoid bone scan",
+      "left wrist X-ray",
+      "scaphoid examination",
+      "scaphoid imaging",
+      "left wrist radiograph",
+      "scaphoid test",
+      "left wrist scan",
+      "X-ray of the left scaphoid",
+      "scaphoid assessment"
+    ]
+  },
+  {
+    "id": "scaphoid-left-anterior",
+    "name": "Scaphoid Left-Anterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "left scaphoid X-ray",
+      "left wrist X-ray",
+      "scaphoid bone scan",
+      "left wrist examination",
+      "scaphoid imaging test",
+      "left-hand X-ray",
+      "scaphoid assessment",
+      "left scaphoid radiograph",
+      "wrist scan",
+      "scaphoid view X-ray"
+    ]
+  },
+  {
+    "id": "scaphoid-left-oblique",
+    "name": "Scaphoid Left-Oblique",
+    "category": "X-Ray",
+    "synonyms": [
+      "left oblique scaphoid X-ray",
+      "scaphoid view X-ray",
+      "oblique scaphoid scan",
+      "left scaphoid examination",
+      "scaphoid bone X-ray",
+      "left wrist X-ray with oblique view",
+      "scaphoid imaging test",
+      "left oblique wrist scan",
+      "scaphoid fracture X-ray",
+      "left oblique scaphoid radiograph"
+    ]
+  },
+  {
+    "id": "scaphoid-left-lateral",
+    "name": "Scaphoid Left-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "scaphoid X-ray",
+      "left wrist X-ray",
+      "scaphoid bone scan",
+      "lateral wrist examination",
+      "left scaphoid radiograph",
+      "wrist imaging",
+      "scaphoid view X-ray",
+      "left hand X-ray",
+      "wrist bone scan",
+      "lateral view wrist X-ray"
+    ]
+  },
+  {
+    "id": "scaphoid-right-ap",
+    "name": "Scaphoid Right-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "scaphoid X-ray",
+      "right scaphoid examination",
+      "scaphoid view X-ray",
+      "wrist X-ray for scaphoid",
+      "scaphoid bone scan",
+      "right wrist X-ray",
+      "scaphoid imaging",
+      "scaphoid AP view",
+      "right wrist examination",
+      "X-ray of the scaphoid bone"
+    ]
+  },
+  {
+    "id": "scaphoid-right-posterior",
+    "name": "Scaphoid Right-Posterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "right scaphoid X-ray",
+      "scaphoid bone scan",
+      "scaphoid examination",
+      "right wrist X-ray",
+      "scaphoid imaging",
+      "right wrist scan",
+      "scaphoid radiograph",
+      "X-ray of the scaphoid",
+      "scaphoid test",
+      "scaphoid assessment"
+    ]
+  },
+  {
+    "id": "scaphoid-right-anterior",
+    "name": "Scaphoid Right-Anterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "scaphoid X-ray",
+      "right scaphoid scan",
+      "scaphoid bone examination",
+      "scaphoid imaging",
+      "wrist X-ray",
+      "right wrist scan",
+      "scaphoid view X-ray",
+      "hand X-ray",
+      "scaphoid test",
+      "right wrist radiograph"
+    ]
+  },
+  {
+    "id": "scaphoid-right-oblique",
+    "name": "Scaphoid Right-Oblique",
+    "category": "X-Ray",
+    "synonyms": [
+      "right oblique scaphoid X-ray",
+      "scaphoid view X-ray",
+      "scaphoid right oblique scan",
+      "scaphoid bone examination",
+      "X-ray of the right scaphoid",
+      "right scaphoid imaging",
+      "scaphoid wrist X-ray",
+      "right oblique scaphoid test",
+      "scaphoid wrist scan",
+      "oblique scaphoid X-ray"
+    ]
+  },
+  {
+    "id": "scaphoid-right-lateral",
+    "name": "Scaphoid Right-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "right lateral scaphoid X-ray",
+      "scaphoid wrist X-ray",
+      "scaphoid bone scan",
+      "right wrist X-ray",
+      "lateral scaphoid examination",
+      "scaphoid imaging",
+      "scaphoid test",
+      "scaphoid view X-ray",
+      "wrist scan",
+      "X-ray of the right scaphoid"
+    ]
+  },
+  {
+    "id": "forearm-left-ap",
+    "name": "Forearm Left-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "left forearm X-ray",
+      "forearm radiograph",
+      "left arm scan",
+      "forearm left AP view",
+      "forearm imaging",
+      "left forearm examination",
+      "forearm X-ray test",
+      "left arm X-ray",
+      "forearm left view",
+      "forearm left anteroposterior scan"
+    ]
+  },
+  {
+    "id": "forearm-left-lateral",
+    "name": "Forearm Left-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "left forearm X-ray",
+      "forearm lateral view",
+      "left arm scan",
+      "forearm radiograph",
+      "left forearm examination",
+      "forearm imaging",
+      "forearm X-ray test",
+      "left arm X-ray",
+      "lateral forearm scan",
+      "X-ray of the left forearm"
+    ]
+  },
+  {
+    "id": "forearm-right-ap",
+    "name": "Forearm Right-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "right forearm X-ray",
+      "forearm radiograph",
+      "forearm scan",
+      "forearm AP view",
+      "right arm X-ray",
+      "X-ray of the right forearm",
+      "forearm examination",
+      "right forearm imaging",
+      "forearm X-ray test",
+      "forearm right anteroposterior view"
+    ]
+  },
+  {
+    "id": "forearm-right-lateral",
+    "name": "Forearm Right-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "right forearm X-ray",
+      "forearm lateral view",
+      "forearm scan",
+      "forearm imaging",
+      "X-ray of the right forearm",
+      "lateral forearm examination",
+      "forearm radiograph",
+      "forearm X-ray test",
+      "right arm X-ray",
+      "forearm lateral film"
+    ]
+  },
+  {
+    "id": "elbow-joint-left-ap",
+    "name": "Elbow Joint Left-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "left elbow X-ray",
+      "elbow joint X-ray",
+      "left elbow scan",
+      "elbow imaging test",
+      "elbow joint examination",
+      "elbow film",
+      "left elbow radiograph",
+      "elbow AP view",
+      "left arm X-ray",
+      "elbow joint assessment"
+    ]
+  },
+  {
+    "id": "elbow-joint-left-lateral",
+    "name": "Elbow Joint Left-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "left elbow X-ray",
+      "left elbow joint scan",
+      "elbow joint radiograph",
+      "elbow imaging",
+      "left elbow examination",
+      "X-ray of the left elbow",
+      "left arm X-ray",
+      "left elbow test",
+      "elbow joint X-ray",
+      "left lateral elbow imaging"
+    ]
+  },
+  {
+    "id": "elbow-joint-left-oblique",
+    "name": "Elbow Joint Left-Oblique",
+    "category": "X-Ray",
+    "synonyms": [
+      "left elbow X-ray",
+      "elbow joint imaging",
+      "left elbow scan",
+      "left elbow radiograph",
+      "elbow examination",
+      "elbow joint X-ray",
+      "left arm X-ray",
+      "elbow test",
+      "left elbow film",
+      "elbow joint assessment"
+    ]
+  },
+  {
+    "id": "elbow-joint-right-ap",
+    "name": "Elbow Joint Right-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "elbow X-ray",
+      "elbow joint scan",
+      "right elbow radiograph",
+      "right elbow examination",
+      "AP view of the elbow",
+      "elbow joint imaging",
+      "elbow X-ray test",
+      "elbow joint film",
+      "right elbow picture",
+      "elbow joint assessment"
+    ]
+  },
+  {
+    "id": "elbow-joint-right-lateral",
+    "name": "Elbow Joint Right-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "right elbow X-ray",
+      "elbow joint radiograph",
+      "lateral elbow scan",
+      "right elbow imaging",
+      "elbow examination",
+      "right elbow film",
+      "elbow joint test",
+      "X-ray of the right elbow",
+      "elbow joint lateral view",
+      "elbow X-ray test"
+    ]
+  },
+  {
+    "id": "elbow-joint-right-oblique",
+    "name": "Elbow Joint Right-Oblique",
+    "category": "X-Ray",
+    "synonyms": [
+      "right oblique elbow X-ray",
+      "elbow joint X-ray",
+      "elbow scan",
+      "elbow examination",
+      "right elbow imaging",
+      "elbow joint radiograph",
+      "oblique view elbow test",
+      "elbow film",
+      "elbow joint assessment",
+      "X-ray of the right elbow"
+    ]
+  },
+  {
+    "id": "humerus-arm-left-ap",
+    "name": "Humerus Arm Left-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "left arm X-ray",
+      "humerus X-ray left",
+      "left arm radiograph",
+      "left humerus scan",
+      "left arm imaging",
+      "humerus examination left",
+      "left arm film",
+      "X-ray of the left arm",
+      "left arm AP view",
+      "humerus left side X-ray"
+    ]
+  },
+  {
+    "id": "humerus-arm-left-lateral",
+    "name": "Humerus Arm Left-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "left arm X-ray",
+      "humerus X-ray left side",
+      "left lateral arm scan",
+      "left arm radiograph",
+      "left arm examination",
+      "left arm imaging",
+      "humerus imaging test",
+      "X-ray of the left humerus",
+      "left upper arm X-ray",
+      "left arm bone scan"
+    ]
+  },
+  {
+    "id": "humerus-arm-right-ap",
+    "name": "Humerus Arm Right-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "right arm humerus X-ray",
+      "humerus X-ray right side",
+      "right arm bone scan",
+      "right humerus radiograph",
+      "arm X-ray",
+      "right arm imaging",
+      "humerus examination",
+      "right arm X-ray test",
+      "X-ray of the right humerus",
+      "right arm skeletal scan"
+    ]
+  },
+  {
+    "id": "humerus-arm-right-lateral",
+    "name": "Humerus Arm Right-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "right arm X-ray",
+      "humerus X-ray",
+      "upper arm scan",
+      "X-ray of the right humerus",
+      "right arm radiograph",
+      "humerus examination",
+      "right arm imaging",
+      "arm bone X-ray",
+      "right lateral arm scan",
+      "X-ray of the right arm"
+    ]
+  },
+  {
+    "id": "shoulder-joint-left-ap",
+    "name": "Shoulder Joint Left-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "shoulder X-ray left",
+      "left shoulder radiograph",
+      "left shoulder scan",
+      "shoulder joint imaging",
+      "left shoulder examination",
+      "shoulder joint X-ray",
+      "left shoulder AP view",
+      "shoulder test",
+      "left shoulder film",
+      "left shoulder X-ray"
+    ]
+  },
+  {
+    "id": "shoulder-joint-left-lateral-exil",
+    "name": "Shoulder Joint Left-Lateral-Exil",
+    "category": "X-Ray",
+    "synonyms": [
+      "left shoulder X-ray",
+      "shoulder joint radiograph",
+      "shoulder scan",
+      "X-ray of the left shoulder",
+      "left shoulder imaging",
+      "left shoulder examination",
+      "shoulder joint test",
+      "shoulder lateral view X-ray",
+      "shoulder film",
+      "shoulder joint left lateral view"
+    ]
+  },
+  {
+    "id": "shoulder-joint-right-ap",
+    "name": "Shoulder Joint Right-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "right shoulder X-ray",
+      "shoulder joint X-ray",
+      "shoulder scan",
+      "right shoulder radiograph",
+      "shoulder examination",
+      "AP view shoulder X-ray",
+      "shoulder imaging",
+      "shoulder joint examination",
+      "shoulder film",
+      "shoulder joint right AP view"
+    ]
+  },
+  {
+    "id": "shoulder-joint-right-lateral-exil",
+    "name": "Shoulder Joint Right-Lateral-Exil",
+    "category": "X-Ray",
+    "synonyms": [
+      "right shoulder X-ray",
+      "shoulder joint X-ray",
+      "lateral shoulder scan",
+      "shoulder examination",
+      "shoulder imaging",
+      "right shoulder radiograph",
+      "shoulder joint film",
+      "shoulder X-ray test",
+      "shoulder lateral view",
+      "right shoulder scan"
+    ]
+  },
+  {
+    "id": "acromio-clavicular-joint-left-ap",
+    "name": "Acromio Clavicular joint Left-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "AC joint X-ray",
+      "left acromioclavicular joint examination",
+      "AC joint scan",
+      "shoulder X-ray",
+      "left shoulder joint imaging",
+      "left AC joint radiograph",
+      "acromioclavicular joint view",
+      "left shoulder X-ray",
+      "AC joint test",
+      "acromion X-ray"
+    ]
+  },
+  {
+    "id": "acromio-clavicular-joint-right-ap",
+    "name": "Acromio Clavicular joint Right-AP",
+    "category": "X-Ray",
+    "synonyms": [
+      "right shoulder X-ray",
+      "AC joint X-ray",
+      "acromioclavicular joint scan",
+      "shoulder joint examination",
+      "right shoulder imaging",
+      "AC joint radiograph",
+      "right shoulder film",
+      "acromioclavicular view",
+      "X-ray of the right AC joint",
+      "shoulder X-ray AP view"
+    ]
+  },
+  {
+    "id": "scapula-left-ap",
+    "name": "Scapula Left-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "left scapula X-ray",
+      "left shoulder X-ray",
+      "scapula radiograph",
+      "scapula scan",
+      "left shoulder examination",
+      "X-ray of the left scapula",
+      "shoulder imaging",
+      "left shoulder film",
+      "AP view of the left scapula",
+      "left shoulder radiograph"
+    ]
+  },
+  {
+    "id": "scapula-left-lateral",
+    "name": "Scapula Left-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "left scapula X-ray",
+      "left shoulder X-ray",
+      "scapula lateral view",
+      "left shoulder scan",
+      "scapula examination",
+      "X-ray of the left scapula",
+      "left scapula radiograph",
+      "shoulder X-ray",
+      "left scapula imaging",
+      "left shoulder examination"
+    ]
+  },
+  {
+    "id": "scapula-right-ap",
+    "name": "Scapula Right-AP",
+    "category": "X-Ray",
+    "synonyms": [
+      "right scapula X-ray",
+      "scapula examination",
+      "shoulder blade scan",
+      "right shoulder X-ray",
+      "scapula radiograph",
+      "shoulder X-ray",
+      "right scapula imaging",
+      "X-ray of the right scapula",
+      "right shoulder blade film",
+      "scapular AP view"
+    ]
+  },
+  {
+    "id": "scapula-right-lateral",
+    "name": "Scapula Right-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "right lateral scapula X-ray",
+      "scapula side view X-ray",
+      "scapula lateral scan",
+      "right scapula radiograph",
+      "scapula imaging test",
+      "right shoulder X-ray",
+      "lateral view scapula examination",
+      "scapula X-ray test",
+      "shoulder blade X-ray",
+      "right lateral shoulder scan"
+    ]
+  },
+  {
+    "id": "clavicle-left-ap",
+    "name": "Clavicle Left-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "left clavicle X-ray",
+      "left clavicle AP view",
+      "left collarbone scan",
+      "clavicle examination",
+      "X-ray of the left collarbone",
+      "left clavicle imaging",
+      "left shoulder X-ray",
+      "clavicle left-side X-ray",
+      "clavicle left-anteroposterior scan",
+      "left clavicle radiograph"
+    ]
+  },
+  {
+    "id": "clavicle-right-ap",
+    "name": "Clavicle Right-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "right clavicle X-ray",
+      "right clavicle scan",
+      "right shoulder X-ray",
+      "clavicle imaging",
+      "X-ray of the right collarbone",
+      "clavicle examination",
+      "right collarbone radiograph",
+      "AP view clavicle X-ray",
+      "right clavicle radiology test",
+      "shoulder bone scan"
+    ]
+  },
+  {
+    "id": "sterno-clavicular-joint-left-oblique",
+    "name": "Sterno Clavicular Joint Left Oblique",
+    "category": "X-Ray",
+    "synonyms": [
+      "left sterno clavicular joint X-ray",
+      "left SC joint scan",
+      "left collarbone joint examination",
+      "sternoclavicular joint imaging",
+      "left shoulder joint X-ray",
+      "SC joint radiograph left",
+      "sternoclavicular joint test",
+      "left clavicle X-ray",
+      "left shoulder scan",
+      "sternoclavicular joint assessment"
+    ]
+  },
+  {
+    "id": "sterno-clavicular-joint-right-oblique",
+    "name": "Sterno Clavicular Joint Right Oblique",
+    "category": "X-Ray",
+    "synonyms": [
+      "sternoclavicular joint X-ray",
+      "SC joint oblique view",
+      "right shoulder joint scan",
+      "SC joint examination",
+      "sternoclavicular imaging",
+      "oblique X-ray of the SC joint",
+      "sternoclavicular joint radiograph",
+      "shoulder X-ray",
+      "SC joint test",
+      "right clavicle X-ray"
+    ]
+  },
+  {
+    "id": "foot-left-ap",
+    "name": "Foot Left-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "left foot X-ray",
+      "left foot radiograph",
+      "left foot scan",
+      "foot X-ray of the left side",
+      "left foot imaging",
+      "left foot examination",
+      "foot left AP view",
+      "left foot film",
+      "left foot X-ray test",
+      "left foot diagnostic scan"
+    ]
+  },
+  {
+    "id": "foot-left-lateral",
+    "name": "Foot Left-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "left lateral foot X-ray",
+      "foot lateral view",
+      "left foot X-ray",
+      "foot scan from the side",
+      "side view foot examination",
+      "left foot radiograph",
+      "foot X-ray left side",
+      "lateral foot imaging",
+      "left foot film",
+      "foot X-ray lateral position"
+    ]
+  },
+  {
+    "id": "foot-left-oblique",
+    "name": "Foot Left-Oblique",
+    "category": "X-Ray",
+    "synonyms": [
+      "left foot oblique X-ray",
+      "left foot oblique view",
+      "left foot scan",
+      "foot X-ray left oblique",
+      "left foot examination",
+      "oblique foot imaging",
+      "left foot radiograph",
+      "foot imaging left oblique",
+      "foot left oblique test",
+      "left foot X-ray"
+    ]
+  },
+  {
+    "id": "foot-right-ap",
+    "name": "Foot Right-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "foot X-ray",
+      "right foot radiograph",
+      "foot scan",
+      "right foot examination",
+      "foot imaging",
+      "right foot X-ray",
+      "AP view of the right foot",
+      "foot film",
+      "right foot X-ray test",
+      "right foot imaging study"
+    ]
+  },
+  {
+    "id": "foot-right-lateral",
+    "name": "Foot Right-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "right lateral foot X-ray",
+      "foot lateral view",
+      "foot side X-ray",
+      "lateral foot radiograph",
+      "right foot scan",
+      "foot imaging test",
+      "foot X-ray lateral view",
+      "foot side view scan",
+      "foot right side examination",
+      "lateral view foot test"
+    ]
+  },
+  {
+    "id": "foot-right-oblique",
+    "name": "Foot Right-Oblique",
+    "category": "X-Ray",
+    "synonyms": [
+      "foot X-ray right oblique",
+      "right oblique foot scan",
+      "foot radiograph",
+      "oblique view foot examination",
+      "right foot X-ray",
+      "foot imaging test",
+      "oblique foot X-ray",
+      "foot scan at an angle",
+      "right foot radiologic examination",
+      "foot right oblique imaging"
+    ]
+  },
+  {
+    "id": "calcaneus-heel-left-lateral",
+    "name": "Calcaneus-Heel-Left-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "left heel X-ray",
+      "calcaneus X-ray",
+      "left lateral heel scan",
+      "heel bone examination",
+      "heel radiograph",
+      "left foot X-ray",
+      "calcaneus imaging",
+      "left heel radiograph",
+      "heel test",
+      "foot X-ray"
+    ]
+  },
+  {
+    "id": "calcaneus-heel-left-axial",
+    "name": "Calcaneus-Heel-Left-Axial",
+    "category": "X-Ray",
+    "synonyms": [
+      "left heel X-ray",
+      "calcaneus X-ray",
+      "left heel scan",
+      "heel bone examination",
+      "left foot X-ray",
+      "calcaneus imaging",
+      "heel radiograph",
+      "X-ray of the left heel",
+      "left heel film",
+      "calcaneus test"
+    ]
+  },
+  {
+    "id": "calcaneus-heel-right-lateral",
+    "name": "Calcaneus-Heel-Right-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "right heel X-ray",
+      "calcaneus X-ray",
+      "heel bone scan",
+      "right lateral heel examination",
+      "X-ray of the right heel",
+      "heel imaging",
+      "calcaneal radiograph",
+      "right foot X-ray",
+      "lateral heel scan",
+      "foot bone X-ray"
+    ]
+  },
+  {
+    "id": "calcaneus-heel-right-axial",
+    "name": "Calcaneus-Heel-Right-Axial",
+    "category": "X-Ray",
+    "synonyms": [
+      "right heel X-ray",
+      "calcaneus X-ray",
+      "heel bone scan",
+      "right heel examination",
+      "calcaneal imaging",
+      "foot X-ray",
+      "heel radiograph",
+      "right foot scan",
+      "heel assessment",
+      "calcaneus radiology"
+    ]
+  },
+  {
+    "id": "ankle-joint-left-ap",
+    "name": "Ankle Joint Left-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "left ankle X-ray",
+      "ankle joint X-ray",
+      "left ankle scan",
+      "ankle examination",
+      "ankle joint radiograph",
+      "ankle imaging",
+      "left ankle AP view",
+      "ankle X-ray left side",
+      "left ankle film",
+      "ankle joint assessment"
+    ]
+  },
+  {
+    "id": "ankle-joint-left-lateral",
+    "name": "Ankle Joint Left-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "left lateral ankle X-ray",
+      "ankle joint X-ray",
+      "ankle scan",
+      "ankle examination",
+      "ankle radiograph",
+      "ankle imaging",
+      "left ankle X-ray",
+      "lateral ankle film",
+      "ankle joint imaging",
+      "ankle test"
+    ]
+  },
+  {
+    "id": "ankle-joint-right-ap",
+    "name": "Ankle Joint Right-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "ankle X-ray",
+      "right ankle joint scan",
+      "ankle joint examination",
+      "right ankle AP view",
+      "ankle radiograph",
+      "right ankle imaging",
+      "ankle joint test",
+      "ankle film",
+      "right ankle X-ray",
+      "ankle joint assessment"
+    ]
+  },
+  {
+    "id": "ankle-joint-right-lateral",
+    "name": "Ankle Joint Right-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "right lateral ankle X-ray",
+      "ankle joint X-ray",
+      "ankle scan",
+      "ankle examination",
+      "ankle imaging",
+      "ankle joint radiograph",
+      "right ankle X-ray",
+      "lateral ankle view",
+      "ankle film",
+      "ankle joint assessment"
+    ]
+  },
+  {
+    "id": "leg-left-ap",
+    "name": "Leg Left-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "left leg X-ray",
+      "leg left AP view",
+      "left leg scan",
+      "left leg radiograph",
+      "leg examination",
+      "left leg imaging",
+      "X-ray of the left leg",
+      "leg left anteroposterior view",
+      "left leg film",
+      "left leg X-ray test"
+    ]
+  },
+  {
+    "id": "leg-left-lateral",
+    "name": "Leg Left-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "left lateral leg X-ray",
+      "leg side view X-ray",
+      "left leg lateral radiograph",
+      "left leg scan",
+      "leg X-ray from the side",
+      "left leg examination",
+      "lateral view of the leg",
+      "leg lateral imaging",
+      "left leg film",
+      "left lateral leg imaging"
+    ]
+  },
+  {
+    "id": "leg-right-ap",
+    "name": "Leg Right-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "right leg X-ray",
+      "leg X-ray",
+      "right leg scan",
+      "AP view of right leg",
+      "anteroposterior leg examination",
+      "right leg radiograph",
+      "right leg imaging",
+      "X-ray of the right leg",
+      "right leg film",
+      "leg AP test"
+    ]
+  },
+  {
+    "id": "leg-right-lateral",
+    "name": "Leg Right-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "right lateral leg X-ray",
+      "leg side view X-ray",
+      "right leg radiograph",
+      "lateral view leg scan",
+      "leg X-ray",
+      "right leg imaging",
+      "leg examination from the side",
+      "X-ray of the right leg",
+      "right leg lateral view",
+      "leg X-ray test"
+    ]
+  },
+  {
+    "id": "knee-joint-left-ap",
+    "name": "Knee Joint Left-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "left knee X-ray",
+      "knee joint X-ray",
+      "left knee scan",
+      "knee examination",
+      "left knee radiograph",
+      "left knee imaging",
+      "knee AP view",
+      "knee joint radiography",
+      "knee X-ray test",
+      "left knee film"
+    ]
+  },
+  {
+    "id": "knee-joint-left-latera",
+    "name": "Knee Joint Left-Latera",
+    "category": "X-Ray",
+    "synonyms": [
+      "left knee X-ray",
+      "X-ray of the left knee joint",
+      "knee joint scan",
+      "left knee examination",
+      "left knee radiograph",
+      "lateral knee X-ray",
+      "knee imaging",
+      "left knee film",
+      "KJ left lateral view",
+      "left knee assessment"
+    ]
+  },
+  {
+    "id": "knee-joint-left-inferior-superior",
+    "name": "Knee Joint Left-Inferior-Superior",
+    "category": "X-Ray",
+    "synonyms": [
+      "knee X-ray",
+      "left knee examination",
+      "knee joint scan",
+      "left knee radiograph",
+      "knee imaging",
+      "knee joint study",
+      "left knee X-ray",
+      "knee joint evaluation",
+      "knee film",
+      "left knee test"
+    ]
+  },
+  {
+    "id": "knee-joint-right-ap",
+    "name": "Knee Joint Right-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "knee X-ray",
+      "right knee AP view",
+      "knee joint scan",
+      "knee examination",
+      "right knee radiograph",
+      "knee imaging",
+      "knee joint radiology",
+      "right knee film",
+      "knee joint X-ray",
+      "knee scan"
+    ]
+  },
+  {
+    "id": "knee-joint-right-latera",
+    "name": "Knee Joint Right-Latera",
+    "category": "X-Ray",
+    "synonyms": [
+      "right knee X-ray",
+      "knee joint imaging",
+      "right knee scan",
+      "knee examination",
+      "X-ray of the right knee",
+      "right lateral knee view",
+      "knee joint radiograph",
+      "knee X-ray test",
+      "right knee film",
+      "lateral view knee X-ray"
+    ]
+  },
+  {
+    "id": "knee-joint-right-inferior-superior",
+    "name": "Knee Joint Right-Inferior-Superior",
+    "category": "X-Ray",
+    "synonyms": [
+      "knee X-ray",
+      "right knee joint scan",
+      "knee joint examination",
+      "knee radiograph",
+      "inferior-superior knee imaging",
+      "right knee film",
+      "knee joint test",
+      "knee joint X-ray",
+      "knee scan",
+      "knee joint assessment"
+    ]
+  },
+  {
+    "id": "femur-thigh-left-ap",
+    "name": "Femur Thigh Left-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "left femur X-ray",
+      "femur scan left side",
+      "left thigh radiograph",
+      "X-ray of the left thigh",
+      "left leg X-ray",
+      "anterior-posterior thigh film",
+      "left femur AP view",
+      "left thigh examination",
+      "X-ray examination of the left femur",
+      "left thigh imaging"
+    ]
+  },
+  {
+    "id": "femur-thigh-left-lateral",
+    "name": "Femur Thigh Left-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "left thigh X-ray",
+      "left femur scan",
+      "left leg X-ray",
+      "thigh bone examination",
+      "left thigh imaging",
+      "femur X-ray",
+      "X-ray of the left thigh",
+      "left femoral radiograph",
+      "thigh scan",
+      "leg X-ray"
+    ]
+  },
+  {
+    "id": "femur-thigh-right-ap",
+    "name": "Femur Thigh Right-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "right thigh X-ray",
+      "femur X-ray",
+      "right thigh scan",
+      "femur examination",
+      "AP view of right femur",
+      "right leg X-ray",
+      "thigh imaging",
+      "right femur radiograph",
+      "femur scan",
+      "right thigh radiology"
+    ]
+  },
+  {
+    "id": "hip-joint-left-ap",
+    "name": "Hip Joint Left-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "left hip X-ray",
+      "hip joint X-ray",
+      "left hip scan",
+      "left hip examination",
+      "left hip radiograph",
+      "hip imaging",
+      "left hip AP view",
+      "hip joint imaging",
+      "left hip film",
+      "left hip assessment"
+    ]
+  },
+  {
+    "id": "hip-joint-left-lateral",
+    "name": "Hip Joint Left-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "left lateral hip X-ray",
+      "hip joint lateral view",
+      "left hip scan",
+      "left hip examination",
+      "lateral hip radiograph",
+      "left hip imaging",
+      "hip X-ray left side",
+      "left hip film",
+      "left hip joint test",
+      "hip X-ray left lateral view"
+    ]
+  },
+  {
+    "id": "hip-joint-right-ap",
+    "name": "Hip Joint Right-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "right hip X-ray",
+      "right hip joint scan",
+      "hip X-ray AP view",
+      "right hip examination",
+      "right hip radiograph",
+      "AP view of right hip",
+      "right hip imaging",
+      "hip joint X-ray",
+      "right hip film",
+      "hip joint right AP test"
+    ]
+  },
+  {
+    "id": "hip-joint-right-lateral",
+    "name": "Hip Joint Right-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "right hip X-ray",
+      "hip joint lateral view",
+      "hip scan",
+      "right hip radiograph",
+      "hip examination",
+      "right lateral hip imaging",
+      "hip X-ray test",
+      "lateral hip scan",
+      "right-side hip film",
+      "hip joint X-ray"
+    ]
+  },
+  {
+    "id": "pelvis-ap",
+    "name": "Pelvis-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "pelvic X-ray",
+      "pelvis radiograph",
+      "pelvic scan",
+      "pelvis AP view",
+      "pelvic examination",
+      "pelvic imaging",
+      "front-back pelvis X-ray",
+      "pelvis AP test",
+      "pelvic film",
+      "anterior-posterior pelvis X-ray"
+    ]
+  },
+  {
+    "id": "pelvis-left-lateral",
+    "name": "Pelvis Left-Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "left lateral pelvis X-ray",
+      "pelvic left-side scan",
+      "left lateral pelvic radiograph",
+      "left lateral pelvis examination",
+      "left side pelvis X-ray",
+      "pelvis left view scan",
+      "pelvic X-ray left lateral",
+      "left lateral pelvis imaging",
+      "pelvis left lateral view",
+      "left lateral pelvic test"
+    ]
+  },
+  {
+    "id": "pelvis-left-oblique",
+    "name": "Pelvis Left-Oblique",
+    "category": "X-Ray",
+    "synonyms": [
+      "left oblique pelvis X-ray",
+      "pelvic left oblique scan",
+      "left pelvis X-ray",
+      "left side pelvic imaging",
+      "oblique pelvis examination",
+      "pelvis imaging left view",
+      "left pelvis radiograph",
+      "left oblique pelvic test",
+      "X-ray of the left pelvis",
+      "pelvis left side scan"
+    ]
+  },
+  {
+    "id": "pelvis-right-oblique",
+    "name": "Pelvis Right-Oblique",
+    "category": "X-Ray",
+    "synonyms": [
+      "right oblique pelvis X-ray",
+      "pelvic X-ray right oblique view",
+      "right oblique pelvis scan",
+      "pelvis right oblique examination",
+      "pelvis X-ray",
+      "right side pelvic imaging",
+      "pelvis right angle X-ray",
+      "oblique pelvis radiograph",
+      "pelvic imaging from the right side",
+      "right-angle pelvis X-ray"
+    ]
+  },
+  {
+    "id": "sacroiliac-joint-ap",
+    "name": "Sacroiliac Joint-Anteroposterior",
+    "category": "X-Ray",
+    "synonyms": [
+      "sacroiliac joint X-ray",
+      "SI joint AP view",
+      "sacroiliac joint scan",
+      "sacroiliac examination",
+      "sacroiliac joint imaging",
+      "pelvic joint X-ray",
+      "SI joint radiograph",
+      "sacroiliac joint test",
+      "sacroiliac joint assessment",
+      "sacroiliac joint film"
+    ]
+  },
+  {
+    "id": "sacroiliac-joint-left-oblique",
+    "name": "Sacroiliac Joint Left-Oblique",
+    "category": "X-Ray",
+    "synonyms": [
+      "sacroiliac joint X-ray",
+      "sacroiliac joint scan",
+      "left oblique SI joint examination",
+      "SI joint left oblique view",
+      "left sacroiliac X-ray",
+      "sacroiliac imaging",
+      "pelvic joint X-ray",
+      "left SI joint test",
+      "sacroiliac joint radiograph",
+      "left-sided sacroiliac scan"
+    ]
+  },
+  {
+    "id": "sacroiliac-joint-right-oblique",
+    "name": "Sacroiliac Joint Right-Oblique",
+    "category": "X-Ray",
+    "synonyms": [
+      "right oblique sacroiliac joint X-ray",
+      "sacroiliac joint imaging",
+      "SI joint right oblique scan",
+      "sacroiliac joint test",
+      "oblique view of the sacroiliac joint",
+      "sacroiliac joint radiograph",
+      "sacroiliac joint examination",
+      "right SI joint X-ray",
+      "sacroiliac joint film",
+      "sacroiliac joint assessment"
+    ]
+  },
+  {
+    "id": "mastoid-lauss",
+    "name": "Mastoid Lauss",
+    "category": "X-Ray",
+    "synonyms": [
+      "mastoid X-ray",
+      "mastoid scan",
+      "mastoid examination",
+      "mastoid imaging",
+      "temporal bone X-ray",
+      "ear X-ray",
+      "mastoid radiograph",
+      "mastoid test",
+      "mastoid evaluation",
+      "mastoid view"
+    ]
+  },
+  {
+    "id": "nasopharynx-lateral",
+    "name": "Nasopharynx Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "nasopharynx X-ray",
+      "lateral nasopharynx view",
+      "nasopharyngeal radiograph",
+      "nasopharynx scan",
+      "nasopharynx imaging",
+      "nasal passage X-ray",
+      "X-ray of the throat area",
+      "side view nasopharynx test",
+      "nasopharynx examination",
+      "nasopharyngeal scan"
+    ]
+  },
+  {
+    "id": "towne-view",
+    "name": "Towne View",
+    "category": "X-Ray",
+    "synonyms": [
+      "Towne view X-ray",
+      "Towne view scan",
+      "Towne view examination",
+      "Towne view imaging",
+      "Towne view radiograph",
+      "Towne view test",
+      "T-view X-ray",
+      "T-view scan",
+      "skull X-ray",
+      "head imaging"
+    ]
+  },
+  {
+    "id": "leg",
+    "name": "Leg",
+    "category": "X-Ray",
+    "synonyms": [
+      "leg X-ray",
+      "leg radiograph",
+      "leg scan",
+      "leg imaging",
+      "lower limb X-ray",
+      "ankle and leg X-ray",
+      "leg examination",
+      "leg film",
+      "X-ray of the leg",
+      "leg test"
+    ]
+  },
+  {
+    "id": "ankle",
+    "name": "Ankle",
+    "category": "X-Ray",
+    "synonyms": [
+      "ankle X-ray",
+      "ankle radiograph",
+      "ankle scan",
+      "ankle examination",
+      "ankle imaging",
+      "ankle film",
+      "X-ray of the ankle",
+      "ankle test",
+      "ankle view",
+      "ankle assessment"
+    ]
+  },
+  {
+    "id": "stn",
+    "name": "STN",
+    "category": "X-Ray",
+    "synonyms": [
+      "STN X-ray",
+      "STN scan",
+      "sternal X-ray",
+      "sternum examination",
+      "sternal radiograph",
+      "STN imaging",
+      "sternum scan",
+      "X-ray of the sternum",
+      "STN test",
+      "chest and sternum X-ray"
+    ]
+  },
+  {
+    "id": "mastoids",
+    "name": "Mastoids",
+    "category": "X-Ray",
+    "synonyms": [
+      "mastoid X-ray",
+      "mastoid scan",
+      "mastoid examination",
+      "mastoid imaging",
+      "ear X-ray",
+      "mastoid radiograph",
+      "mastoid study",
+      "mastoid test",
+      "mastoid CT scan",
+      "mastoid evaluation"
+    ]
+  },
+  {
+    "id": "forearm",
+    "name": "Forearm",
+    "category": "X-Ray",
+    "synonyms": [
+      "forearm X-ray",
+      "forearm scan",
+      "forearm radiograph",
+      "forearm imaging",
+      "forearm examination",
+      "forearm film",
+      "X-ray of the forearm",
+      "forearm X-ray test",
+      "upper limb X-ray",
+      "wrist and forearm X-ray"
+    ]
+  },
+  {
+    "id": "wrist",
+    "name": "Wrist",
+    "category": "X-Ray",
+    "synonyms": [
+      "wrist X-ray",
+      "wrist radiograph",
+      "wrist scan",
+      "wrist examination",
+      "X-ray of the wrist",
+      "wrist imaging",
+      "wrist film",
+      "wrist check",
+      "wrist study",
+      "wrist assessment"
+    ]
+  },
+  {
+    "id": "elbow",
+    "name": "Elbow",
+    "category": "X-Ray",
+    "synonyms": [
+      "elbow X-ray",
+      "elbow radiograph",
+      "elbow imaging",
+      "elbow scan",
+      "X-ray of the elbow",
+      "elbow examination",
+      "elbow film",
+      "elbow study",
+      "elbow joint X-ray",
+      "elbow test"
+    ]
+  },
+  {
+    "id": "tm-joint-left",
+    "name": "TM joint Left",
+    "category": "X-Ray",
+    "synonyms": [
+      "TM joint X-ray left",
+      "left temporomandibular joint scan",
+      "left jaw X-ray",
+      "left TMJ examination",
+      "left side jaw imaging",
+      "left TM joint radiograph",
+      "left TM joint test",
+      "left jaw joint X-ray",
+      "left side TMJ imaging",
+      "left mandibular joint scan"
+    ]
+  },
+  {
+    "id": "tm-joint-right",
+    "name": "TM joint Right",
+    "category": "X-Ray",
+    "synonyms": [
+      "right TM joint X-ray",
+      "right temporomandibular joint scan",
+      "TMJ examination right side",
+      "right jaw joint X-ray",
+      "right TMJ imaging",
+      "right side jaw scan",
+      "temporomandibular joint test right",
+      "right side TM joint radiograph",
+      "right TM joint evaluation",
+      "right mandibular joint X-ray"
+    ]
+  },
+  {
+    "id": "ba-swallow",
+    "name": "BA Swallow",
+    "category": "X-Ray",
+    "synonyms": [
+      "barium swallow",
+      "BA swallow test",
+      "barium esophagram",
+      "barium swallow examination",
+      "esophageal swallow study",
+      "swallowing X-ray",
+      "barium swallow scan",
+      "swallow test",
+      "barium test for swallowing",
+      "upper GI series with barium"
+    ]
+  },
+  {
+    "id": "ivp",
+    "name": "IVP",
+    "category": "X-Ray",
+    "synonyms": [
+      "IVP",
+      "intravenous pyelogram",
+      "kidney X-ray",
+      "IV pyelogram",
+      "renal imaging test",
+      "urinary tract X-ray",
+      "IVP scan",
+      "kidney scan",
+      "IVP examination",
+      "contrast X-ray of the kidneys"
+    ]
+  },
+  {
+    "id": "ba-enema",
+    "name": "BA Enema",
+    "category": "X-Ray",
+    "synonyms": [
+      "barium enema",
+      "BA enema",
+      "barium colon test",
+      "barium contrast enema",
+      "lower GI series",
+      "barium X-ray examination",
+      "colon X-ray",
+      "barium bowel study",
+      "barium test",
+      "large intestine X-ray"
+    ]
+  },
+  {
+    "id": "dl-spine",
+    "name": "DL Spine",
+    "category": "X-Ray",
+    "synonyms": [
+      "DL spine X-ray",
+      "lumbar spine X-ray",
+      "spine imaging",
+      "spine radiograph",
+      "lower back X-ray",
+      "spinal examination",
+      "DL spine scan",
+      "back X-ray",
+      "thoracic spine X-ray",
+      "spine test"
+    ]
+  },
+  {
+    "id": "b-l-hands",
+    "name": "B-L Hands",
+    "category": "X-Ray",
+    "synonyms": [
+      "B-L hands X-ray",
+      "bilateral hand X-ray",
+      "hand radiograph",
+      "hand scan",
+      "X-ray of both hands",
+      "hand imaging",
+      "B-L hands examination",
+      "B-L hands film",
+      "bilateral hand imaging",
+      "dual hand X-ray"
+    ]
+  },
+  {
+    "id": "arm",
+    "name": "Arm",
+    "category": "X-Ray",
+    "synonyms": [
+      "arm X-ray",
+      "arm radiograph",
+      "upper limb X-ray",
+      "arm imaging",
+      "arm scan",
+      "arm examination",
+      "X-ray of the arm",
+      "forearm X-ray",
+      "arm film",
+      "arm test"
+    ]
+  },
+  {
+    "id": "foot",
+    "name": "Foot",
+    "category": "X-Ray",
+    "synonyms": [
+      "foot X-ray",
+      "foot radiograph",
+      "foot scan",
+      "foot imaging",
+      "X-ray of the foot",
+      "foot examination",
+      "foot test",
+      "foot film",
+      "ankle and foot X-ray",
+      "foot assessment"
+    ]
+  },
+  {
+    "id": "thigh-and-hip",
+    "name": "Thigh and Hip",
+    "category": "X-Ray",
+    "synonyms": [
+      "thigh and hip X-ray",
+      "hip and thigh scan",
+      "hip X-ray",
+      "thigh examination",
+      "thigh imaging",
+      "hip radiograph",
+      "lower body X-ray",
+      "leg X-ray",
+      "hip joint test",
+      "thigh and hip imaging"
+    ]
+  },
+  {
+    "id": "thigh-and-knee",
+    "name": "Thigh and Knee",
+    "category": "X-Ray",
+    "synonyms": [
+      "thigh and knee X-ray",
+      "thigh and knee scan",
+      "knee and thigh examination",
+      "leg X-ray",
+      "knee imaging",
+      "X-ray of the thigh and knee",
+      "lower limb X-ray",
+      "thigh and knee radiograph",
+      "knee joint X-ray",
+      "leg scan"
+    ]
+  },
+  {
+    "id": "knee-and-leg",
+    "name": "Knee and Leg",
+    "category": "X-Ray",
+    "synonyms": [
+      "knee and leg X-ray",
+      "knee radiograph",
+      "leg scan",
+      "knee and leg examination",
+      "knee imaging",
+      "X-ray of the knee and leg",
+      "knee and leg film",
+      "knee and leg test",
+      "knee and leg study",
+      "lower limb X-ray"
+    ]
+  },
+  {
+    "id": "leg-and-ankle",
+    "name": "Leg and Ankle",
+    "category": "X-Ray",
+    "synonyms": [
+      "leg and ankle X-ray",
+      "ankle and leg scan",
+      "leg and ankle examination",
+      "leg radiograph",
+      "ankle imaging",
+      "lower leg X-ray",
+      "ankle film",
+      "X-ray of the leg and ankle",
+      "leg and ankle study",
+      "leg and foot X-ray"
+    ]
+  },
+  {
+    "id": "calcaneus-axial",
+    "name": "Calcaneus Axial",
+    "category": "X-Ray",
+    "synonyms": [
+      "calcaneus X-ray",
+      "heel X-ray",
+      "calcaneal scan",
+      "heel bone examination",
+      "foot X-ray",
+      "calcaneus imaging",
+      "X-ray of the heel",
+      "calcaneus radiograph",
+      "heel examination",
+      "calcaneus test"
+    ]
+  },
+  {
+    "id": "chest-ap",
+    "name": "Chest AP",
+    "category": "X-Ray",
+    "synonyms": [
+      "chest X-ray",
+      "AP chest X-ray",
+      "chest radiograph",
+      "anterior-posterior chest film",
+      "lung scan",
+      "CXR",
+      "thoracic X-ray",
+      "chest imaging test",
+      "chest examination",
+      "front view chest X-ray"
+    ]
+  },
+  {
+    "id": "skull-lateral",
+    "name": "Skull Lateral",
+    "category": "X-Ray",
+    "synonyms": [
+      "lateral skull X-ray",
+      "skull radiograph",
+      "side view skull X-ray",
+      "skull scan",
+      "lateral cranial X-ray",
+      "skull examination",
+      "lateral head X-ray",
+      "skull imaging",
+      "lateral head scan",
+      "skull lateral view X-ray"
+    ]
+  },
+  {
+    "id": "bitewing",
+    "name": "Bitewing",
+    "category": "X-Ray",
+    "synonyms": [
+      "bitewing X-ray",
+      "bitewing radiograph",
+      "bitewing examination",
+      "dental bitewing",
+      "bitewing scan",
+      "dental X-ray",
+      "bitewing imaging",
+      "BW X-ray",
+      "bitewing test",
+      "posterior-anterior bitewing"
+    ]
+  },
+  {
+    "id": "iopa",
+    "name": "Intraoral Periapical",
+    "category": "X-Ray",
+    "synonyms": [
+      "IOPA",
+      "intraoral X-ray",
+      "periapical X-ray",
+      "tooth X-ray",
+      "dental periapical examination",
+      "dental X-ray",
+      "intraoral scan",
+      "dental imaging test",
+      "root X-ray",
+      "intraoral radiograph"
+    ]
+  },
+  {
+    "id": "occlusal-view",
+    "name": "Occlusal View",
+    "category": "X-Ray",
+    "synonyms": [
+      "occlusal X-ray",
+      "bitewing film",
+      "occlusal radiograph",
+      "tooth alignment X-ray",
+      "occlusal imaging",
+      "occlusal scan",
+      "dental occlusion test",
+      "jaw alignment X-ray",
+      "occlusal examination",
+      "dental bite X-ray"
+    ]
+  },
+  {
+    "id": "opg",
+    "name": "Orthopantomogram",
+    "category": "X-Ray",
+    "synonyms": [
+      "OPG",
+      "orthopantomogram",
+      "panoramic dental X-ray",
+      "dental panoramic scan",
+      "full mouth X-ray",
+      "jaw X-ray",
+      "panorex",
+      "dental imaging test",
+      "teeth scan",
+      "panoramic X-ray examination"
+    ]
+  },
+  {
+    "id": "lateral-cephalogram",
+    "name": "Lateral Cephalogram",
+    "category": "X-Ray",
+    "synonyms": [
+      "lateral ceph X-ray",
+      "lateral cephalometric radiograph",
+      "side head scan",
+      "profile skull X-ray",
+      "lateral skull examination",
+      "head X-ray",
+      "cephalometric test",
+      "side view head imaging",
+      "lateral head scan",
+      "lateral ceph test"
+    ]
+  },
+  {
+    "id": "tmj-open-closed",
+    "name": "Temporomandibular Joint Open/Closed",
+    "category": "X-Ray",
+    "synonyms": [
+      "TMJ assessment",
+      "jaw joint X-ray",
+      "temporomandibular joint scan",
+      "TMJ examination",
+      "jaw scan",
+      "TMJ imaging",
+      "jaw joint evaluation",
+      "TMJ test",
+      "jaw X-ray",
+      "TMJ radiograph"
+    ]
+  },
+  {
+    "id": "abdomen",
+    "name": "Abdomen",
+    "category": "USG",
+    "synonyms": [
+      "abdominal scan",
+      "belly sono",
+      "ultrasound of the belly",
+      "stomach scan",
+      "tummy ultrasound",
+      "abdominal imaging",
+      "USG of the abdomen",
+      "sonogram abdomen",
+      "abdominal examination",
+      "tummy test"
+    ]
+  },
+  {
+    "id": "pelvic-organs",
+    "name": "Pelvic Organs",
+    "category": "USG",
+    "synonyms": [
+      "pelvic ultrasound",
+      "pelvic scan",
+      "sonogram of the pelvic organs",
+      "pelvic examination",
+      "USG of the pelvis",
+      "pelvic imaging",
+      "transabdominal pelvic ultrasound",
+      "pelvic organ assessment",
+      "tummy scan for pelvic organs",
+      "pelvic organs test"
+    ]
+  },
+  {
+    "id": "neck",
+    "name": "Neck",
+    "category": "USG",
+    "synonyms": [
+      "neck ultrasound",
+      "neck scan",
+      "ultrasound of the neck",
+      "neck examination",
+      "carotid ultrasound",
+      "USG neck",
+      "thyroid ultrasound",
+      "cervical ultrasound",
+      "sonogram of the neck",
+      "neck imaging"
+    ]
+  },
+  {
+    "id": "breast",
+    "name": "Breast",
+    "category": "USG",
+    "synonyms": [
+      "breast ultrasound",
+      "breast scan",
+      "mammary ultrasound",
+      "breast examination",
+      "USG breast",
+      "breast imaging",
+      "sonogram of the breast",
+      "breast sonography",
+      "breast test",
+      "breast checkup"
+    ]
+  },
+  {
+    "id": "cervical-spine",
+    "name": "Cervical Spine",
+    "category": "USG",
+    "synonyms": [
+      "cervical spine ultrasound",
+      "neck ultrasound",
+      "cervical spine scan",
+      "cervical spine examination",
+      "cervical sonogram",
+      "cervical spine imaging",
+      "neck scan",
+      "ultrasound of the cervical spine",
+      "cervical USG",
+      "spine ultrasound"
+    ]
+  },
+  {
+    "id": "chest",
+    "name": "Chest",
+    "category": "USG",
+    "synonyms": [
+      "chest ultrasound",
+      "thoracic ultrasound",
+      "chest USG",
+      "lung scan",
+      "chest examination",
+      "chest sonogram",
+      "cardiac ultrasound",
+      "chest imaging test",
+      "chest scan",
+      "ultrasound of the chest"
+    ]
+  },
+  {
+    "id": "nasopharynx",
+    "name": "Nasopharynx",
+    "category": "USG",
+    "synonyms": [
+      "nasopharyngeal ultrasound",
+      "nasopharynx scan",
+      "nasopharyngeal examination",
+      "nose and throat ultrasound",
+      "nasal passage scan",
+      "nasopharynx imaging",
+      "USG of the nasopharynx",
+      "throat ultrasound",
+      "nasopharyngeal test",
+      "upper airway ultrasound"
+    ]
+  },
+  {
+    "id": "pelvic-hip-joint-pbh",
+    "name": "Pelvic Hip Joint PBH",
+    "category": "USG",
+    "synonyms": [
+      "pelvic ultrasound",
+      "hip joint scan",
+      "pelvic hip examination",
+      "hip ultrasound",
+      "USG of the pelvis",
+      "pelvic imaging",
+      "hip joint assessment",
+      "pelvic scan",
+      "sonogram of the pelvis",
+      "pelvic hip joint evaluation"
+    ]
+  },
+  {
+    "id": "shoulder",
+    "name": "Shoulder",
+    "category": "USG",
+    "synonyms": [
+      "shoulder ultrasound",
+      "shoulder scan",
+      "shoulder imaging",
+      "USG shoulder",
+      "shoulder examination",
+      "shoulder sonogram",
+      "shoulder assessment",
+      "shoulder test",
+      "ultrasound of the shoulder",
+      "shoulder echo"
+    ]
+  },
+  {
+    "id": "knee-joints",
+    "name": "Knee Joints",
+    "category": "USG",
+    "synonyms": [
+      "knee ultrasound",
+      "knee joint scan",
+      "knee sonogram",
+      "USG knee",
+      "knee joint examination",
+      "knee imaging",
+      "knee test",
+      "sonography of the knee",
+      "knee scan",
+      "knee assessment"
+    ]
+  },
+  {
+    "id": "brain",
+    "name": "Brain",
+    "category": "USG",
+    "synonyms": [
+      "brain ultrasound",
+      "brain scan",
+      "cranial ultrasound",
+      "head ultrasound",
+      "brain imaging",
+      "ultrasound of the brain",
+      "sonography of the brain",
+      "brain examination",
+      "transcranial ultrasound",
+      "brain USG"
+    ]
+  },
+  {
+    "id": "face",
+    "name": "Face",
+    "category": "USG",
+    "synonyms": [
+      "facial ultrasound",
+      "face scan",
+      "face imaging",
+      "facial examination",
+      "USG face",
+      "face sonography",
+      "face test",
+      "facial assessment",
+      "face evaluation",
+      "sonogram of the face"
+    ]
+  },
+  {
+    "id": "sub-mandibular-gland",
+    "name": "Sub Mandibular Gland",
+    "category": "USG",
+    "synonyms": [
+      "submandibular ultrasound",
+      "submandibular gland scan",
+      "submandibular examination",
+      "gland ultrasound",
+      "salivary gland test",
+      "neck ultrasound",
+      "submandibular imaging",
+      "submandibular USG",
+      "jaw ultrasound",
+      "salivary gland scan"
+    ]
+  },
+  {
+    "id": "parotid-gland",
+    "name": "Parotid Gland",
+    "category": "USG",
+    "synonyms": [
+      "parotid ultrasound",
+      "salivary gland scan",
+      "parotid gland imaging",
+      "USG of the parotid gland",
+      "parotid examination",
+      "salivary gland test",
+      "parotid sonography",
+      "parotid scan",
+      "gland imaging test",
+      "parotid gland evaluation"
+    ]
+  },
+  {
+    "id": "limbs",
+    "name": "Limbs",
+    "category": "USG",
+    "synonyms": [
+      "limb ultrasound",
+      "limb scan",
+      "extremity ultrasound",
+      "limb imaging",
+      "USG of the limbs",
+      "extremity scan",
+      "arm and leg ultrasound",
+      "limb examination",
+      "musculoskeletal ultrasound",
+      "limb sonography"
+    ]
+  },
+  {
+    "id": "lymph-nodes",
+    "name": "Lymph Nodes",
+    "category": "USG",
+    "synonyms": [
+      "lymph node ultrasound",
+      "lymph node scan",
+      "lymph node examination",
+      "lymph node imaging",
+      "USG of lymph nodes",
+      "lymph node assessment",
+      "lymph node check",
+      "nodal ultrasound",
+      "lymphatic ultrasound",
+      "lymph node evaluation"
+    ]
+  },
+  {
+    "id": "swellings",
+    "name": "Swellings",
+    "category": "USG",
+    "synonyms": [
+      "swelling examination",
+      "swelling scan",
+      "ultrasound for swellings",
+      "USG for swellings",
+      "soft tissue ultrasound",
+      "lump ultrasound",
+      "fluid collection scan",
+      "edema ultrasound",
+      "swelling assessment",
+      "sonogram for swellings"
+    ]
+  },
+  {
+    "id": "foetal-wellbeing",
+    "name": "Foetal wellbeing",
+    "category": "USG",
+    "synonyms": [
+      "foetal monitoring",
+      "foetal health scan",
+      "baby wellbeing check",
+      "foetal assessment",
+      "ultrasound for baby health",
+      "foetal wellbeing examination",
+      "baby growth scan",
+      "foetal well-being test",
+      "sonogram for baby",
+      "foetal wellness ultrasound"
+    ]
+  },
+  {
+    "id": "abdominal-aorta-and-its-branches--doppler-study",
+    "name": "Abdominal aorta and its branches -doppler study",
+    "category": "USG",
+    "synonyms": [
+      "abdominal aorta Doppler scan",
+      "aorta ultrasound study",
+      "Doppler examination of the abdominal aorta",
+      "abdominal aorta vascular test",
+      "Doppler imaging of the aorta",
+      "abdominal artery scan",
+      "aorta blood flow test",
+      "ultrasound of the aorta",
+      "Doppler ultrasound of the abdomen",
+      "abdominal aorta evaluation"
+    ]
+  },
+  {
+    "id": "deep-venous-thrombosis-doppler-study",
+    "name": "Deep Venous Thrombosis Doppler Study",
+    "category": "USG",
+    "synonyms": [
+      "DVT Doppler study",
+      "deep vein ultrasound",
+      "venous Doppler scan",
+      "DVT scan",
+      "deep vein examination",
+      "leg vein ultrasound",
+      "DVT ultrasound",
+      "deep vein test",
+      "venous flow study",
+      "Doppler study for blood clots"
+    ]
+  },
+  {
+    "id": "venous-doppler-study",
+    "name": "Venous doppler study",
+    "category": "USG",
+    "synonyms": [
+      "venous ultrasound",
+      "venous doppler scan",
+      "vein study",
+      "venous flow examination",
+      "venous blood flow test",
+      "Doppler ultrasound of the veins",
+      "vein scan",
+      "venous imaging",
+      "leg vein ultrasound",
+      "Doppler study for veins"
+    ]
+  },
+  {
+    "id": "arterial-doppler-study-of-limbs",
+    "name": "Arterial doppler study of limbs",
+    "category": "USG",
+    "synonyms": [
+      "limb arterial Doppler",
+      "arterial Doppler scan of legs",
+      "arterial blood flow study",
+      "limb blood flow ultrasound",
+      "Doppler ultrasound of limbs",
+      "peripheral arterial Doppler test",
+      "vascular ultrasound of legs",
+      "limb circulation examination",
+      "ultrasound Doppler of the legs",
+      "peripheral Doppler scan"
+    ]
+  },
+  {
+    "id": "renal-arterial-doppler-study",
+    "name": "Renal arterial doppler study",
+    "category": "USG",
+    "synonyms": [
+      "renal artery doppler scan",
+      "renal doppler ultrasound",
+      "kidney blood flow study",
+      "renal vascular ultrasound",
+      "kidney doppler test",
+      "renal artery examination",
+      "doppler study of the kidneys",
+      "kidney artery imaging",
+      "renal blood flow assessment",
+      "USG renal doppler"
+    ]
+  },
+  {
+    "id": "carotid-doppler-study",
+    "name": "Carotid doppler study",
+    "category": "USG",
+    "synonyms": [
+      "carotid ultrasound",
+      "carotid artery scan",
+      "carotid doppler exam",
+      "carotid artery test",
+      "doppler study of the carotid arteries",
+      "carotid imaging",
+      "neck ultrasound",
+      "carotid flow study",
+      "carotid artery evaluation",
+      "doppler scan of the neck"
+    ]
+  },
+  {
+    "id": "varicose-veins-doppler-study",
+    "name": "Varicose veins doppler study",
+    "category": "USG",
+    "synonyms": [
+      "varicose veins ultrasound",
+      "vein doppler exam",
+      "venous doppler study",
+      "varicose veins scan",
+      "leg vein ultrasound",
+      "vein mapping test",
+      "doppler ultrasound for varicose veins",
+      "venous ultrasound examination",
+      "varicose vein assessment",
+      "ultrasound doppler of the legs"
+    ]
+  },
+  {
+    "id": "ecg",
+    "name": "ECG",
+    "category": "Cardio",
+    "synonyms": [
+      "ECG",
+      "electrocardiogram",
+      "heart rhythm test",
+      "cardiac test",
+      "EKG",
+      "heart scan",
+      "ECG examination",
+      "electrical heart test",
+      "cardiac monitoring",
+      "heart tracing"
+    ]
+  },
+  {
+    "id": "cag",
+    "name": "Coronary Angiography",
+    "category": "Cardio",
+    "synonyms": [
+      "coronary angiogram",
+      "CAG",
+      "heart vessel scan",
+      "coronary imaging test",
+      "heart angiography",
+      "coronary artery exam",
+      "coronary artery scan",
+      "cardiac angiography",
+      "heart blood vessel test",
+      "coronary assessment"
+    ]
+  },
+  {
+    "id": "holter",
+    "name": "Holter",
+    "category": "Cardio",
+    "synonyms": [
+      "Holter monitor",
+      "Holter test",
+      "24-hour heart monitor",
+      "ambulatory ECG",
+      "heart rhythm monitor",
+      "continuous ECG",
+      "Holter examination",
+      "Holter recording",
+      "wearable heart monitor",
+      "extended heart test"
+    ]
+  },
+  {
+    "id": "lung-function-test",
+    "name": "Lung Function Test",
+    "category": "Cardio",
+    "synonyms": [
+      "lung function test",
+      "pulmonary function test",
+      "PFT",
+      "breathing test",
+      "lung test",
+      "respiratory function test",
+      "spirometry",
+      "lung capacity test",
+      "airway test",
+      "pulmonary function examination"
+    ]
+  },
+  {
+    "id": "echo",
+    "name": "ECHO",
+    "category": "Cardio",
+    "synonyms": [
+      "echocardiogram",
+      "ECHO test",
+      "heart ultrasound",
+      "cardiac echo",
+      "ultrasound of the heart",
+      "cardiac ultrasound",
+      "ECHO scan",
+      "heart echo examination",
+      "sonogram of the heart",
+      "echocardiography"
+    ]
+  },
+  {
+    "id": "treadmill-test",
+    "name": "Treadmill test",
+    "category": "Cardio",
+    "synonyms": [
+      "treadmill stress test",
+      "exercise tolerance test",
+      "cardiac stress test",
+      "treadmill examination",
+      "exercise test",
+      "stress ECG",
+      "walking test",
+      "treadmill evaluation",
+      "exercise stress examination",
+      "heart stress test"
+    ]
+  },
+  {
+    "id": "brain-plain---non-contrast-head",
+    "name": "Brain Plain - Non Contrast head",
+    "category": "CT-Scan",
+    "synonyms": [
+      "non-contrast brain scan",
+      "head CT scan",
+      "brain imaging without contrast",
+      "CT head without contrast",
+      "plain head scan",
+      "brain examination without contrast",
+      "non-contrast head examination",
+      "CT brain scan",
+      "head imaging",
+      "brain plain scan"
+    ]
+  },
+  {
+    "id": "ct-angio",
+    "name": "CT Angiography",
+    "category": "CT-Scan",
+    "synonyms": [
+      "CT angiogram",
+      "CT vascular scan",
+      "CT blood vessel scan",
+      "angiographic CT scan",
+      "CT angio exam",
+      "vascular imaging test",
+      "CT angiography test",
+      "CT scan of blood vessels",
+      "angiography scan",
+      "computed tomography angiography"
+    ]
+  },
+  {
+    "id": "brain-plain--contrast",
+    "name": "Brain Plain- Contrast",
+    "category": "CT-Scan",
+    "synonyms": [
+      "brain CT scan with contrast",
+      "contrast-enhanced brain scan",
+      "brain imaging with contrast",
+      "CT brain examination",
+      "brain scan with dye",
+      "enhanced brain CT",
+      "brain contrast study",
+      "brain CT with contrast",
+      "brain imaging test",
+      "brain CT examination"
+    ]
+  },
+  {
+    "id": "thorax---hrct-thorax",
+    "name": "Thorax - HRCT Thorax",
+    "category": "CT-Scan",
+    "synonyms": [
+      "HRCT scan of the thorax",
+      "high-resolution chest CT",
+      "lung CT scan",
+      "thoracic HRCT",
+      "high-definition thorax scan",
+      "HRCT thorax examination",
+      "chest CT imaging",
+      "high-res lung scan",
+      "detailed chest scan",
+      "HRCT thorax test"
+    ]
+  },
+  {
+    "id": "pns---non-contrast",
+    "name": "PNS - Non Contrast",
+    "category": "CT-Scan",
+    "synonyms": [
+      "PNS scan",
+      "non-contrast PNS examination",
+      "PNS imaging",
+      "peripheral nerve scan",
+      "non-contrast nerve study",
+      "nerve scan without contrast",
+      "PNS test",
+      "no-contrast PNS test",
+      "PNS evaluation",
+      "nerve examination without contrast"
+    ]
+  },
+  {
+    "id": "sinus---contrast",
+    "name": "Sinus - Contrast",
+    "category": "CT-Scan",
+    "synonyms": [
+      "sinus CT scan",
+      "sinus contrast examination",
+      "CT scan of the sinuses",
+      "sinus imaging with contrast",
+      "sinus scan",
+      "sinus contrast test",
+      "CT sinus scan",
+      "sinus imaging test",
+      "sinus assessment with dye",
+      "sinus X-ray with contrast"
+    ]
+  },
+  {
+    "id": "inner-ear-temporal-bone---non-contrast",
+    "name": "Inner Ear (Temporal Bone) - Non Contrast",
+    "category": "CT-Scan",
+    "synonyms": [
+      "non-contrast inner ear scan",
+      "temporal bone CT",
+      "inner ear examination",
+      "inner ear imaging",
+      "temporal bone scan",
+      "non-contrast CT of the inner ear",
+      "inner ear test",
+      "temporal bone imaging study",
+      "CT scan of the inner ear",
+      "ear CT without contrast"
+    ]
+  },
+  {
+    "id": "inner-ear-temporal-bone---contrast",
+    "name": "Inner Ear (Temporal Bone) - Contrast",
+    "category": "CT-Scan",
+    "synonyms": [
+      "temporal bone scan",
+      "inner ear CT scan",
+      "inner ear examination",
+      "CT scan of the temporal bone",
+      "temporal bone imaging",
+      "ear scan with contrast",
+      "CT for inner ear issues",
+      "temporal bone contrast study",
+      "inner ear contrast test",
+      "CT temporal bone study"
+    ]
+  },
+  {
+    "id": "neck-plain---contrast",
+    "name": "Neck Plain - Contrast",
+    "category": "CT-Scan",
+    "synonyms": [
+      "neck CT scan with contrast",
+      "contrast-enhanced neck scan",
+      "neck imaging with contrast",
+      "neck contrast examination",
+      "CT neck with dye",
+      "neck CT with contrast agent",
+      "neck scan with contrast material",
+      "enhanced neck CT",
+      "contrast neck X-ray",
+      "neck imaging test"
+    ]
+  },
+  {
+    "id": "thorax-plain---contrast",
+    "name": "Thorax Plain - Contrast",
+    "category": "CT-Scan",
+    "synonyms": [
+      "thoracic CT scan",
+      "contrast-enhanced thorax scan",
+      "CT scan of the chest",
+      "thorax imaging with contrast",
+      "chest CT with contrast",
+      "thoracic examination",
+      "contrast thorax study",
+      "CT chest exam",
+      "chest scan with contrast",
+      "thorax CT examination"
+    ]
+  },
+  {
+    "id": "thorax-and-abdomen---plain-contrast",
+    "name": "Thorax and Abdomen - Plain Contrast",
+    "category": "CT-Scan",
+    "synonyms": [
+      "thoracic and abdominal CT scan",
+      "thorax and abdomen CT",
+      "CT scan of the chest and abdomen",
+      "chest and belly scan",
+      "thoracoabdominal imaging",
+      "CT thorax and abdomen",
+      "contrast-enhanced chest and abdominal scan",
+      "CT examination of thorax and abdomen",
+      "chest and abdominal contrast scan",
+      "thorax and abdomen imaging test"
+    ]
+  },
+  {
+    "id": "abdomen-plain---contrast---delayed",
+    "name": "Abdomen Plain - Contrast - Delayed",
+    "category": "CT-Scan",
+    "synonyms": [
+      "abdominal CT scan",
+      "CT scan of the abdomen",
+      "contrast-enhanced abdominal scan",
+      "delayed abdomen scan",
+      "abdominal contrast study",
+      "belly CT",
+      "abdominal imaging with contrast",
+      "CT abdomen with contrast",
+      "abdominal examination with contrast",
+      "abdominal scan with delayed imaging"
+    ]
+  },
+  {
+    "id": "abdomen---non-contrast-liver",
+    "name": "Abdomen - Non Contrast Liver",
+    "category": "CT-Scan",
+    "synonyms": [
+      "non-contrast liver scan",
+      "liver CT scan",
+      "abdominal CT without contrast",
+      "liver imaging test",
+      "abdominal non-contrast examination",
+      "liver assessment scan",
+      "CT abdomen without contrast",
+      "liver evaluation scan",
+      "abdominal CT",
+      "liver scan"
+    ]
+  },
+  {
+    "id": "abdomen---tripple-phase-arterial,-portal,-venous",
+    "name": "Abdomen - tripple phase Arterial, Portal, Venous",
+    "category": "CT-Scan",
+    "synonyms": [
+      "triple phase abdomen CT scan",
+      "abdominal CT angiography",
+      "three-phase abdominal scan",
+      "arterial-portal-venous CT examination",
+      "abdominal vascular scan",
+      "abdominal triphasic scan",
+      "CT scan of the abdomen with contrast",
+      "3-phase abdomen imaging",
+      "abdominal CT with arterial and venous phases",
+      "triple phase abdominal imaging"
+    ]
+  },
+  {
+    "id": "pelvis",
+    "name": "Pelvis",
+    "category": "CT-Scan",
+    "synonyms": [
+      "pelvic CT scan",
+      "CT scan of the pelvis",
+      "pelvis imaging",
+      "pelvic examination",
+      "pelvis scan",
+      "pelvic computed tomography",
+      "pelvic CT examination",
+      "abdominal and pelvic scan",
+      "pelvis X-ray",
+      "pelvic imaging test"
+    ]
+  },
+  {
+    "id": "hip-left",
+    "name": "Hip Left",
+    "category": "CT-Scan",
+    "synonyms": [
+      "left hip CT scan",
+      "CT scan of the left hip",
+      "hip scan",
+      "left hip examination",
+      "left hip imaging",
+      "hip computed tomography",
+      "left hip CT examination",
+      "left hip diagnostic scan",
+      "CT of the left hip joint",
+      "left hip cross-sectional imaging"
+    ]
+  },
+  {
+    "id": "hip-right",
+    "name": "Hip Right",
+    "category": "CT-Scan",
+    "synonyms": [
+      "right hip CT scan",
+      "hip CT examination",
+      "computed tomography of the right hip",
+      "hip scan",
+      "right hip imaging",
+      "CT of the hip joint",
+      "hip right imaging test",
+      "right hip scan",
+      "hip right examination",
+      "CT hip study"
+    ]
+  },
+  {
+    "id": "femur-left",
+    "name": "Femur Left",
+    "category": "CT-Scan",
+    "synonyms": [
+      "left femur CT scan",
+      "CT scan of the left thigh",
+      "left leg CT examination",
+      "femur scan",
+      "left femur imaging",
+      "CT femur left",
+      "left thigh scan",
+      "left leg imaging test",
+      "left femur evaluation",
+      "femur left scan"
+    ]
+  },
+  {
+    "id": "femur-right",
+    "name": "Femur Right",
+    "category": "CT-Scan",
+    "synonyms": [
+      "right femur CT scan",
+      "CT scan of the right thigh",
+      "femur imaging",
+      "right leg CT examination",
+      "femur right scan",
+      "CT femur right",
+      "right thigh scan",
+      "CT of the right femur",
+      "femur right X-ray",
+      "right femur examination"
+    ]
+  },
+  {
+    "id": "knee-left",
+    "name": "Knee Left",
+    "category": "CT-Scan",
+    "synonyms": [
+      "left knee CT scan",
+      "left knee computed tomography",
+      "CT scan of the left knee",
+      "knee imaging",
+      "left knee examination",
+      "knee scan",
+      "left knee X-ray",
+      "knee CT test",
+      "left knee scan",
+      "knee evaluation"
+    ]
+  },
+  {
+    "id": "knee-right",
+    "name": "Knee Right",
+    "category": "CT-Scan",
+    "synonyms": [
+      "knee CT scan",
+      "right knee scan",
+      "knee imaging",
+      "CT of the right knee",
+      "knee examination",
+      "knee X-ray",
+      "knee test",
+      "right knee CT",
+      "knee 3D imaging",
+      "knee computed tomography"
+    ]
+  },
+  {
+    "id": "leg-left",
+    "name": "Leg Left",
+    "category": "CT-Scan",
+    "synonyms": [
+      "left leg CT scan",
+      "leg left CT examination",
+      "left leg imaging",
+      "leg left scan",
+      "CT of the left leg",
+      "left leg computed tomography",
+      "left leg scan",
+      "leg CT test",
+      "left limb CT scan",
+      "CT leg examination"
+    ]
+  },
+  {
+    "id": "leg-right",
+    "name": "Leg Right",
+    "category": "CT-Scan",
+    "synonyms": [
+      "leg CT scan",
+      "right leg imaging",
+      "CT of the right leg",
+      "leg scan",
+      "lower limb CT",
+      "right leg examination",
+      "CT leg test",
+      "leg right scan",
+      "leg radiology",
+      "right limb CT"
+    ]
+  },
+  {
+    "id": "ankle-left",
+    "name": "Ankle Left",
+    "category": "CT-Scan",
+    "synonyms": [
+      "left ankle CT scan",
+      "CT scan of the left ankle",
+      "ankle scan",
+      "left ankle imaging",
+      "left ankle examination",
+      "ankle CT",
+      "ankle left imaging test",
+      "left foot CT scan",
+      "ankle evaluation",
+      "left ankle X-ray"
+    ]
+  },
+  {
+    "id": "ankle-right",
+    "name": "Ankle Right",
+    "category": "CT-Scan",
+    "synonyms": [
+      "right ankle CT scan",
+      "CT of the right ankle",
+      "ankle scan",
+      "right ankle imaging",
+      "ankle CT examination",
+      "computed tomography of the right ankle",
+      "ankle right scan",
+      "ankle right CT test",
+      "right ankle X-ray CT",
+      "ankle joint scan"
+    ]
+  },
+  {
+    "id": "foot-left",
+    "name": "Foot Left",
+    "category": "CT-Scan",
+    "synonyms": [
+      "left foot CT scan",
+      "CT scan of the left foot",
+      "left foot imaging",
+      "left foot examination",
+      "left foot computerized tomography",
+      "left foot CT examination",
+      "foot scan for the left side",
+      "left foot X-ray CT",
+      "left foot CT test",
+      "left foot radiologic scan"
+    ]
+  },
+  {
+    "id": "foot-right",
+    "name": "Foot Right",
+    "category": "CT-Scan",
+    "synonyms": [
+      "foot CT scan",
+      "right foot scan",
+      "CT of the right foot",
+      "foot examination",
+      "foot imaging",
+      "CT foot test",
+      "right foot imaging test",
+      "foot X-ray CT",
+      "foot computer tomography",
+      "right foot analysis"
+    ]
+  },
+  {
+    "id": "heel-left",
+    "name": "Heel Left",
+    "category": "CT-Scan",
+    "synonyms": [
+      "left heel scan",
+      "heel CT scan",
+      "CT of the left heel",
+      "left heel examination",
+      "heel imaging",
+      "left foot CT",
+      "left heel test",
+      "CT scan of the heel",
+      "heel bone scan",
+      "foot CT examination"
+    ]
+  },
+  {
+    "id": "heel-right",
+    "name": "Heel Right",
+    "category": "CT-Scan",
+    "synonyms": [
+      "heel CT scan",
+      "CT scan of the heel",
+      "heel imaging",
+      "heel examination",
+      "heel right CT",
+      "heel right scan",
+      "foot CT scan",
+      "heel X-ray CT",
+      "heel right imaging",
+      "CT heel assessment"
+    ]
+  },
+  {
+    "id": "shoulder-joint-left",
+    "name": "Shoulder Joint Left",
+    "category": "CT-Scan",
+    "synonyms": [
+      "left shoulder CT scan",
+      "shoulder joint scan",
+      "left shoulder imaging",
+      "shoulder examination",
+      "CT of the left shoulder",
+      "shoulder joint examination",
+      "left shoulder X-ray scan",
+      "shoulder CT",
+      "left shoulder study",
+      "shoulder joint assessment"
+    ]
+  },
+  {
+    "id": "shoulder-joint-right",
+    "name": "Shoulder Joint Right",
+    "category": "CT-Scan",
+    "synonyms": [
+      "right shoulder CT scan",
+      "shoulder CT imaging",
+      "CT scan of the right shoulder",
+      "shoulder joint examination",
+      "shoulder scan",
+      "right shoulder imaging",
+      "shoulder joint CT",
+      "CT scan for shoulder pain",
+      "shoulder joint assessment",
+      "right shoulder X-ray"
+    ]
+  },
+  {
+    "id": "humerus-left",
+    "name": "Humerus Left",
+    "category": "CT-Scan",
+    "synonyms": [
+      "left humerus CT scan",
+      "left arm CT examination",
+      "CT of the left humerus",
+      "humerus left imaging",
+      "humerus left scan",
+      "left arm CT study",
+      "humerus left X-ray",
+      "left shoulder CT scan",
+      "humerus left radiology exam",
+      "left upper arm CT"
+    ]
+  },
+  {
+    "id": "humerus-right",
+    "name": "Humerus Right",
+    "category": "CT-Scan",
+    "synonyms": [
+      "right humerus CT scan",
+      "humerus right CT imaging",
+      "right arm CT scan",
+      "humerus examination",
+      "computed tomography of the right humerus",
+      "humerus right scan",
+      "CT scan of the right arm",
+      "right upper arm CT",
+      "humerus imaging test",
+      "right humerus evaluation"
+    ]
+  },
+  {
+    "id": "elbow-left",
+    "name": "Elbow Left",
+    "category": "CT-Scan",
+    "synonyms": [
+      "left elbow CT scan",
+      "CT scan of the left elbow",
+      "left elbow imaging",
+      "elbow scan",
+      "elbow examination",
+      "left arm CT",
+      "elbow X-ray scan",
+      "elbow study",
+      "elbow left CT",
+      "left elbow computed tomography"
+    ]
+  },
+  {
+    "id": "elbow-right",
+    "name": "Elbow Right",
+    "category": "CT-Scan",
+    "synonyms": [
+      "right elbow CT scan",
+      "CT scan of the right elbow",
+      "elbow scan",
+      "elbow imaging",
+      "right elbow examination",
+      "elbow CT examination",
+      "right arm CT",
+      "elbow right imaging",
+      "right elbow X-ray",
+      "elbow right test"
+    ]
+  },
+  {
+    "id": "forearm-left",
+    "name": "Forearm Left",
+    "category": "CT-Scan",
+    "synonyms": [
+      "left forearm scan",
+      "left forearm CT",
+      "forearm imaging",
+      "CT scan of the left forearm",
+      "left arm CT examination",
+      "forearm left examination",
+      "upper limb CT scan",
+      "left forearm test",
+      "left arm imaging study",
+      "forearm CT test"
+    ]
+  },
+  {
+    "id": "forearm-right",
+    "name": "Forearm Right",
+    "category": "CT-Scan",
+    "synonyms": [
+      "right forearm CT scan",
+      "forearm CT imaging",
+      "right arm CT examination",
+      "forearm computed tomography",
+      "arm scan",
+      "CT of the right forearm",
+      "right forearm scan",
+      "forearm X-ray CT",
+      "right arm imaging test",
+      "CT examination of the forearm"
+    ]
+  },
+  {
+    "id": "wrist-left",
+    "name": "Wrist Left",
+    "category": "CT-Scan",
+    "synonyms": [
+      "left wrist CT scan",
+      "CT scan of the left wrist",
+      "wrist scan",
+      "wrist examination",
+      "left wrist imaging",
+      "wrist CT",
+      "left wrist computed tomography",
+      "left wrist X-ray scan",
+      "wrist evaluation",
+      "left wrist diagnostic scan"
+    ]
+  },
+  {
+    "id": "wrist-right",
+    "name": "Wrist Right",
+    "category": "CT-Scan",
+    "synonyms": [
+      "wrist CT scan",
+      "CT scan of the wrist",
+      "wrist imaging",
+      "wrist examination",
+      "wrist scan",
+      "computed tomography wrist",
+      "wrist CT",
+      "wrist study",
+      "CT wrist test",
+      "wrist X-ray scan"
+    ]
+  },
+  {
+    "id": "hand-left",
+    "name": "Hand Left",
+    "category": "CT-Scan",
+    "synonyms": [
+      "left hand CT scan",
+      "left hand computed tomography",
+      "CT scan of the left hand",
+      "left hand imaging test",
+      "hand scan for the left side",
+      "hand CT examination",
+      "left hand X-ray CT",
+      "left hand 3D scan",
+      "left hand diagnostic scan",
+      "left hand CT test"
+    ]
+  },
+  {
+    "id": "hand-right",
+    "name": "Hand Right",
+    "category": "CT-Scan",
+    "synonyms": [
+      "hand CT scan",
+      "CT scan of the hand",
+      "hand imaging",
+      "hand examination",
+      "hand scan",
+      "hand computed tomography",
+      "CT of the right hand",
+      "hand X-ray alternative",
+      "hand tomography",
+      "right hand scan"
+    ]
+  },
+  {
+    "id": "pulmonary-angio",
+    "name": "Pulmonary Angio",
+    "category": "CT-Scan",
+    "synonyms": [
+      "pulmonary angiogram",
+      "lung angiogram",
+      "pulmonary vascular scan",
+      "CT pulmonary angiography",
+      "lung blood vessel scan",
+      "pulmonary angio test",
+      "CT angio of the lungs",
+      "vascular lung scan",
+      "chest CT angiogram",
+      "pulmonary arteries scan"
+    ]
+  },
+  {
+    "id": "renal-angio",
+    "name": "Renal Angio",
+    "category": "CT-Scan",
+    "synonyms": [
+      "renal angiogram",
+      "kidney angiogram",
+      "renal vascular scan",
+      "kidney blood vessel scan",
+      "renal imaging",
+      "kidney CT angiography",
+      "renal artery scan",
+      "CT renal angio",
+      "kidney scan",
+      "vascular examination of the kidneys"
+    ]
+  },
+  {
+    "id": "upper-limb-angio",
+    "name": "Upper Limb Angio",
+    "category": "CT-Scan",
+    "synonyms": [
+      "upper limb angiography",
+      "arm angio scan",
+      "upper limb blood vessel examination",
+      "arm vascular scan",
+      "upper extremity angio",
+      "arm angiogram",
+      "upper limb vascular imaging",
+      "CT scan of the arm",
+      "arm blood flow test",
+      "upper limb CT angiography"
+    ]
+  },
+  {
+    "id": "lower-limb-angio",
+    "name": "Lower Limb Angio",
+    "category": "CT-Scan",
+    "synonyms": [
+      "lower limb angiogram",
+      "leg blood vessel scan",
+      "lower extremity angio",
+      "leg angiography",
+      "lower limb vascular scan",
+      "ankle and leg scan",
+      "peripheral angiogram",
+      "vascular examination of legs",
+      "lower limb imaging test",
+      "leg circulation test"
+    ]
+  },
+  {
+    "id": "pleural-fluid",
+    "name": "Pleural fluid",
+    "category": "Others",
+    "synonyms": [
+      "pleural fluid analysis",
+      "pleural tap",
+      "thoracentesis",
+      "pleural fluid test",
+      "lung fluid examination",
+      "fluid drainage test",
+      "pleural fluid culture",
+      "chest fluid analysis",
+      "pleural effusion test",
+      "thoracic fluid study"
+    ]
+  },
+  {
+    "id": "catheter-insertions-for-collections",
+    "name": "Catheter insertions for collections",
+    "category": "Others",
+    "synonyms": [
+      "catheter insertion for sample collection",
+      "catheterization for fluid collection",
+      "catheter test",
+      "tube insertion for testing",
+      "urinary catheter collection",
+      "catheter drainage procedure",
+      "fluid collection via catheter",
+      "catheter sampling",
+      "catheter exam",
+      "collection catheterization"
+    ]
+  },
+  {
+    "id": "urinary-bladder-balloon-rupture-for-indwelling",
+    "name": "Urinary bladder balloon rupture for indwelling",
+    "category": "Others",
+    "synonyms": [
+      "bladder balloon test",
+      "indwelling balloon examination",
+      "urinary balloon rupture procedure",
+      "bladder pressure test",
+      "catheter balloon test",
+      "bladder drainage assessment",
+      "urinary catheter evaluation",
+      "bladder scan with balloon",
+      "indwelling catheter examination",
+      "balloon rupture assessment"
     ]
   }
 ]
