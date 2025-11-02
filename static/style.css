@@ -1065,6 +1065,34 @@ header p {
     align-items: center;
 }
 
+.filters-group {
+    display: flex;
+    gap: 10px;
+    flex: 1;
+    align-items: center;
+}
+
+.category-filter {
+    min-width: 180px;
+    padding: 12px 18px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-filter:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.category-filter:hover {
+    border-color: #667eea;
+}
+
 .test-search-main {
     flex: 1;
     padding: 12px 18px;

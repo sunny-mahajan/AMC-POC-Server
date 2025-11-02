@@ -47,6 +47,7 @@ class SpeechRecognitionApp {
 
         // Main test list elements
         this.testSearch = document.getElementById('testSearch');
+        this.categoryFilter = document.getElementById('categoryFilter');
         this.addNewTestMainBtn = document.getElementById('addNewTestMainBtn');
         this.testListMain = document.getElementById('testListMain');
         this.testCount = document.getElementById('testCount');
@@ -85,6 +86,7 @@ class SpeechRecognitionApp {
         this.formSynonyms = [];
         this.testToDelete = null;
         this.searchQuery = '';
+        this.selectedCategory = '';
     }
 
     setupEventListeners() {
@@ -96,6 +98,14 @@ class SpeechRecognitionApp {
         if (this.testSearch) {
             this.testSearch.addEventListener('input', (e) => {
                 this.searchQuery = e.target.value.toLowerCase();
+                this.renderMainTestList();
+            });
+        }
+
+        // Category filter functionality
+        if (this.categoryFilter) {
+            this.categoryFilter.addEventListener('change', (e) => {
+                this.selectedCategory = e.target.value;
                 this.renderMainTestList();
             });
         }
@@ -423,6 +433,7 @@ class SpeechRecognitionApp {
                     console.warn('Unexpected response format, defaulting to empty array');
                     this.availableTests = [];
                 }
+                await this.loadCategoriesForFilter();
                 this.renderMainTestList();
             } else {
                 console.error('Failed to load tests:', response.status);
@@ -434,11 +445,45 @@ class SpeechRecognitionApp {
         }
     }
 
+    async loadCategoriesForFilter() {
+        try {
+            const response = await fetch('/api/categories');
+            if (response.ok) {
+                const data = await response.json();
+                const categories = data.categories || [];
+                
+                if (this.categoryFilter) {
+                    // Clear existing options except "All Categories"
+                    while (this.categoryFilter.options.length > 1) {
+                        this.categoryFilter.remove(1);
+                    }
+                    
+                    // Add categories
+                    categories.forEach(category => {
+                        const option = document.createElement('option');
+                        option.value = category;
+                        option.textContent = category;
+                        this.categoryFilter.appendChild(option);
+                    });
+                }
+            }
+        } catch (error) {
+            console.error('Error loading categories for filter:', error);
+        }
+    }
+
     renderMainTestList() {
         if (!this.testListMain) return;
 
-        // Filter tests by search query
+        // Filter tests by category first
         let filteredTests = this.availableTests || [];
+        if (this.selectedCategory) {
+            filteredTests = filteredTests.filter(test => 
+                test.category === this.selectedCategory
+            );
+        }
+
+        // Then filter by search query
         if (this.searchQuery) {
             filteredTests = filteredTests.filter(test =>
                 test.name.toLowerCase().includes(this.searchQuery) ||
