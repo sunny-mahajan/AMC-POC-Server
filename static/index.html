@@ -1,50 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medical Test Speech Recognition</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎤</text></svg>">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎤</text></svg>">
     <link rel="stylesheet" href="/static/style.css">
     <script src="https://cdn.jsdelivr.net/npm/@deepgram/sdk"></script>
 </head>
+
 <body>
     <div class="container">
         <header>
-            <h1>Medical Test Speech Recognition</h1>
-            <p>Speak naturally to order medical tests</p>
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>Medical Test Speech Recognition</h1>
+                    <p>Speak naturally to order medical tests</p>
+                </div>
+                <button id="settingsBtn" class="settings-btn" title="Settings">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z">
+                        </path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                </button>
+            </div>
         </header>
 
         <div class="main-content">
             <!-- Speech Recognition Section -->
             <div class="speech-section">
-                <div class="engine-selector">
-                    <label class="engine-label">Speech Engine:</label>
-                    <div class="engine-options">
-                        <label class="engine-option">
-                            <input type="radio" name="speechEngine" value="deepgram" checked>
-                            <span>Deepgram (Medical)</span>
-                        </label>
-                        <label class="engine-option">
-                            <input type="radio" name="speechEngine" value="webspeech">
-                            <span>Web Speech API</span>
-                        </label>
-                    </div>
-                </div>
-
                 <div class="speech-controls">
-                    <button id="startBtn" class="btn btn-primary">
-                        <span class="icon">🎤</span>
-                        Start Recording
-                    </button>
-                    <button id="stopBtn" class="btn btn-secondary" disabled>
-                        <span class="icon">⏹️</span>
-                        Stop Recording
-                    </button>
-                    <button id="clearBtn" class="btn btn-outline">
-                        <span class="icon">🗑️</span>
-                        Clear
-                    </button>
+                    <div class="speech-controls-left">
+                        <button id="startBtn" class="btn btn-primary">
+                            <span class="icon">🎤</span>
+                            Start
+                        </button>
+                        <button id="stopBtn" class="btn btn-secondary" disabled>
+                            <span class="icon">⏹️</span>
+                            Stop
+                        </button>
+                    </div>
+                    <div class="speech-controls-right">
+                        <button id="clearBtn" class="btn btn-outline">
+                            <span class="icon">🗑️</span>
+                            Clear
+                        </button>
+                    </div>
                 </div>
 
                 <div class="status-indicator">
@@ -132,6 +138,63 @@
         </div>
     </div>
 
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content settings-modal-content">
+            <div class="modal-header">
+                <h3>Settings</h3>
+                <button class="modal-close" id="settingsModalCloseBtn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="setting-item">
+                    <label class="setting-label">
+                        <span class="label-text">Speech Engine</span>
+                    </label>
+                    <div class="engine-options">
+                        <label class="engine-option">
+                            <input type="radio" name="speechEngine" value="deepgram" checked>
+                            <span>Deepgram (Medical)</span>
+                        </label>
+                        <label class="engine-option">
+                            <input type="radio" name="speechEngine" value="webspeech">
+                            <span>Web Speech API</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="setting-item">
+                    <label for="thresholdSlider" class="setting-label">
+                        <span class="label-text">Match Threshold</span>
+                        <span class="label-value" id="thresholdValue">75%</span>
+                    </label>
+                    <div class="slider-container">
+                        <input type="range" id="thresholdSlider" class="threshold-slider" min="50" max="100" step="5"
+                            value="75" aria-label="Match threshold percentage">
+                        <div class="slider-labels">
+                            <span>50%</span>
+                            <span>75%</span>
+                            <span>100%</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="setting-item">
+                    <button id="generateEmbeddingsBtn" class="btn-generate-embeddings">
+                        <span class="btn-text">Generate Embeddings</span>
+                        <span class="btn-loader hidden">
+                            <span class="spinner-small"></span>
+                            Generating...
+                        </span>
+                    </button>
+                    <div id="embeddingsStatus" class="embeddings-status hidden"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="/static/script.js"></script>
 </body>
+
 </html>

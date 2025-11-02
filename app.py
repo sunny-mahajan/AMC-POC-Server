@@ -44,6 +44,7 @@ if os.path.exists(TESTS_EMB_JSON):
 
 class StreamRequest(BaseModel):
     transcript: str
+    threshold: float = 0.75  # Default threshold 0.75 (75%)
 
 
 @app.post("/generate_embeddings")
@@ -52,6 +53,10 @@ def generate_embeddings():
         raw_tests = json.load(f)
     for test in raw_tests:
         embeddings = []
+        # Include the actual test name first
+        name_emb = model.encode(test["name"])
+        embeddings.append(name_emb.tolist())
+        # Then include all synonyms
         for phrase in test["synonyms"]:
             emb = model.encode(phrase)
             embeddings.append(emb.tolist())
@@ -103,7 +108,7 @@ def match_stream(req: StreamRequest):
                 detailed.append({"chunk": chunk, "method": "skipped", "reason": "action_without_test"})
                 continue
 
-        emb_matches = embedding_match(chunk, tests, model)
+        emb_matches = embedding_match(chunk, tests, model, threshold=req.threshold)
         if emb_matches:
             for m in emb_matches:
                 # Don't add tests that were previously removed

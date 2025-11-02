@@ -23,6 +23,7 @@ class SpeechRecognitionApp {
         this.processingChunks = false;
         this.availableTests = [];
         this.allDetectedTests = new Set();
+        this.matchThreshold = 0.75; // Default threshold (75%)
 
         this.initializeElements();
         this.setupEventListeners();
@@ -55,6 +56,13 @@ class SpeechRecognitionApp {
         this.gridViewBtn = document.getElementById('gridViewBtn');
         this.listViewBtn = document.getElementById('listViewBtn');
         this.testCount = document.getElementById('testCount');
+        this.settingsBtn = document.getElementById('settingsBtn');
+        this.settingsModal = document.getElementById('settingsModal');
+        this.settingsModalCloseBtn = document.getElementById('settingsModalCloseBtn');
+        this.thresholdSlider = document.getElementById('thresholdSlider');
+        this.thresholdValue = document.getElementById('thresholdValue');
+        this.generateEmbeddingsBtn = document.getElementById('generateEmbeddingsBtn');
+        this.embeddingsStatus = document.getElementById('embeddingsStatus');
 
         // State for filtering
         this.selectedCategory = 'All';
@@ -103,17 +111,80 @@ class SpeechRecognitionApp {
         });
 
         // Modal event listeners
-        this.modalCloseBtn.addEventListener('click', () => this.closeModal());
+        this.modalCloseBtn.addEventListener('click', () => this.closeSynonymModal());
         this.synonymModal.addEventListener('click', (e) => {
             if (e.target === this.synonymModal) {
-                this.closeModal();
+                this.closeSynonymModal();
             }
         });
+
+        // Settings modal event listeners
+        if (this.settingsBtn) {
+            this.settingsBtn.addEventListener('click', () => this.openSettingsModal());
+        }
+        if (this.settingsModalCloseBtn) {
+            this.settingsModalCloseBtn.addEventListener('click', () => this.closeSettingsModal());
+        }
+        if (this.settingsModal) {
+            this.settingsModal.addEventListener('click', (e) => {
+                if (e.target === this.settingsModal) {
+                    this.closeSettingsModal();
+                }
+            });
+        }
+
+        // Generate embeddings button
+        if (this.generateEmbeddingsBtn) {
+            this.generateEmbeddingsBtn.addEventListener('click', () => this.generateEmbeddings());
+        }
 
         // Cleanup on page unload
         window.addEventListener('beforeunload', () => {
             this.cleanup();
         });
+
+        // Settings handlers
+        this.initializeSettings();
+    }
+
+    initializeSettings() {
+        // Load threshold from localStorage or use default
+        const savedThreshold = localStorage.getItem('matchThreshold');
+        if (savedThreshold !== null) {
+            this.matchThreshold = parseFloat(savedThreshold);
+            this.thresholdSlider.value = (this.matchThreshold * 100).toString();
+            this.updateThresholdDisplay();
+        }
+
+        // Threshold slider handler
+        if (this.thresholdSlider) {
+            this.thresholdSlider.addEventListener('input', (e) => {
+                const percentageValue = parseInt(e.target.value);
+                this.matchThreshold = percentageValue / 100; // Convert to 0-1 range
+                this.updateThresholdDisplay();
+                // Save to localStorage
+                localStorage.setItem('matchThreshold', this.matchThreshold.toString());
+            });
+        }
+    }
+
+    openSettingsModal() {
+        if (this.settingsModal) {
+            this.settingsModal.classList.add('show');
+        }
+    }
+
+    closeSettingsModal() {
+        if (this.settingsModal) {
+            this.settingsModal.classList.remove('show');
+        }
+    }
+
+    updateThresholdDisplay() {
+        if (this.thresholdValue) {
+            const percentage = Math.round(this.matchThreshold * 100);
+            this.thresholdValue.textContent = `${percentage}%`;
+        }
     }
 
     async initializeMicrophone() {
@@ -695,13 +766,16 @@ class SpeechRecognitionApp {
 
     async callMatchAPI(transcript) {
         try {
-            console.log('Calling match API with:', transcript);
+            console.log('Calling match API with:', transcript, 'threshold:', this.matchThreshold);
             const response = await fetch('/match_stream', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ transcript })
+                body: JSON.stringify({ 
+                    transcript,
+                    threshold: this.matchThreshold
+                })
             });
 
             if (response.ok) {
@@ -798,8 +872,76 @@ class SpeechRecognitionApp {
         this.synonymModal.classList.add('show');
     }
 
-    closeModal() {
+    closeSynonymModal() {
         this.synonymModal.classList.remove('show');
+    }
+
+    async generateEmbeddings() {
+        if (!this.generateEmbeddingsBtn || !this.embeddingsStatus) return;
+
+        // Show loader and disable button
+        const btnText = this.generateEmbeddingsBtn.querySelector('.btn-text');
+        const btnLoader = this.generateEmbeddingsBtn.querySelector('.btn-loader');
+
+        btnText.classList.add('hidden');
+        btnLoader.classList.remove('hidden');
+        this.generateEmbeddingsBtn.disabled = true;
+
+        // Hide previous status
+        this.embeddingsStatus.classList.add('hidden');
+        this.embeddingsStatus.className = 'embeddings-status hidden';
+
+        try {
+            const response = await fetch('/generate_embeddings', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+
+            if (response.ok) {
+                const result = await response.json();
+
+                // Show success message
+                this.embeddingsStatus.classList.remove('hidden');
+                this.embeddingsStatus.classList.add('success');
+                this.embeddingsStatus.innerHTML = `
+                    <span style="font-size: 1.2rem;">✓</span>
+                    <span>${result.message || 'Embeddings generated successfully!'}</span>
+                `;
+
+                // Reload available tests
+                await this.loadAvailableTests();
+
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    this.embeddingsStatus.classList.add('hidden');
+                }, 5000);
+            } else {
+                const error = await response.json();
+                throw new Error(error.detail || 'Failed to generate embeddings');
+            }
+        } catch (error) {
+            console.error('Error generating embeddings:', error);
+
+            // Show error message
+            this.embeddingsStatus.classList.remove('hidden');
+            this.embeddingsStatus.classList.add('error');
+            this.embeddingsStatus.innerHTML = `
+                <span style="font-size: 1.2rem;">✗</span>
+                <span>${error.message || 'Failed to generate embeddings. Please try again.'}</span>
+            `;
+
+            // Hide error message after 8 seconds
+            setTimeout(() => {
+                this.embeddingsStatus.classList.add('hidden');
+            }, 8000);
+        } finally {
+            // Reset button state
+            btnText.classList.remove('hidden');
+            btnLoader.classList.add('hidden');
+            this.generateEmbeddingsBtn.disabled = false;
+        }
     }
 }
 
