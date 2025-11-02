@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Depends, Query
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
@@ -8,6 +8,7 @@ import json
 import os
 from openai import OpenAI
 from dotenv import load_dotenv
+from sqlalchemy.orm import Session
 
 from utils import (
     normalize_text,
@@ -20,12 +21,10 @@ from utils import (
     NEGATION_WORDS,
     SYMPTOM_WORDS
 )
-
+from database import init_db, get_db, get_db_session, TestRepository
 
 load_dotenv()
 
-TESTS_JSON = "tests.json"
-TESTS_EMB_JSON = "tests_with_embeddings.json"
 MODEL_NAME = "all-mpnet-base-v2"
 
 openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
@@ -35,12 +34,42 @@ app = FastAPI()
 # Mount static files
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
+# Initialize database on startup
+@app.on_event("startup")
+def startup_event():
+    init_db()
+    print("Database initialized")
+
 model = SentenceTransformer(MODEL_NAME)
 
-tests = []
-if os.path.exists(TESTS_EMB_JSON):
-    with open(TESTS_EMB_JSON, "r", encoding="utf-8") as f:
-        tests = json.load(f)
+# Cache for tests with embeddings (loaded from database)
+_tests_cache = None
+_cache_valid = False
+
+def get_tests_with_embeddings(db: Session = None) -> List[dict]:
+    """Get tests with embeddings, using cache if available"""
+    global _tests_cache, _cache_valid
+    
+    if _cache_valid and _tests_cache is not None:
+        return _tests_cache
+    
+    if db is None:
+        db = get_db_session()
+        try:
+            _tests_cache = TestRepository.get_tests_with_embeddings(db)
+            _cache_valid = True
+            return _tests_cache
+        finally:
+            db.close()
+    else:
+        _tests_cache = TestRepository.get_tests_with_embeddings(db)
+        _cache_valid = True
+        return _tests_cache
+
+def invalidate_cache():
+    """Invalidate the tests cache"""
+    global _cache_valid
+    _cache_valid = False
 
 
 class StreamRequest(BaseModel):
@@ -61,30 +90,66 @@ class TestUpdate(BaseModel):
 
 
 @app.post("/generate_embeddings")
-def generate_embeddings():
-    with open(TESTS_JSON, "r", encoding="utf-8") as f:
-        raw_tests = json.load(f)
-    for test in raw_tests:
+def generate_embeddings(test_id: Optional[str] = Query(None), db: Session = Depends(get_db)):
+    """Generate embeddings for all tests or a specific test.
+    
+    Query parameter: test_id (optional) - if provided, only generate for that test
+    """
+    if test_id:
+        # Generate embeddings for a specific test only
+        test = TestRepository.get_test_by_id(db, test_id)
+        if not test:
+            raise HTTPException(status_code=404, detail=f"Test with ID '{test_id}' not found")
+        
         embeddings = []
         # Include the actual test name first
-        name_emb = model.encode(test["name"])
+        name_emb = model.encode(test.name)
         embeddings.append(name_emb.tolist())
         # Then include all synonyms
-        for phrase in test["synonyms"]:
+        for phrase in test.synonyms or []:
             emb = model.encode(phrase)
             embeddings.append(emb.tolist())
-        test["embeddings"] = embeddings
-    with open(TESTS_EMB_JSON, "w", encoding="utf-8") as f:
-        json.dump(raw_tests, f, ensure_ascii=False, indent=2)
-    global tests
-    tests = raw_tests
-    return {"status": "ok", "tests_count": len(tests)}
+        
+        TestRepository.update_test_embeddings(db, test_id, embeddings)
+        invalidate_cache()
+        return {"status": "ok", "message": f"Embeddings generated for test '{test.name}'", "test_id": test_id}
+    else:
+        # Generate embeddings for all tests without embeddings
+        tests = TestRepository.get_all_tests(db)
+        updated = 0
+        
+        for test in tests:
+            if not test.embeddings or len(test.embeddings) == 0:
+                embeddings = []
+                # Include the actual test name first
+                name_emb = model.encode(test.name)
+                embeddings.append(name_emb.tolist())
+                # Then include all synonyms
+                for phrase in test.synonyms or []:
+                    emb = model.encode(phrase)
+                    embeddings.append(emb.tolist())
+                
+                TestRepository.update_test_embeddings(db, test.id, embeddings)
+                updated += 1
+        
+        invalidate_cache()
+        return {"status": "ok", "tests_count": len(tests), "updated": updated}
 
 
 @app.post("/match_stream")
-def match_stream(req: StreamRequest):
+def match_stream(req: StreamRequest, db: Session = Depends(get_db)):
+    tests = get_tests_with_embeddings(db)
     if not tests:
-        return {"error": "Embeddings not loaded. Run /generate_embeddings first."}
+        # Check if any tests exist at all
+        total_tests = TestRepository.get_all_tests(db)
+        if not total_tests:
+            return {"error": "No tests found in database. Please run migration first."}
+        else:
+            return {
+                "error": f"No tests with embeddings found. Found {len(total_tests)} tests without embeddings. Please run /generate_embeddings first.",
+                "total_tests": len(total_tests),
+                "tests_with_embeddings": 0
+            }
 
     transcript = req.transcript
     chunks = split_into_chunks(transcript)
@@ -173,29 +238,43 @@ def root():
     return FileResponse("static/index.html")
 
 @app.get("/api/tests")
-def get_tests():
+def get_tests(db: Session = Depends(get_db)):
     """Get list of available tests for the frontend"""
-    if not tests:
-        return {"error": "Tests not loaded"}
+    db_tests = TestRepository.get_all_tests(db)
     
     # Return simplified test data for frontend
     simplified_tests = []
-    for test in tests:
+    for test in db_tests:
         simplified_tests.append({
-            "id": test.get("id", test["name"].lower().replace(" ", "-")),
-            "name": test["name"],
-            "category": test.get("category", "lab"),
-            "synonyms": test.get("synonyms", [])
+            "id": test.id,
+            "name": test.name,
+            "category": test.category or "Other",
+            "synonyms": test.synonyms if isinstance(test.synonyms, list) else []
         })
     
     return simplified_tests
 
 @app.get("/api/status")
-def api_status():
+def api_status(db: Session = Depends(get_db)):
+    total_tests = TestRepository.get_all_tests(db)
+    tests_with_embeddings = TestRepository.get_tests_with_embeddings(db)
+    
+    # Sample test info
+    sample_test = None
+    if total_tests:
+        sample_test = {
+            "id": total_tests[0].id,
+            "name": total_tests[0].name,
+            "has_embeddings": bool(total_tests[0].embeddings and len(total_tests[0].embeddings) > 0) if total_tests[0].embeddings else False
+        }
+    
     return {
         "status": "running",
         "model": MODEL_NAME,
-        "tests_loaded": len(tests)
+        "tests_total": len(total_tests),
+        "tests_with_embeddings": len(tests_with_embeddings),
+        "database_ready": len(tests_with_embeddings) > 0,
+        "sample_test": sample_test
     }
 
 @app.get("/api/config")
@@ -206,51 +285,34 @@ def get_config():
     }
 
 @app.get("/api/categories")
-def get_categories():
+def get_categories(db: Session = Depends(get_db)):
     """Get unique list of categories from existing tests"""
     try:
-        raw_tests = load_tests_from_file()
-        categories = sorted(set(test.get("category") for test in raw_tests if test.get("category")))
+        categories = TestRepository.get_all_categories(db)
         return {"categories": categories}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error loading categories: {str(e)}")
 
 
 # Helper functions for test management
-def load_tests_from_file():
-    """Load tests from tests.json"""
-    if os.path.exists(TESTS_JSON):
-        with open(TESTS_JSON, "r", encoding="utf-8") as f:
-            return json.load(f)
-    return []
-
-
-def save_tests_to_file(tests_data):
-    """Save tests to tests.json"""
-    with open(TESTS_JSON, "w", encoding="utf-8") as f:
-        json.dump(tests_data, f, ensure_ascii=False, indent=2)
-
-
-def regenerate_embeddings():
-    """Regenerate embeddings after test modification"""
-    raw_tests = load_tests_from_file()
-    for test in raw_tests:
-        embeddings = []
-        # Include the actual test name first
-        name_emb = model.encode(test["name"])
-        embeddings.append(name_emb.tolist())
-        # Then include all synonyms
-        for phrase in test["synonyms"]:
-            emb = model.encode(phrase)
-            embeddings.append(emb.tolist())
-        test["embeddings"] = embeddings
-
-    with open(TESTS_EMB_JSON, "w", encoding="utf-8") as f:
-        json.dump(raw_tests, f, ensure_ascii=False, indent=2)
-
-    global tests
-    tests = raw_tests
-    return raw_tests
+def regenerate_embeddings_for_test(db: Session, test_id: str):
+    """Regenerate embeddings for a single test (optimized)"""
+    test = TestRepository.get_test_by_id(db, test_id)
+    if not test:
+        return False
+    
+    embeddings = []
+    # Include the actual test name first
+    name_emb = model.encode(test.name)
+    embeddings.append(name_emb.tolist())
+    # Then include all synonyms
+    for phrase in test.synonyms or []:
+        emb = model.encode(phrase)
+        embeddings.append(emb.tolist())
+    
+    TestRepository.update_test_embeddings(db, test_id, embeddings)
+    invalidate_cache()
+    return True
 
 
 def generate_test_id(name):
@@ -260,149 +322,140 @@ def generate_test_id(name):
 
 # Test CRUD endpoints
 @app.post("/api/tests")
-def create_test(test_data: TestCreate):
+def create_test(test_data: TestCreate, db: Session = Depends(get_db)):
     """Create a new test"""
-    raw_tests = load_tests_from_file()
-
     # Generate ID from name
     test_id = generate_test_id(test_data.name)
 
     # Check if test ID already exists
-    if any(t.get("id") == test_id for t in raw_tests):
+    existing = TestRepository.get_test_by_id(db, test_id)
+    if existing:
         raise HTTPException(status_code=400, detail=f"Test with ID '{test_id}' already exists")
 
     # Create new test
-    new_test = {
+    new_test_data = {
         "id": test_id,
         "name": test_data.name,
         "category": test_data.category,
-        "synonyms": test_data.synonyms
+        "synonyms": test_data.synonyms or [],
+        "embeddings": []
     }
 
-    raw_tests.append(new_test)
-    save_tests_to_file(raw_tests)
-
-    # Regenerate embeddings
-    regenerate_embeddings()
+    new_test = TestRepository.create_test(db, new_test_data)
+    
+    # Generate embeddings for the new test (async in background would be better, but this works)
+    regenerate_embeddings_for_test(db, test_id)
 
     return {
         "status": "success",
         "message": f"Test '{test_data.name}' created successfully",
-        "test": new_test
+        "test": new_test.to_dict()
     }
 
 
 @app.put("/api/tests/{test_id}")
-def update_test(test_id: str, test_data: TestUpdate):
+def update_test(test_id: str, test_data: TestUpdate, db: Session = Depends(get_db)):
     """Update an existing test"""
-    raw_tests = load_tests_from_file()
+    # Prepare update data
+    update_data = {}
+    if test_data.name is not None:
+        update_data["name"] = test_data.name
+    if test_data.category is not None:
+        update_data["category"] = test_data.category
+    if test_data.synonyms is not None:
+        update_data["synonyms"] = test_data.synonyms
 
-    # Find test by ID
-    test_index = next((i for i, t in enumerate(raw_tests) if t.get("id") == test_id), None)
-
-    if test_index is None:
+    # Update test
+    updated_test = TestRepository.update_test(db, test_id, update_data)
+    if not updated_test:
         raise HTTPException(status_code=404, detail=f"Test with ID '{test_id}' not found")
 
-    # Update test fields
-    if test_data.name is not None:
-        raw_tests[test_index]["name"] = test_data.name
-    if test_data.category is not None:
-        raw_tests[test_index]["category"] = test_data.category
-    if test_data.synonyms is not None:
-        raw_tests[test_index]["synonyms"] = test_data.synonyms
-
-    save_tests_to_file(raw_tests)
-
-    # Regenerate embeddings
-    regenerate_embeddings()
+    # Regenerate embeddings only if name or synonyms changed (embeddings depend on these)
+    if test_data.name is not None or test_data.synonyms is not None:
+        regenerate_embeddings_for_test(db, test_id)
 
     return {
         "status": "success",
         "message": f"Test '{test_id}' updated successfully",
-        "test": raw_tests[test_index]
+        "test": updated_test.to_dict()
     }
 
 
 @app.delete("/api/tests/{test_id}")
-def delete_test(test_id: str):
+def delete_test(test_id: str, db: Session = Depends(get_db)):
     """Delete a test"""
-    raw_tests = load_tests_from_file()
-
-    # Find test by ID
-    test_index = next((i for i, t in enumerate(raw_tests) if t.get("id") == test_id), None)
-
-    if test_index is None:
+    # Get test before deletion for response
+    test = TestRepository.get_test_by_id(db, test_id)
+    if not test:
         raise HTTPException(status_code=404, detail=f"Test with ID '{test_id}' not found")
-
-    deleted_test = raw_tests.pop(test_index)
-    save_tests_to_file(raw_tests)
-
-    # Regenerate embeddings
-    regenerate_embeddings()
+    
+    test_dict = test.to_dict()
+    
+    # Delete test
+    success = TestRepository.delete_test(db, test_id)
+    if not success:
+        raise HTTPException(status_code=500, detail="Failed to delete test")
+    
+    invalidate_cache()
 
     return {
         "status": "success",
-        "message": f"Test '{deleted_test['name']}' deleted successfully",
-        "test": deleted_test
+        "message": f"Test '{test_dict['name']}' deleted successfully",
+        "test": test_dict
     }
 
 
 @app.post("/api/tests/{test_id}/synonyms")
-def add_synonym(test_id: str, synonym: dict):
+def add_synonym(test_id: str, synonym: dict, db: Session = Depends(get_db)):
     """Add a synonym to a test"""
     if "synonym" not in synonym:
         raise HTTPException(status_code=400, detail="Missing 'synonym' field in request body")
 
-    raw_tests = load_tests_from_file()
-
-    # Find test by ID
-    test_index = next((i for i, t in enumerate(raw_tests) if t.get("id") == test_id), None)
-
-    if test_index is None:
+    test = TestRepository.get_test_by_id(db, test_id)
+    if not test:
         raise HTTPException(status_code=404, detail=f"Test with ID '{test_id}' not found")
 
     synonym_text = synonym["synonym"].strip()
+    synonyms = test.synonyms if isinstance(test.synonyms, list) else []
 
     # Check if synonym already exists
-    if synonym_text in raw_tests[test_index]["synonyms"]:
+    if synonym_text in synonyms:
         raise HTTPException(status_code=400, detail=f"Synonym '{synonym_text}' already exists")
 
-    raw_tests[test_index]["synonyms"].append(synonym_text)
-    save_tests_to_file(raw_tests)
-
-    # Regenerate embeddings
-    regenerate_embeddings()
+    synonyms.append(synonym_text)
+    updated_test = TestRepository.update_test(db, test_id, {"synonyms": synonyms})
+    
+    # Regenerate embeddings since synonyms changed
+    regenerate_embeddings_for_test(db, test_id)
 
     return {
         "status": "success",
         "message": f"Synonym '{synonym_text}' added successfully",
-        "test": raw_tests[test_index]
+        "test": updated_test.to_dict()
     }
 
 
 @app.delete("/api/tests/{test_id}/synonyms/{synonym}")
-def remove_synonym(test_id: str, synonym: str):
+def remove_synonym(test_id: str, synonym: str, db: Session = Depends(get_db)):
     """Remove a synonym from a test"""
-    raw_tests = load_tests_from_file()
-
-    # Find test by ID
-    test_index = next((i for i, t in enumerate(raw_tests) if t.get("id") == test_id), None)
-
-    if test_index is None:
+    test = TestRepository.get_test_by_id(db, test_id)
+    if not test:
         raise HTTPException(status_code=404, detail=f"Test with ID '{test_id}' not found")
 
+    synonyms = test.synonyms if isinstance(test.synonyms, list) else []
+
     # Check if synonym exists
-    if synonym not in raw_tests[test_index]["synonyms"]:
+    if synonym not in synonyms:
         raise HTTPException(status_code=404, detail=f"Synonym '{synonym}' not found")
 
-    raw_tests[test_index]["synonyms"].remove(synonym)
-    save_tests_to_file(raw_tests)
-
-    # Regenerate embeddings
-    regenerate_embeddings()
+    synonyms.remove(synonym)
+    updated_test = TestRepository.update_test(db, test_id, {"synonyms": synonyms})
+    
+    # Regenerate embeddings since synonyms changed
+    regenerate_embeddings_for_test(db, test_id)
 
     return {
         "status": "success",
         "message": f"Synonym '{synonym}' removed successfully",
-        "test": raw_tests[test_index]
+        "test": updated_test.to_dict()
     }
