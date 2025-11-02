@@ -1,0 +1,67 @@
+[
+  {
+    "id": "cbc",
+    "name": "Complete Blood Count",
+    "category": "Lab 3",
+    "synonyms": [
+      "CBC",
+      "complete blood count",
+      "blood work",
+      "full blood test",
+      "blood profile",
+      "complete blood examination",
+      "CBC test",
+      "blood cell count"
+    ]
+  },
+  {
+    "id": "rft",
+    "name": "Renal Function Test",
+    "category": "Lab",
+    "synonyms": [
+      "renal panel",
+      "kidney function test",
+      "RFT",
+      "renal test",
+      "kidney health examination",
+      "urine and blood kidney test",
+      "kidney function examination",
+      "kidney checkup",
+      "renal function evaluation"
+    ]
+  },
+  {
+    "id": "rbs",
+    "name": "RANDOM SERUM GLUCOSE",
+    "category": "Lab",
+    "synonyms": [
+      "random blood sugar test",
+      "RBS test",
+      "blood glucose test",
+      "serum glucose level check",
+      "glucose test",
+      "blood sugar examination",
+      "random serum glucose check",
+      "sugar level test",
+      "glucose measurement",
+      "fasting blood sugar test"
+    ]
+  },
+  {
+    "id": "lft",
+    "name": "Liver Function Test",
+    "category": "Lab",
+    "synonyms": [
+      "liver function tests",
+      "LFT",
+      "liver panel",
+      "liver blood test",
+      "hepatic function test",
+      "liver health check",
+      "liver enzyme test",
+      "liver examination",
+      "blood test for liver function",
+      "liver test"
+    ]
+  }
+]

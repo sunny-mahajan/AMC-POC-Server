@@ -43,18 +43,12 @@ class SpeechRecognitionApp {
         this.finalTranscript = document.getElementById('finalTranscript');
         this.testResults = document.getElementById('testResults');
         this.processingStatus = document.getElementById('processingStatus');
-        this.availableTestsContainer = document.getElementById('availableTests');
-        this.synonymModal = document.getElementById('synonymModal');
-        this.modalTestName = document.getElementById('modalTestName');
-        this.modalSynonymsList = document.getElementById('modalSynonymsList');
-        this.modalCloseBtn = document.getElementById('modalCloseBtn');
         this.engineRadios = document.querySelectorAll('input[name="speechEngine"]');
 
-        // New elements for categorized view
-        this.categoryList = document.getElementById('categoryList');
+        // Main test list elements
         this.testSearch = document.getElementById('testSearch');
-        this.gridViewBtn = document.getElementById('gridViewBtn');
-        this.listViewBtn = document.getElementById('listViewBtn');
+        this.addNewTestMainBtn = document.getElementById('addNewTestMainBtn');
+        this.testListMain = document.getElementById('testListMain');
         this.testCount = document.getElementById('testCount');
         this.settingsBtn = document.getElementById('settingsBtn');
         this.settingsModal = document.getElementById('settingsModal');
@@ -64,10 +58,33 @@ class SpeechRecognitionApp {
         this.generateEmbeddingsBtn = document.getElementById('generateEmbeddingsBtn');
         this.embeddingsStatus = document.getElementById('embeddingsStatus');
 
-        // State for filtering
-        this.selectedCategory = 'All';
+        // Test Form Modal elements
+        this.testFormModal = document.getElementById('testFormModal');
+        this.testFormModalCloseBtn = document.getElementById('testFormModalCloseBtn');
+        this.testFormTitle = document.getElementById('testFormTitle');
+        this.testForm = document.getElementById('testForm');
+        this.testName = document.getElementById('testName');
+        this.testCategory = document.getElementById('testCategory');
+        this.newCategoryInput = document.getElementById('newCategoryInput');
+        this.newSynonymInput = document.getElementById('newSynonymInput');
+        this.addSynonymBtn = document.getElementById('addSynonymBtn');
+        this.synonymsList = document.getElementById('synonymsList');
+        this.cancelTestFormBtn = document.getElementById('cancelTestFormBtn');
+        this.saveTestBtn = document.getElementById('saveTestBtn');
+
+        // Delete Confirmation Modal elements
+        this.deleteConfirmModal = document.getElementById('deleteConfirmModal');
+        this.deleteConfirmModalCloseBtn = document.getElementById('deleteConfirmModalCloseBtn');
+        this.deleteConfirmMessage = document.getElementById('deleteConfirmMessage');
+        this.cancelDeleteBtn = document.getElementById('cancelDeleteBtn');
+        this.confirmDeleteBtn = document.getElementById('confirmDeleteBtn');
+
+        // State for test management
+        this.currentTestId = null;
+        this.isEditMode = false;
+        this.formSynonyms = [];
+        this.testToDelete = null;
         this.searchQuery = '';
-        this.viewMode = 'grid'; // 'grid' or 'list'
     }
 
     setupEventListeners() {
@@ -75,31 +92,17 @@ class SpeechRecognitionApp {
         this.stopBtn.addEventListener('click', () => this.stopRecording());
         this.clearBtn.addEventListener('click', () => this.clearAll());
 
-        // Search functionality
+        // Main search functionality
         if (this.testSearch) {
             this.testSearch.addEventListener('input', (e) => {
                 this.searchQuery = e.target.value.toLowerCase();
-                this.renderAvailableTests();
+                this.renderMainTestList();
             });
         }
 
-        // View toggle
-        if (this.gridViewBtn) {
-            this.gridViewBtn.addEventListener('click', () => {
-                this.viewMode = 'grid';
-                this.gridViewBtn.classList.add('active');
-                this.listViewBtn.classList.remove('active');
-                this.availableTestsContainer.classList.remove('list-view');
-            });
-        }
-
-        if (this.listViewBtn) {
-            this.listViewBtn.addEventListener('click', () => {
-                this.viewMode = 'list';
-                this.listViewBtn.classList.add('active');
-                this.gridViewBtn.classList.remove('active');
-                this.availableTestsContainer.classList.add('list-view');
-            });
+        // Add new test button
+        if (this.addNewTestMainBtn) {
+            this.addNewTestMainBtn.addEventListener('click', () => this.openAddTestForm());
         }
 
         // Engine selection
@@ -108,14 +111,6 @@ class SpeechRecognitionApp {
                 this.currentEngine = e.target.value;
                 console.log('Switched to:', this.currentEngine);
             });
-        });
-
-        // Modal event listeners
-        this.modalCloseBtn.addEventListener('click', () => this.closeSynonymModal());
-        this.synonymModal.addEventListener('click', (e) => {
-            if (e.target === this.synonymModal) {
-                this.closeSynonymModal();
-            }
         });
 
         // Settings modal event listeners
@@ -136,6 +131,91 @@ class SpeechRecognitionApp {
         // Generate embeddings button
         if (this.generateEmbeddingsBtn) {
             this.generateEmbeddingsBtn.addEventListener('click', () => this.generateEmbeddings());
+        }
+
+        // Test Form Modal event listeners
+        if (this.testFormModalCloseBtn) {
+            this.testFormModalCloseBtn.addEventListener('click', () => this.closeTestFormModal());
+        }
+        if (this.testFormModal) {
+            this.testFormModal.addEventListener('click', (e) => {
+                if (e.target === this.testFormModal) {
+                    this.closeTestFormModal();
+                }
+            });
+        }
+        if (this.cancelTestFormBtn) {
+            this.cancelTestFormBtn.addEventListener('click', () => this.closeTestFormModal());
+        }
+
+        // Test Form handlers
+        if (this.addSynonymBtn) {
+            this.addSynonymBtn.addEventListener('click', () => this.addSynonymToForm());
+        }
+        if (this.newSynonymInput) {
+            this.newSynonymInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    this.addSynonymToForm();
+                }
+            });
+        }
+        if (this.testForm) {
+            this.testForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                this.saveTest();
+            });
+        }
+
+        // Category dropdown handler
+        if (this.testCategory) {
+            this.testCategory.addEventListener('change', (e) => {
+                if (e.target.value === '__new__') {
+                    // Show new category input and hide select
+                    this.newCategoryInput.classList.remove('hidden');
+                    this.testCategory.classList.add('hidden');
+                    this.newCategoryInput.focus();
+                    this.newCategoryInput.required = true;
+                    this.testCategory.required = false;
+                } else {
+                    // Hide new category input
+                    this.newCategoryInput.classList.add('hidden');
+                    this.testCategory.classList.remove('hidden');
+                    this.newCategoryInput.required = false;
+                    this.testCategory.required = true;
+                }
+            });
+        }
+
+        // Allow canceling new category by clearing input and showing select again
+        if (this.newCategoryInput) {
+            this.newCategoryInput.addEventListener('blur', () => {
+                if (!this.newCategoryInput.value.trim()) {
+                    this.newCategoryInput.classList.add('hidden');
+                    this.testCategory.classList.remove('hidden');
+                    this.testCategory.value = '';
+                    this.newCategoryInput.required = false;
+                    this.testCategory.required = true;
+                }
+            });
+        }
+
+        // Delete Confirmation Modal event listeners
+        if (this.deleteConfirmModalCloseBtn) {
+            this.deleteConfirmModalCloseBtn.addEventListener('click', () => this.closeDeleteConfirmModal());
+        }
+        if (this.deleteConfirmModal) {
+            this.deleteConfirmModal.addEventListener('click', (e) => {
+                if (e.target === this.deleteConfirmModal) {
+                    this.closeDeleteConfirmModal();
+                }
+            });
+        }
+        if (this.cancelDeleteBtn) {
+            this.cancelDeleteBtn.addEventListener('click', () => this.closeDeleteConfirmModal());
+        }
+        if (this.confirmDeleteBtn) {
+            this.confirmDeleteBtn.addEventListener('click', () => this.deleteTest());
         }
 
         // Cleanup on page unload
@@ -343,7 +423,7 @@ class SpeechRecognitionApp {
                     console.warn('Unexpected response format, defaulting to empty array');
                     this.availableTests = [];
                 }
-                this.renderAvailableTests();
+                this.renderMainTestList();
             } else {
                 console.error('Failed to load tests:', response.status);
                 this.availableTests = []; // Ensure it's an array even on error
@@ -354,75 +434,11 @@ class SpeechRecognitionApp {
         }
     }
 
-    renderCategories() {
-        if (!this.categoryList) return;
+    renderMainTestList() {
+        if (!this.testListMain) return;
 
-        // Get unique categories with counts
-        const categories = {};
-        this.availableTests.forEach(test => {
-            if (!categories[test.category]) {
-                categories[test.category] = 0;
-            }
-            categories[test.category]++;
-        });
-
-        // Add "All" category
-        const totalCount = this.availableTests.length;
-
-        // Clear and render
-        this.categoryList.innerHTML = '';
-
-        // All category
-        const allCategory = this.createCategoryItem('All', totalCount, this.selectedCategory === 'All');
-        this.categoryList.appendChild(allCategory);
-
-        // Sort and add other categories
-        Object.keys(categories).sort().forEach(category => {
-            const categoryItem = this.createCategoryItem(category, categories[category], this.selectedCategory === category);
-            this.categoryList.appendChild(categoryItem);
-        });
-    }
-
-    createCategoryItem(name, count, isActive) {
-        const item = document.createElement('div');
-        item.className = `category-item${isActive ? ' active' : ''}`;
-        item.innerHTML = `
-            <span class="category-name">${name}</span>
-            <span class="category-count">${count}</span>
-        `;
-
-        item.addEventListener('click', () => {
-            this.selectedCategory = name;
-            this.renderCategories();
-            this.renderAvailableTests();
-        });
-
-        return item;
-    }
-
-    renderAvailableTests() {
-        if (!this.availableTestsContainer) {
-            console.error('Available tests container not found');
-            return;
-        }
-
-        this.availableTestsContainer.innerHTML = '';
-
-        // Ensure availableTests is an array before iterating
-        if (!Array.isArray(this.availableTests)) {
-            console.warn('availableTests is not an array:', this.availableTests);
-            return;
-        }
-
-        // Filter tests by category and search
-        let filteredTests = this.availableTests;
-
-        // Filter by category
-        if (this.selectedCategory !== 'All') {
-            filteredTests = filteredTests.filter(test => test.category === this.selectedCategory);
-        }
-
-        // Filter by search query
+        // Filter tests by search query
+        let filteredTests = this.availableTests || [];
         if (this.searchQuery) {
             filteredTests = filteredTests.filter(test =>
                 test.name.toLowerCase().includes(this.searchQuery) ||
@@ -436,29 +452,41 @@ class SpeechRecognitionApp {
             this.testCount.textContent = `(${filteredTests.length})`;
         }
 
-        // Render filtered tests
         if (filteredTests.length === 0) {
-            this.availableTestsContainer.innerHTML = '<div class="no-results"><p>No tests found matching your criteria.</p></div>';
+            this.testListMain.innerHTML = '<p style="text-align: center; color: #999; padding: 40px;">No tests found</p>';
             return;
         }
 
-        filteredTests.forEach(test => {
-            const testCard = document.createElement('div');
-            testCard.className = 'test-card';
-            testCard.innerHTML = `
-                <div class="test-card-name">${test.name}</div>
-                <div class="test-card-category">${test.category}</div>
-            `;
+        this.testListMain.innerHTML = filteredTests.map(test => `
+            <div class="test-list-item">
+                <div class="test-list-header" onclick="window.speechApp.toggleTestDetails('${test.id}')">
+                    <div class="test-list-info">
+                        <div class="test-list-name">${test.name}</div>
+                        <div class="test-list-meta">
+                            <span class="test-list-category">${test.category}</span>
+                            <span class="test-list-synonym-count">${test.synonyms.length} synonyms</span>
+                        </div>
+                    </div>
+                    <div class="test-list-actions">
+                        <button class="btn-edit" onclick="event.stopPropagation(); window.speechApp.openEditTestForm('${test.id}')">Edit</button>
+                        <button class="btn-delete-test" onclick="event.stopPropagation(); window.speechApp.confirmDeleteTest('${test.id}')">Delete</button>
+                    </div>
+                </div>
+                <div class="test-list-details" id="test-details-${test.id}">
+                    <div class="test-synonyms-title">Synonyms:</div>
+                    <div class="test-synonyms-grid">
+                        ${test.synonyms.map(syn => `<span class="synonym-tag">${syn}</span>`).join('')}
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    }
 
-            testCard.addEventListener('click', () => {
-                this.showSynonyms(test);
-            });
-
-            this.availableTestsContainer.appendChild(testCard);
-        });
-
-        // Render categories
-        this.renderCategories();
+    toggleTestDetails(testId) {
+        const details = document.getElementById(`test-details-${testId}`);
+        if (details) {
+            details.classList.toggle('expanded');
+        }
     }
 
     async startRecording() {
@@ -663,6 +691,45 @@ class SpeechRecognitionApp {
         }
     }
 
+    showToast(message, type = 'info', duration = 3000) {
+        const container = document.getElementById('toastContainer');
+        if (!container) return;
+
+        const toast = document.createElement('div');
+        toast.className = `toast ${type}`;
+
+        toast.innerHTML = `
+            <div class="toast-icon"></div>
+            <div class="toast-content">${message}</div>
+            <button class="toast-close" aria-label="Close">&times;</button>
+        `;
+
+        const closeBtn = toast.querySelector('.toast-close');
+        closeBtn.addEventListener('click', () => {
+            this.removeToast(toast);
+        });
+
+        container.appendChild(toast);
+
+        // Auto-remove after duration
+        if (duration > 0) {
+            setTimeout(() => {
+                this.removeToast(toast);
+            }, duration);
+        }
+    }
+
+    removeToast(toast) {
+        if (!toast || !toast.parentElement) return;
+
+        toast.classList.add('removing');
+        setTimeout(() => {
+            if (toast.parentElement) {
+                toast.parentElement.removeChild(toast);
+            }
+        }, 300); // Match animation duration
+    }
+
     updateLiveTranscript(text) {
         if (!this.liveTranscript) return;
 
@@ -852,30 +919,6 @@ class SpeechRecognitionApp {
         `;
     }
 
-    showSynonyms(test) {
-        this.modalTestName.textContent = test.name;
-        this.modalSynonymsList.innerHTML = '';
-
-        if (test.synonyms && test.synonyms.length > 0) {
-            test.synonyms.forEach(synonym => {
-                const li = document.createElement('li');
-                li.textContent = synonym;
-                this.modalSynonymsList.appendChild(li);
-            });
-        } else {
-            const li = document.createElement('li');
-            li.textContent = 'No synonyms available';
-            li.style.color = '#999';
-            this.modalSynonymsList.appendChild(li);
-        }
-
-        this.synonymModal.classList.add('show');
-    }
-
-    closeSynonymModal() {
-        this.synonymModal.classList.remove('show');
-    }
-
     async generateEmbeddings() {
         if (!this.generateEmbeddingsBtn || !this.embeddingsStatus) return;
 
@@ -943,10 +986,313 @@ class SpeechRecognitionApp {
             this.generateEmbeddingsBtn.disabled = false;
         }
     }
+
+    // Test Form Management Methods
+    async openAddTestForm() {
+        this.isEditMode = false;
+        this.currentTestId = null;
+        this.formSynonyms = [];
+
+        if (this.testFormTitle) {
+            this.testFormTitle.textContent = 'Add New Test';
+        }
+
+        // Reset form
+        if (this.testForm) {
+            this.testForm.reset();
+        }
+
+        // Reset category UI state
+        if (this.newCategoryInput) {
+            this.newCategoryInput.classList.add('hidden');
+            this.newCategoryInput.value = '';
+            this.newCategoryInput.required = false;
+        }
+        if (this.testCategory) {
+            this.testCategory.classList.remove('hidden');
+            this.testCategory.required = true;
+        }
+
+        // Load and populate categories
+        await this.loadCategories();
+
+        this.renderFormSynonyms();
+        this.testFormModal.classList.add('show');
+    }
+
+    async openEditTestForm(testId) {
+        const test = this.availableTests.find(t => t.id === testId);
+        if (!test) return;
+
+        this.isEditMode = true;
+        this.currentTestId = testId;
+        this.formSynonyms = [...test.synonyms];
+
+        if (this.testFormTitle) {
+            this.testFormTitle.textContent = 'Edit Test';
+        }
+
+        // Load and populate categories first
+        await this.loadCategories();
+
+        // Populate form
+        if (this.testName) this.testName.value = test.name;
+        
+        // Set category - check if it exists in the dropdown
+        if (this.testCategory) {
+            const categoryValue = test.category;
+            // Check if category exists in options
+            const categoryExists = Array.from(this.testCategory.options).some(
+                opt => opt.value === categoryValue
+            );
+            
+            if (categoryExists) {
+                // Use existing category from dropdown
+                this.testCategory.value = categoryValue;
+                this.newCategoryInput.classList.add('hidden');
+                this.testCategory.classList.remove('hidden');
+                this.newCategoryInput.required = false;
+                this.testCategory.required = true;
+            } else {
+                // Category doesn't exist, show new category input with existing value
+                this.testCategory.value = '__new__';
+                this.newCategoryInput.value = categoryValue;
+                this.newCategoryInput.classList.remove('hidden');
+                this.testCategory.classList.add('hidden');
+                this.newCategoryInput.required = true;
+                this.testCategory.required = false;
+            }
+        }
+
+        this.renderFormSynonyms();
+        this.testFormModal.classList.add('show');
+    }
+
+    closeTestFormModal() {
+        if (this.testFormModal) {
+            this.testFormModal.classList.remove('show');
+        }
+        this.isEditMode = false;
+        this.currentTestId = null;
+        this.formSynonyms = [];
+        if (this.testForm) {
+            this.testForm.reset();
+        }
+        // Reset category UI state
+        if (this.newCategoryInput) {
+            this.newCategoryInput.classList.add('hidden');
+            this.newCategoryInput.value = '';
+            this.newCategoryInput.required = false;
+        }
+        if (this.testCategory) {
+            this.testCategory.classList.remove('hidden');
+            this.testCategory.required = true;
+        }
+    }
+
+    async loadCategories() {
+        try {
+            const response = await fetch('/api/categories');
+            if (response.ok) {
+                const data = await response.json();
+                const categories = data.categories || [];
+                
+                // Clear existing options except placeholder and "Add New"
+                if (this.testCategory) {
+                    // Keep first two options (placeholder and "Add New")
+                    while (this.testCategory.options.length > 2) {
+                        this.testCategory.remove(2);
+                    }
+                    
+                    // Add existing categories
+                    categories.forEach(category => {
+                        const option = document.createElement('option');
+                        option.value = category;
+                        option.textContent = category;
+                        this.testCategory.appendChild(option);
+                    });
+                }
+            } else {
+                console.error('Failed to load categories:', response.status);
+            }
+        } catch (error) {
+            console.error('Error loading categories:', error);
+        }
+    }
+
+    addSynonymToForm() {
+        if (!this.newSynonymInput) return;
+
+        const synonym = this.newSynonymInput.value.trim();
+        if (!synonym) return;
+
+        if (this.formSynonyms.includes(synonym)) {
+            this.showToast('This synonym already exists', 'warning');
+            return;
+        }
+
+        this.formSynonyms.push(synonym);
+        this.newSynonymInput.value = '';
+        this.renderFormSynonyms();
+    }
+
+    removeSynonymFromForm(synonym) {
+        this.formSynonyms = this.formSynonyms.filter(s => s !== synonym);
+        this.renderFormSynonyms();
+    }
+
+    renderFormSynonyms() {
+        if (!this.synonymsList) return;
+
+        this.synonymsList.innerHTML = this.formSynonyms.map(syn => `
+            <div class="synonym-chip">
+                <span>${syn}</span>
+                <button type="button" class="synonym-chip-remove" onclick="window.speechApp.removeSynonymFromForm('${syn.replace(/'/g, "\\'")}')">×</button>
+            </div>
+        `).join('');
+    }
+
+    async saveTest() {
+        const name = this.testName.value.trim();
+        
+        // Get category - either from select or new input
+        let category = '';
+        if (this.newCategoryInput && !this.newCategoryInput.classList.contains('hidden')) {
+            category = this.newCategoryInput.value.trim();
+        } else {
+            category = this.testCategory.value;
+        }
+
+        if (!name || !category || category === '__new__' || category === '') {
+            this.showToast('Please fill in all required fields', 'warning');
+            return;
+        }
+
+        const btnText = this.saveTestBtn.querySelector('.btn-text');
+        const btnLoader = this.saveTestBtn.querySelector('.btn-loader');
+
+        btnText.classList.add('hidden');
+        btnLoader.classList.remove('hidden');
+        this.saveTestBtn.disabled = true;
+
+        try {
+            const testData = {
+                name,
+                category,
+                synonyms: this.formSynonyms
+            };
+
+            let response;
+            if (this.isEditMode) {
+                response = await fetch(`/api/tests/${this.currentTestId}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(testData)
+                });
+            } else {
+                response = await fetch('/api/tests', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(testData)
+                });
+            }
+
+            if (response.ok) {
+                const result = await response.json();
+
+                // Reload tests
+                await this.loadAvailableTests();
+
+                // Close form modal
+                this.closeTestFormModal();
+
+                // Update test list
+                this.renderMainTestList();
+
+                this.showToast(result.message || 'Test saved successfully!', 'success');
+            } else {
+                const error = await response.json();
+                throw new Error(error.detail || 'Failed to save test');
+            }
+        } catch (error) {
+            console.error('Error saving test:', error);
+            this.showToast(error.message || 'Failed to save test. Please try again.', 'error');
+        } finally {
+            btnText.classList.remove('hidden');
+            btnLoader.classList.add('hidden');
+            this.saveTestBtn.disabled = false;
+        }
+    }
+
+    confirmDeleteTest(testId) {
+        const test = this.availableTests.find(t => t.id === testId);
+        if (!test) return;
+
+        this.testToDelete = testId;
+
+        if (this.deleteConfirmMessage) {
+            this.deleteConfirmMessage.textContent = `Are you sure you want to delete "${test.name}"? This action cannot be undone.`;
+        }
+
+        this.deleteConfirmModal.classList.add('show');
+    }
+
+    closeDeleteConfirmModal() {
+        if (this.deleteConfirmModal) {
+            this.deleteConfirmModal.classList.remove('show');
+        }
+        this.testToDelete = null;
+    }
+
+    async deleteTest() {
+        if (!this.testToDelete) return;
+
+        const btnText = this.confirmDeleteBtn.querySelector('.btn-text');
+        const btnLoader = this.confirmDeleteBtn.querySelector('.btn-loader');
+
+        btnText.classList.add('hidden');
+        btnLoader.classList.remove('hidden');
+        this.confirmDeleteBtn.disabled = true;
+
+        try {
+            const response = await fetch(`/api/tests/${this.testToDelete}`, {
+                method: 'DELETE'
+            });
+
+            if (response.ok) {
+                const result = await response.json();
+
+                // Reload tests
+                await this.loadAvailableTests();
+
+                // Close delete modal
+                this.closeDeleteConfirmModal();
+
+                // Update test list
+                this.renderMainTestList();
+
+                this.showToast(result.message || 'Test deleted successfully!', 'success');
+            } else {
+                const error = await response.json();
+                throw new Error(error.detail || 'Failed to delete test');
+            }
+        } catch (error) {
+            console.error('Error deleting test:', error);
+            this.showToast(error.message || 'Failed to delete test. Please try again.', 'error');
+        } finally {
+            btnText.classList.remove('hidden');
+            btnLoader.classList.add('hidden');
+            this.confirmDeleteBtn.disabled = false;
+        }
+    }
 }
 
 // Initialize the app when the page loads
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Initializing Speech Recognition App with dual engine support...');
-    new SpeechRecognitionApp();
+    window.speechApp = new SpeechRecognitionApp();
 });

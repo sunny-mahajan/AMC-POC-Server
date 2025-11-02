@@ -93,47 +93,20 @@
             </div>
         </div>
 
-        <!-- Available Tests Reference with Category Sidebar -->
+        <!-- Available Tests Management -->
         <div class="tests-reference">
-            <h3>Available Tests <span id="testCount" class="test-count"></span></h3>
-            <div class="tests-layout">
-                <!-- Category Sidebar -->
-                <div class="category-sidebar">
-                    <div class="category-header">
-                        <h4>Categories</h4>
-                    </div>
-                    <div class="category-list" id="categoryList">
-                        <!-- Categories will be loaded here -->
-                    </div>
-                </div>
-
-                <!-- Tests Panel -->
-                <div class="tests-panel">
-                    <div class="tests-header">
-                        <input type="text" id="testSearch" class="test-search" placeholder="🔍 Search tests...">
-                        <div class="view-toggle">
-                            <button id="gridViewBtn" class="view-btn active" title="Grid View">⊞</button>
-                            <button id="listViewBtn" class="view-btn" title="List View">☰</button>
-                        </div>
-                    </div>
-                    <div class="tests-grid" id="availableTests">
-                        <!-- Tests will be loaded here -->
-                    </div>
-                </div>
+            <div class="tests-reference-header">
+                <h3>Medical Tests <span id="testCount" class="test-count"></span></h3>
             </div>
-        </div>
-    </div>
-
-    <!-- Modal for Test Synonyms -->
-    <div id="synonymModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 id="modalTestName"></h3>
-                <button class="modal-close" id="modalCloseBtn">&times;</button>
+            <div class="test-management-actions-main">
+                <input type="text" id="testSearch" class="test-search-main" placeholder="🔍 Search tests...">
+                <button id="addNewTestMainBtn" class="btn-add-test-main">
+                    <span>➕</span>
+                    Add New Test
+                </button>
             </div>
-            <div class="modal-body">
-                <h4>Synonyms:</h4>
-                <ul id="modalSynonymsList"></ul>
+            <div id="testListMain" class="test-list-main">
+                <!-- Tests will be loaded here -->
             </div>
         </div>
     </div>
@@ -188,11 +161,111 @@
                         </span>
                     </button>
                     <div id="embeddingsStatus" class="embeddings-status hidden"></div>
-
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Test Management Modal -->
+    <div id="testManagementModal" class="modal">
+        <div class="modal-content test-management-modal-content">
+            <div class="modal-header">
+                <h3>Manage Medical Tests</h3>
+                <button class="modal-close" id="testManagementModalCloseBtn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!-- Add New Test Button -->
+                <div class="test-management-actions">
+                    <button id="addNewTestBtn" class="btn-add-test">
+                        <span>➕</span>
+                        Add New Test
+                    </button>
+                    <input type="text" id="testManagementSearch" class="test-management-search" placeholder="🔍 Search tests...">
+                </div>
+
+                <!-- Test List -->
+                <div id="testListContainer" class="test-list-container">
+                    <!-- Tests will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add/Edit Test Modal -->
+    <div id="testFormModal" class="modal">
+        <div class="modal-content test-form-modal-content">
+            <div class="modal-header">
+                <h3 id="testFormTitle">Add New Test</h3>
+                <button class="modal-close" id="testFormModalCloseBtn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="testForm">
+                    <div class="form-group">
+                        <label for="testName">Test Name *</label>
+                        <input type="text" id="testName" required placeholder="e.g., Complete Blood Count">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="testCategory">Category *</label>
+                        <select id="testCategory" required>
+                            <option value="">-- Select or Add Category --</option>
+                            <option value="__new__">➕ Add New Category</option>
+                        </select>
+                        <input type="text" id="newCategoryInput" class="hidden" placeholder="Enter new category name">
+                        <small class="form-hint">Select an existing category or add a new one</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Synonyms</label>
+                        <div class="synonyms-input-group">
+                            <input type="text" id="newSynonymInput" placeholder="Add a synonym">
+                            <button type="button" id="addSynonymBtn" class="btn-add-synonym">Add</button>
+                        </div>
+                        <div id="synonymsList" class="synonyms-list">
+                            <!-- Synonyms will be added here -->
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" id="cancelTestFormBtn" class="btn-cancel">Cancel</button>
+                        <button type="submit" id="saveTestBtn" class="btn-save">
+                            <span class="btn-text">Save Test</span>
+                            <span class="btn-loader hidden">
+                                <span class="spinner-small"></span>
+                                Saving...
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="deleteConfirmModal" class="modal">
+        <div class="modal-content delete-confirm-modal-content">
+            <div class="modal-header">
+                <h3>Confirm Delete</h3>
+                <button class="modal-close" id="deleteConfirmModalCloseBtn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="deleteConfirmMessage">Are you sure you want to delete this test?</p>
+                <div class="form-actions">
+                    <button type="button" id="cancelDeleteBtn" class="btn-cancel">Cancel</button>
+                    <button type="button" id="confirmDeleteBtn" class="btn-delete">
+                        <span class="btn-text">Delete</span>
+                        <span class="btn-loader hidden">
+                            <span class="spinner-small"></span>
+                            Deleting...
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toastContainer" class="toast-container"></div>
 
     <script src="/static/script.js"></script>
 </body>
