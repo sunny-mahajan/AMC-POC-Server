@@ -1,9 +1,11 @@
 """Database models and connection management for SQLite"""
-from sqlalchemy import create_engine, Column, String, Text, Integer, JSON, Float
+from sqlalchemy import create_engine, Column, String, Text, Integer, JSON, Float, Index
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, Session
+from sqlalchemy.sql import text
 from typing import List, Optional, Dict, Any
 import json
+import time
 
 Base = declarative_base()
 
@@ -18,6 +20,12 @@ class Test(Base):
     synonyms = Column(JSON, default=list)  # Store as JSON array
     embeddings = Column(JSON, default=list)  # Store embeddings as JSON array
     embeddings_updated = Column(Integer, default=0)  # Timestamp to track when embeddings were last updated
+    
+    # Add indexes for better query performance
+    __table_args__ = (
+        Index('idx_embeddings_notnull', 'embeddings'),
+        Index('idx_category_name', 'category', 'name'),
+    )
 
     def to_dict(self) -> Dict[str, Any]:
         """Convert test to dictionary format"""
@@ -123,12 +131,67 @@ class TestRepository:
     
     @staticmethod
     def get_tests_with_embeddings(db: Session) -> List[Dict[str, Any]]:
-        """Get all tests with embeddings for matching"""
-        tests = db.query(Test).filter(Test.embeddings != None).all()
-        # Filter out tests with empty embeddings (None or empty list)
+        """Get all tests with embeddings for matching - OPTIMIZED"""
+        # Use raw SQL for better performance - only select what we need
+        query = text("""
+            SELECT id, name, category, synonyms, embeddings 
+            FROM tests 
+            WHERE embeddings IS NOT NULL 
+            AND json_array_length(embeddings) > 0
+            ORDER BY name
+        """)
+        
         result = []
-        for test in tests:
-            if test.embeddings and isinstance(test.embeddings, list) and len(test.embeddings) > 0:
-                result.append(test.to_dict())
+        rows = db.execute(query).fetchall()
+        
+        for row in rows:
+            # Parse JSON directly without SQLAlchemy object conversion
+            synonyms = json.loads(row.synonyms) if row.synonyms else []
+            embeddings = json.loads(row.embeddings) if row.embeddings else []
+            
+            if embeddings and len(embeddings) > 0:
+                result.append({
+                    "id": row.id,
+                    "name": row.name,
+                    "category": row.category,
+                    "synonyms": synonyms,
+                    "embeddings": embeddings
+                })
+        
+        return result
+    
+    @staticmethod
+    def get_tests_count_with_embeddings(db: Session) -> int:
+        """Get count of tests with embeddings - fast count query"""
+        query = text("""
+            SELECT COUNT(*) as count 
+            FROM tests 
+            WHERE embeddings IS NOT NULL 
+            AND json_array_length(embeddings) > 0
+        """)
+        result = db.execute(query).fetchone()
+        return result.count if result else 0
+    
+    @staticmethod 
+    def get_tests_metadata_only(db: Session) -> List[Dict[str, Any]]:
+        """Get tests metadata without embeddings for UI (much faster)"""
+        query = text("""
+            SELECT id, name, category, synonyms
+            FROM tests 
+            ORDER BY name
+        """)
+        
+        result = []
+        rows = db.execute(query).fetchall()
+        
+        for row in rows:
+            synonyms = json.loads(row.synonyms) if row.synonyms else []
+            result.append({
+                "id": row.id,
+                "name": row.name,
+                "category": row.category,
+                "synonyms": synonyms
+            })
+        
         return result
 

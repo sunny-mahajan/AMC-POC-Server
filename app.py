@@ -6,6 +6,7 @@ from typing import List, Optional
 from sentence_transformers import SentenceTransformer
 import json
 import os
+import time
 from openai import OpenAI
 from dotenv import load_dotenv
 from sqlalchemy.orm import Session
@@ -39,37 +40,59 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 def startup_event():
     init_db()
     print("Database initialized")
+    # Warm up cache in background
+    warm_cache()
 
 model = SentenceTransformer(MODEL_NAME)
 
-# Cache for tests with embeddings (loaded from database)
+# Enhanced caching system with smart invalidation
 _tests_cache = None
 _cache_valid = False
+_cache_timestamp = 0
+_cache_ttl = 300  # 5 minutes TTL for cache
 
 def get_tests_with_embeddings(db: Session = None) -> List[dict]:
-    """Get tests with embeddings, using cache if available"""
-    global _tests_cache, _cache_valid
+    """Get tests with embeddings, using optimized cache"""
+    global _tests_cache, _cache_valid, _cache_timestamp
     
-    if _cache_valid and _tests_cache is not None:
+    current_time = time.time()
+    
+    # Check if cache is valid and not expired
+    if (_cache_valid and 
+        _tests_cache is not None and 
+        (current_time - _cache_timestamp) < _cache_ttl):
         return _tests_cache
     
+    # Cache miss or expired - reload from database
     if db is None:
         db = get_db_session()
         try:
             _tests_cache = TestRepository.get_tests_with_embeddings(db)
             _cache_valid = True
+            _cache_timestamp = current_time
+            print(f"Cache reloaded: {len(_tests_cache)} tests with embeddings")
             return _tests_cache
         finally:
             db.close()
     else:
         _tests_cache = TestRepository.get_tests_with_embeddings(db)
         _cache_valid = True
+        _cache_timestamp = current_time
         return _tests_cache
 
 def invalidate_cache():
-    """Invalidate the tests cache"""
-    global _cache_valid
+    """Smart cache invalidation"""
+    global _cache_valid, _cache_timestamp
     _cache_valid = False
+    _cache_timestamp = 0
+
+def warm_cache():
+    """Preload cache on startup"""
+    try:
+        get_tests_with_embeddings()
+        print("Cache warmed up successfully")
+    except Exception as e:
+        print(f"Failed to warm cache: {e}")
 
 
 class StreamRequest(BaseModel):
@@ -239,42 +262,32 @@ def root():
 
 @app.get("/api/tests")
 def get_tests(db: Session = Depends(get_db)):
-    """Get list of available tests for the frontend"""
-    db_tests = TestRepository.get_all_tests(db)
-    
-    # Return simplified test data for frontend
-    simplified_tests = []
-    for test in db_tests:
-        simplified_tests.append({
-            "id": test.id,
-            "name": test.name,
-            "category": test.category or "Other",
-            "synonyms": test.synonyms if isinstance(test.synonyms, list) else []
-        })
-    
+    """Get list of available tests for the frontend - OPTIMIZED"""
+    # Use optimized query without embeddings for UI
+    simplified_tests = TestRepository.get_tests_metadata_only(db)
     return simplified_tests
 
-@app.get("/api/status")
+@app.get("/api/status")  
 def api_status(db: Session = Depends(get_db)):
-    total_tests = TestRepository.get_all_tests(db)
-    tests_with_embeddings = TestRepository.get_tests_with_embeddings(db)
+    # Use optimized count queries instead of loading all data
+    total_count = db.query(Test).count()
+    embeddings_count = TestRepository.get_tests_count_with_embeddings(db)
     
-    # Sample test info
-    sample_test = None
-    if total_tests:
-        sample_test = {
-            "id": total_tests[0].id,
-            "name": total_tests[0].name,
-            "has_embeddings": bool(total_tests[0].embeddings and len(total_tests[0].embeddings) > 0) if total_tests[0].embeddings else False
-        }
+    # Check cache status
+    cache_status = {
+        "valid": _cache_valid,
+        "size": len(_tests_cache) if _tests_cache else 0,
+        "age_seconds": int(time.time() - _cache_timestamp) if _cache_timestamp > 0 else 0
+    }
     
     return {
         "status": "running",
         "model": MODEL_NAME,
-        "tests_total": len(total_tests),
-        "tests_with_embeddings": len(tests_with_embeddings),
-        "database_ready": len(tests_with_embeddings) > 0,
-        "sample_test": sample_test
+        "tests_total": total_count,
+        "tests_with_embeddings": embeddings_count,
+        "database_ready": embeddings_count > 0,
+        "cache_status": cache_status,
+        "performance_mode": "optimized"
     }
 
 @app.get("/api/config")
@@ -370,10 +383,14 @@ def update_test(test_id: str, test_data: TestUpdate, db: Session = Depends(get_d
     if not updated_test:
         raise HTTPException(status_code=404, detail=f"Test with ID '{test_id}' not found")
 
+    # Smart cache invalidation - only invalidate if name or synonyms changed
+    should_invalidate_cache = (test_data.name is not None or test_data.synonyms is not None)
+    
     # Regenerate embeddings only if name or synonyms changed (embeddings depend on these)
-    if test_data.name is not None or test_data.synonyms is not None:
+    if should_invalidate_cache:
         regenerate_embeddings_for_test(db, test_id)
-
+        invalidate_cache()  # Only invalidate cache when embeddings change
+    
     return {
         "status": "success",
         "message": f"Test '{test_id}' updated successfully",
